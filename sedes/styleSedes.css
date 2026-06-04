@@ -319,9 +319,11 @@ img, picture, video, canvas, svg {
     'GRAD' 0,
     'opsz' 24
   }.titulo-sedes {
-  position: absolute;
+  background-color: rgba(255, 255, 255, 0.562);
+    position: absolute;
   top: 10px;
-  width: 100%;
+  width: 300px;
+  margin: 0 800px;
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
