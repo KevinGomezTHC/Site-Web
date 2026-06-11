@@ -251,7 +251,7 @@ img, picture, video, canvas, svg {
   display: flex;
   gap: 24px;
   align-items: center;
-  animation: scroll-logos 30s linear infinite;
+  animation: scroll-logos 15s linear infinite;
 }
 
 .marquee-track:hover {
