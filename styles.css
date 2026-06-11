@@ -24,6 +24,11 @@ img, picture, video, canvas, svg {
   height: auto;
   display: block;
 }
+.menu a:hover,
+.menu-item > a:hover {
+  opacity: 1;
+  color: #ff5a3c;
+}
 
 /* ================= NAVBAR ================= */
 .navbar {
