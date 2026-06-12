@@ -676,3 +676,12 @@ textarea { min-height: 160px; resize: vertical; }
     text-align: center;
   }
 }
+.ci-item a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--trans);
+}
+.ci-item a:hover {
+  color: var(--brand-dark);
+  text-decoration: underline;
+}
