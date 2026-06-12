@@ -646,4 +646,33 @@ textarea { min-height: 160px; resize: vertical; }
   font-weight: 500;
   justify-content: flex-start;
   gap: 8px;
+}.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.footer-social a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,.5);
+  font-size: 13px;
+  letter-spacing: .04em;
+  text-decoration: none;
+  transition: var(--trans);
+}
+.footer-social a i {
+  font-size: 18px;
+}
+.footer-social a:hover {
+  color: var(--brand);
+}
+
+@media (max-width: 768px) {
+  .footer-inner {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
 }
