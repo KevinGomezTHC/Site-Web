@@ -595,3 +595,55 @@ textarea { min-height: 160px; resize: vertical; }
   .form-row { grid-template-columns: 1fr; }
   .footer-inner { flex-direction: column; gap: 12px; text-align: center; }
 }
+.pv-form .pv-form-header {
+  padding: 24px 32px 0;
+}
+.pv-form-tag {
+  display: block;
+  font-size: 11px;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--brand);
+  margin-bottom: 6px;
+}
+.pv-form .pv-form-header h3 {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #fff;
+  margin-bottom: 0;
+}
+.pv-form .pv-form-header h3 em {
+  color: var(--brand);
+  font-style: italic;
+}
+.pv-form-body {
+  padding: 24px 32px 32px;
+  display: grid;
+  gap: 16px;
+}
+.pv-field label {
+  display: block;
+  font-size: 10px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.45);
+  margin-bottom: 6px;
+}
+.pv-input {
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pv-input i { color: var(--brand); font-size: 18px; }
+.pv-input-status {
+  background: rgba(192,57,43,.12);
+  color: var(--brand);
+  font-weight: 500;
+  justify-content: flex-start;
+  gap: 8px;
+}
