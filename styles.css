@@ -249,21 +249,36 @@ img, picture, video, canvas, svg {
 
 .marquee-track {
   display: flex;
+  width: max-content;
   gap: 24px;
   align-items: center;
-  animation: scroll-logos 15s linear infinite;
+  animation: scroll-logos 40s linear infinite;
 }
 
 .marquee-track:hover {
   animation-play-state: paused;
 }
+.marquee-track1 {
+  display: flex;
+  width: max-content;
+  gap: 24px;
+  align-items: center;
+  animation: scroll-logos 80s linear infinite;
+}
 
+.marquee-track1:hover {
+  animation-play-state: paused;
+}
 .marquee-group {
   display: flex;
   gap: 24px;
   align-items: center;
 }
-
+.marquee-group1 {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
 .partner-logo {
   min-width: 170px;
   width: 170px;
@@ -891,7 +906,10 @@ img, picture, video, canvas, svg {
   .marquee-group {
     gap: 16px;
   }
-
+  .marquee-track1,
+  .marquee-group1 {
+    gap: 16px;
+  }
   .partner-logo {
     min-width: 140px;
     width: 140px;
