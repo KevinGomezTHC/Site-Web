@@ -3,6 +3,7 @@ body {
     font-family: 'DM Serif Text', serif;
     min-width: 0;
     overflow-x: hidden;
+    touch-action: pan-y;
   }
 
 img, picture, video, canvas, svg {
@@ -222,7 +223,8 @@ img, picture, video, canvas, svg {
   }
   @media (max-width: 768px) {
     body {
-      overflow: auto;
+      overflow-y: auto;
+      overflow-x: hidden;
     }
     .card-front, .card-back {
       padding: 100px;
@@ -480,7 +482,15 @@ img, picture, video, canvas, svg {
   html, body{
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden;}
+    overflow-x: hidden;
+    touch-action: pan-y;
+  }
+  .titulo-sedes {
+    left: 50%;
+    margin: 0;
+    transform: translateX(-50%);
+    width: 260px;
+  }
   .main-header {
     height: auto;
     flex-direction: column;
