@@ -477,6 +477,7 @@ img, picture, video, canvas, svg {
 
 
 @media (max-width: 900px) {
+  html, body{overflow-x: hidden;}
   .main-header {
     height: auto;
     flex-direction: column;

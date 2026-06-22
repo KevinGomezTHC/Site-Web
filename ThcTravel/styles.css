@@ -569,6 +569,7 @@ textarea { min-height: 160px; resize: vertical; }
 
 /* ---- RESPONSIVE ---- */
 @media (max-width: 1024px) {
+  html, body{overflow-x: hidden;}
   .logo-img {
   height: 68px;
   }
