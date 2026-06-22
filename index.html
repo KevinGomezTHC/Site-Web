@@ -3,17 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Hospitality Center</title>
     <link rel="icon" href="/image/icono.png" type="image/png" />
-    <!-- Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
-
-    <!-- SweetAlert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -26,13 +22,19 @@
             <span>THE HOSPITALITY CENTER</span>
         </a>
 
-        <nav class="menu">
-            <div class="menu-item has-dropdown">
+        <!-- Botón hamburguesa (solo visible en móvil via CSS) -->
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="menu" id="mainMenu">
+            <div class="menu-item has-dropdown" id="academyItem">
                 <a href="#programs">Academy</a>
                 <div class="dropdown">
                     <a href="https://thc-academy.onhercules.app/">THC Academy</a>
                     <a href="https://thc-edu.onhercules.app/login">THC EDU</a>
-                    <!--<a href="https://thehospitalitycenterlatam.q10.com">Q10 Academy</a>-->
                 </div>
             </div>
             <a href="#about">Nosotros</a>
@@ -47,7 +49,6 @@
 
     <!-- HERO -->
     <section class="hero">
-
         <div class="overlay"></div>
         <div class="hero-content">
             <div class="hero-side-logo reveal delay-2">
@@ -78,27 +79,22 @@
                 <h2>25+</h2>
                 <p>Soluciones</p>
             </div>
-
             <div class="stat">
                 <h2>98%</h2>
                 <p>Satisfacción</p>
             </div>
-
             <div class="stat">
                 <h2>15+</h2>
                 <p>Países</p>
             </div>
         </div>
-
     </section>
 
 
 
     <section class="mission-vision reveal" id="about">
-
         <div class="section-header reveal">
             <p class="subtitle">NOSOTROS</p>
-
         </div>
 
         <div class="about-text reveal delay-1">
@@ -108,14 +104,11 @@
                 sanitarias y de gestión del talento humano, alineadas con estándares internacionales de calidad,
                 servicio y eficiencia.
                 <br><br>
-
                 Su modelo corporativo integra formación especializada, operación hotelera, procesos de sanitación
                 profesional y selección estratégica de talento, acompañando a hoteles, restaurantes, empresas,
                 instituciones, operadores turísticos, centros corporativos y proyectos de servicios en la optimización
                 de procesos, el fortalecimiento de equipos y la mejora continua de la experiencia del cliente.
             </p>
-
-
         </div>
 
         <div class="mission-grid reveal delay-2">
@@ -134,7 +127,6 @@
                     interacción genere valor, confianza y resultados sostenibles.
                 </p>
             </div>
-
             <div class="mission-card">
                 <h3>Visión</h3>
                 <p>
@@ -149,7 +141,6 @@
                 </p>
             </div>
         </div>
-
     </section>
 
     <section class="partner-marquee reveal">
@@ -176,61 +167,41 @@
                 <div class="partner-logo"><img src="/image/SociosTHC/JMU.png" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/JWMARRIOT.png" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/KNOXVILLE.webp" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/lenoir-rhyne.webp" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/Logo_of_Broward_County,_Florida.svg.png"
-                        alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-American_Airlines_Arena.webp" alt="Socio"
-                        loading="lazy"></div>
+                <div class="partner-logo"><img src="/image/SociosTHC/lenoir-rhyne.webp" alt="Socio" loading="lazy"></div>
+                <div class="partner-logo"><img src="/image/SociosTHC/Logo_of_Broward_County,_Florida.svg.png" alt="Socio" loading="lazy"></div>
+                <div class="partner-logo"><img src="/image/SociosTHC/logo-American_Airlines_Arena.webp" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/logo-aramark.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-barrymore.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-bath-club.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logocasalolamalaga.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-capitalVacations.png" alt="Socio"
-                        loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-centerplate.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-convention center.png" alt="Socio"
-                        loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-deliverlean.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-franismarion.png" alt="Socio" loading="lazy">
-                </div>
+                <div class="partner-logo"><img src="/image/SociosTHC/logo-barrymore.png" alt="Socio" loading="lazy"></div>
+                <div class="partner-logo"><img src="/image/SociosTHC/logo-bath-club.png" alt="Socio" loading="lazy"></div>
+                <div class="partner-logo"><img src="/image/SociosTHC/logocasalolamalaga.png" alt="Socio" loading="lazy"></div>
+                <div class="partner-logo"><img src="/image/SociosTHC/logo-capitalVacations.png" alt="Socio" loading="lazy"></div>
+                <div class="partner-logo"><img src="/image/SociosTHC/logo-centerplate.png" alt="Socio" loading="lazy"></div>
+                <div class="partner-logo"><img src="/image/SociosTHC/logo-convention center.png" alt="Socio" loading="lazy"></div>
+                <div class="partner-logo"><img src="/image/SociosTHC/logo-deliverlean.png" alt="Socio" loading="lazy"></div>
+                <div class="partner-logo"><img src="/image/SociosTHC/logo-franismarion.png" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/logo-hadRock.png" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/logo-hilton.png" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/logo-Holiday.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-Hyatt-Regency.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-Jockey-Club.png" alt="Socio" loading="lazy">
-                </div>
+                <div class="partner-logo"><img src="/image/SociosTHC/logo-Hyatt-Regency.png" alt="Socio" loading="lazy"></div>
+                <div class="partner-logo"><img src="/image/SociosTHC/logo-Jockey-Club.png" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/logo-levy.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/Logo-MarriotBonvoy.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-performance.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-sheraton.png" alt="Socio" loading="lazy">
-                </div>
+                <div class="partner-logo"><img src="/image/SociosTHC/Logo-MarriotBonvoy.png" alt="Socio" loading="lazy"></div>
+                <div class="partner-logo"><img src="/image/SociosTHC/logo-performance.png" alt="Socio" loading="lazy"></div>
+                <div class="partner-logo"><img src="/image/SociosTHC/logo-sheraton.png" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/logo-soodexo.png" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/logo-spoon.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-terranum.png" alt="Socio" loading="lazy">
-                </div>
+                <div class="partner-logo"><img src="/image/SociosTHC/logo-terranum.png" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/logo-western.png" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/logo-westin.png" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/logo-william.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-wilmington.png" alt="Socio" loading="lazy">
-                </div>
+                <div class="partner-logo"><img src="/image/SociosTHC/logo-wilmington.png" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/MARRIOT.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/Mercedes-Benz.png" alt="Socio" loading="lazy">
-                </div>
+                <div class="partner-logo"><img src="/image/SociosTHC/Mercedes-Benz.png" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/MIAMIOPEN.jpg" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/Montreat.png" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/NASCAR.png" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/NATIONS.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/STATE UNIVERSITY.png" alt="Socio" loading="lazy">
-                </div>
+                <div class="partner-logo"><img src="/image/SociosTHC/STATE UNIVERSITY.png" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/WHotels.png" alt="Socio" loading="lazy"></div>
             </div>
             <div class="marquee-group">
@@ -251,67 +222,47 @@
                 <div class="partner-logo"><img src="/image/SociosTHC/JMU.png" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/JWMARRIOT.png" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/KNOXVILLE.webp" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/lenoir-rhyne.webp" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/Logo_of_Broward_County,_Florida.svg.png"
-                        alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-American_Airlines_Arena.webp" alt="Socio"
-                        loading="lazy"></div>
+                <div class="partner-logo"><img src="/image/SociosTHC/lenoir-rhyne.webp" alt="Socio" loading="lazy"></div>
+                <div class="partner-logo"><img src="/image/SociosTHC/Logo_of_Broward_County,_Florida.svg.png" alt="Socio" loading="lazy"></div>
+                <div class="partner-logo"><img src="/image/SociosTHC/logo-American_Airlines_Arena.webp" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/logo-aramark.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-barrymore.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-bath-club.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logocasalolamalaga.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-capitalVacations.png" alt="Socio"
-                        loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-centerplate.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-convention center.png" alt="Socio"
-                        loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-deliverlean.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-franismarion.png" alt="Socio" loading="lazy">
-                </div>
+                <div class="partner-logo"><img src="/image/SociosTHC/logo-barrymore.png" alt="Socio" loading="lazy"></div>
+                <div class="partner-logo"><img src="/image/SociosTHC/logo-bath-club.png" alt="Socio" loading="lazy"></div>
+                <div class="partner-logo"><img src="/image/SociosTHC/logocasalolamalaga.png" alt="Socio" loading="lazy"></div>
+                <div class="partner-logo"><img src="/image/SociosTHC/logo-capitalVacations.png" alt="Socio" loading="lazy"></div>
+                <div class="partner-logo"><img src="/image/SociosTHC/logo-centerplate.png" alt="Socio" loading="lazy"></div>
+                <div class="partner-logo"><img src="/image/SociosTHC/logo-convention center.png" alt="Socio" loading="lazy"></div>
+                <div class="partner-logo"><img src="/image/SociosTHC/logo-deliverlean.png" alt="Socio" loading="lazy"></div>
+                <div class="partner-logo"><img src="/image/SociosTHC/logo-franismarion.png" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/logo-hadRock.png" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/logo-hilton.png" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/logo-Holiday.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-Hyatt-Regency.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-Jockey-Club.png" alt="Socio" loading="lazy">
-                </div>
+                <div class="partner-logo"><img src="/image/SociosTHC/logo-Hyatt-Regency.png" alt="Socio" loading="lazy"></div>
+                <div class="partner-logo"><img src="/image/SociosTHC/logo-Jockey-Club.png" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/logo-levy.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/Logo-MarriotBonvoy.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-performance.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-sheraton.png" alt="Socio" loading="lazy">
-                </div>
+                <div class="partner-logo"><img src="/image/SociosTHC/Logo-MarriotBonvoy.png" alt="Socio" loading="lazy"></div>
+                <div class="partner-logo"><img src="/image/SociosTHC/logo-performance.png" alt="Socio" loading="lazy"></div>
+                <div class="partner-logo"><img src="/image/SociosTHC/logo-sheraton.png" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/logo-soodexo.png" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/logo-spoon.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-terranum.png" alt="Socio" loading="lazy">
-                </div>
+                <div class="partner-logo"><img src="/image/SociosTHC/logo-terranum.png" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/logo-western.png" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/logo-westin.png" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/logo-william.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-wilmington.png" alt="Socio" loading="lazy">
-                </div>
+                <div class="partner-logo"><img src="/image/SociosTHC/logo-wilmington.png" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/MARRIOT.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/Mercedes-Benz.png" alt="Socio" loading="lazy">
-                </div>
+                <div class="partner-logo"><img src="/image/SociosTHC/Mercedes-Benz.png" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/MIAMIOPEN.jpg" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/Montreat.png" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/NASCAR.png" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/NATIONS.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/STATE UNIVERSITY.png" alt="Socio" loading="lazy">
-                </div>
+                <div class="partner-logo"><img src="/image/SociosTHC/STATE UNIVERSITY.png" alt="Socio" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/SociosTHC/WHotels.png" alt="Socio" loading="lazy"></div>
             </div>
         </div>
     </section>
-    <section class="programs" id="programs">
 
+    <section class="programs" id="programs">
         <div class="section-header reveal">
             <p class="subtitle">SERVICIOS</p>
             <h2>Soluciones para empresas y talento</h2>
@@ -322,7 +273,6 @@
         </div>
 
         <div class="grid">
-
             <div class="card reveal delay-1">
                 <div class="badge">Contenido de nuestro servicio</div>
                 <img src="image/ThcAcademy.png" alt="">
@@ -377,6 +327,7 @@
                     </button>
                 </div>
             </div>
+
             <div class="card reveal delay-1">
                 <div class="badge">Contenido de nuestro servicio</div>
                 <img src="image/headHunting.png" alt="">
@@ -394,12 +345,10 @@
                     </button>
                 </div>
             </div>
-
         </div>
-
     </section>
-    <section class="travel-section reveal" id="travel">
 
+    <section class="travel-section reveal" id="travel">
         <div class="travel-content">
             <div class="travel-copy">
                 <p class="subtitle">CONEXIÓN ESTRATÉGICA</p>
@@ -410,6 +359,7 @@
                 <p class="description">
                     Explora el mundo con <strong>THC Travel</strong>. Complementamos nuestros servicios con experiencias
                     corporativas y programas de inmersión para profesionales de hospitalidad.
+                </p>
 
                 <div class="travel-stats">
                     <div>
@@ -436,25 +386,20 @@
                 <p class="travel-card-caption">Más de 3,000 viajeros satisfechos</p>
             </div>
         </div>
-
     </section>
 
 
     <!-- FORMULARIO -->
     <section class="form-section" id="form">
-
         <div class="form-text reveal">
             <p class="subtitle">CONTÁCTANOS</p>
-
             <h2>
                 Consolida tu <br>
                 <span>proyecto</span> hoy
             </h2>
-
             <p class="description">
                 Solicita información sobre nuestros servicios empresariales y programas de academia para tu equipo.
             </p>
-
             <ul>
                 <li>Certificación internacional reconocida</li>
                 <li>Instructores con experiencia global</li>
@@ -465,7 +410,6 @@
 
         <div class="form-box reveal delay-2">
             <h3>Registro de Interés</h3>
-
             <form id="registroForm" action="https://formsubmit.co/ajax/Directoracademico@thehospitalitycenter.net"
                 method="POST" class="contact-form">
                 <input type="hidden" name="_captcha" value="false">
@@ -487,13 +431,11 @@
                 <button type="submit" class="btn btn-primary btn-full">Enviar solicitud</button>
             </form>
         </div>
-
     </section>
 
     <!-- CERTIFICCIONES DE CALIDAD -->
     <section class="partner-marquee reveal">
         <div class="section-header">
-
             <h2>Certificaciones de Calidad</h2>
         </div>
         <div class="marquee-track">
@@ -522,7 +464,6 @@
                 <div class="partner-logo"><img src="/image/CCTHC/nsf.png" alt="Socio 10" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/CCTHC/brcgs.png" alt="Socio 11" loading="lazy"></div>
                 <div class="partner-logo"><img src="/image/CCTHC/SQF.webp" alt="Socio 12" loading="lazy"></div>
-
             </div>
         </div>
     </section>
@@ -531,9 +472,7 @@
     <footer class="main-footer">
         <div class="footer-top">
             <img src="image/thc-logo.png" alt="Logo THC" class="footer-logo">
-            <p class="footer-desc">En The Hospitality Center Latam, Brindamos personal de calidad en Colombia y Costa
-                Rica.
-            </p>
+            <p class="footer-desc">En The Hospitality Center Latam, Brindamos personal de calidad en Colombia y Costa Rica.</p>
         </div>
         <div class="footer-links">
             <div>
@@ -544,12 +483,9 @@
                     <li><span>(+506) 6474 5123</span></li>
                 </ul>
                 <div class="footer-social">
-                    <a href="https://www.tiktok.com/@thehospitality.centercr?_r=1&_t=ZS-96xh3VF3Jhc" title="TikTok"><img
-                            src="image/logos/LogoTiktok.a8b71481-8a43-465d-88d6-e63add92c112" alt="TikTok"></a>
-                    <a href="https://www.instagram.com/thehospitalitycenter.costarica?igsh=MW9oem40bnN1eWZhaA=="
-                        title="Instagram"><img src="image/logos/logoInstagram.png" alt="Instagram"></a>
-                    <a href="https://www.facebook.com/share/1CrFUsfVho/" title="Facebook"><img
-                            src="image/logos/Facebook_Logo_.png" alt="Facebook"></a>
+                    <a href="https://www.tiktok.com/@thehospitality.centercr?_r=1&_t=ZS-96xh3VF3Jhc" title="TikTok"><img src="image/logos/LogoTiktok.a8b71481-8a43-465d-88d6-e63add92c112" alt="TikTok"></a>
+                    <a href="https://www.instagram.com/thehospitalitycenter.costarica?igsh=MW9oem40bnN1eWZhaA==" title="Instagram"><img src="image/logos/logoInstagram.png" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/share/1CrFUsfVho/" title="Facebook"><img src="image/logos/Facebook_Logo_.png" alt="Facebook"></a>
                 </div>
             </div>
             <div>
@@ -561,13 +497,10 @@
                     <li><span>Sede Galerias Cl. 57 #24-8</span></li>
                 </ul>
                 <div class="footer-social">
-                    <a href="https://www.tiktok.com/@thehospitalitycen?lang=es" title="TikTok"><img
-                            src="image/logos/LogoTiktok.a8b71481-8a43-465d-88d6-e63add92c112" alt="TikTok"></a>
-                    <a href="https://www.instagram.com/thehospitalitycentercolombia/" title="Instagram"><img
-                            src="image/logos/logoInstagram.png" alt="Instagram"></a>
+                    <a href="https://www.tiktok.com/@thehospitalitycen?lang=es" title="TikTok"><img src="image/logos/LogoTiktok.a8b71481-8a43-465d-88d6-e63add92c112" alt="TikTok"></a>
+                    <a href="https://www.instagram.com/thehospitalitycentercolombia/" title="Instagram"><img src="image/logos/logoInstagram.png" alt="Instagram"></a>
                     <a href="https://x.com/_THCLATAM" title="X"><img src="image/logos/LogoX.webp" alt="x"></a>
-                    <a href="https://www.facebook.com/photo/?fbid=122191570718755524&set=a.122098842476755524"
-                        title="Facebook"><img src="image/logos/Facebook_Logo_.png" alt="Facebook"></a>
+                    <a href="https://www.facebook.com/photo/?fbid=122191570718755524&set=a.122098842476755524" title="Facebook"><img src="image/logos/Facebook_Logo_.png" alt="Facebook"></a>
                 </div>
             </div>
             <div>
@@ -575,108 +508,111 @@
                 <ul>
                     <li><span>info@thehospitalitycenter-latam.com</span></li>
                     <li><span>(+57) 324 4987120</span></li>
-                    <li><span>Calle 49 # 41-35, segundo piso. Al frente de la Estación Tranvía Pabellón del Agua.</span>
-                    </li>
+                    <li><span>Calle 49 # 41-35, segundo piso. Al frente de la Estación Tranvía Pabellón del Agua.</span></li>
                 </ul>
                 <div class="footer-social">
-                    <a href="https://www.tiktok.com/@thcmedellin?_r=1&_t=ZS-96xgz7kcBzJ" title="TikTok"><img
-                            src="image/logos/LogoTiktok.a8b71481-8a43-465d-88d6-e63add92c112" alt="TikTok"></a>
-                    <a href="https://www.instagram.com/thehospitalitycentercolombia/" title="Instagram"><img
-                            src="image/logos/logoInstagram.png" alt="Instagram"></a>
+                    <a href="https://www.tiktok.com/@thcmedellin?_r=1&_t=ZS-96xgz7kcBzJ" title="TikTok"><img src="image/logos/LogoTiktok.a8b71481-8a43-465d-88d6-e63add92c112" alt="TikTok"></a>
+                    <a href="https://www.instagram.com/thehospitalitycentercolombia/" title="Instagram"><img src="image/logos/logoInstagram.png" alt="Instagram"></a>
                     <a href="https://x.com/_THCLATAM" title="X"><img src="image/logos/LogoX.webp" alt="x"></a>
-                    <a href="https://www.facebook.com/photo/?fbid=122191570718755524&set=a.122098842476755524"
-                        title="Facebook"><img src="image/logos/Facebook_Logo_.png" alt="Facebook"></a>
+                    <a href="https://www.facebook.com/photo/?fbid=122191570718755524&set=a.122098842476755524" title="Facebook"><img src="image/logos/Facebook_Logo_.png" alt="Facebook"></a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- ===================== PANEL DE INFORMACIÓN DE SERVICIO (MODAL) ===================== -->
+    <!-- PANEL DE INFORMACIÓN DE SERVICIO (MODAL) -->
     <div class="service-modal-overlay" id="serviceModalOverlay">
         <div class="service-modal" role="dialog" aria-modal="true" aria-labelledby="serviceModalTitle">
-
-            <button class="service-modal-close" id="serviceModalClose" type="button"
-                aria-label="Cerrar">&times;</button>
-
+            <button class="service-modal-close" id="serviceModalClose" type="button" aria-label="Cerrar">&times;</button>
             <div class="service-modal-grid">
-
-                <!-- Columna izquierda: imagen + info del servicio -->
                 <div class="service-modal-info">
                     <div class="service-modal-image">
                         <img id="serviceModalImage" src="" alt="">
                     </div>
-
                     <p class="service-modal-eyebrow">CONTENIDO DEL SERVICIO</p>
                     <h2 id="serviceModalTitle">Servicio</h2>
                     <p class="service-modal-summary" id="serviceModalSummary"></p>
                     <p class="service-modal-description" id="serviceModalDescription"></p>
                     <p class="service-modal-description1" id="serviceModalDescription1"></p>
-
                     <ul class="service-modal-points" id="serviceModalPoints"></ul>
                 </div>
-
-                <!-- Columna derecha: formulario -->
                 <div class="service-modal-form-box">
                     <h3>Solicita información</h3>
-                    <p class="service-modal-form-sub">Te contactaremos con los detalles de <span
-                            id="serviceModalFormService">este servicio</span>.</p>
-
-                    <form id="serviceForm"
-                        action="https://formsubmit.co/ajax/Directoracademico@thehospitalitycenter.net" method="POST"
-                        class="contact-form">
+                    <p class="service-modal-form-sub">Te contactaremos con los detalles de <span id="serviceModalFormService">este servicio</span>.</p>
+                    <form id="serviceForm" action="https://formsubmit.co/ajax/Directoracademico@thehospitalitycenter.net" method="POST" class="contact-form">
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_subject" value="Nueva solicitud THC - Servicio">
                         <input type="hidden" name="_template" value="table">
                         <input type="hidden" name="programa" id="serviceFormProgram" value="">
-
                         <input type="text" name="nombre" placeholder="Nombre completo*" required>
                         <input type="text" name="pais" placeholder="País*" required>
                         <input type="email" name="correo" placeholder="Correo electrónico*" required>
                         <input type="text" name="telefono" placeholder="Teléfono / WhatsApp*" required>
-
-                        <div class="service-modal-locked-option" id="serviceFormProgramDisplay">
-                            Servicio
-                        </div>
-
+                        <div class="service-modal-locked-option" id="serviceFormProgramDisplay">Servicio</div>
                         <button type="submit" class="btn btn-primary btn-full">Enviar solicitud</button>
                     </form>
                 </div>
-
             </div>
         </div>
     </div>
-    <!-- =================== FIN PANEL DE INFORMACIÓN DE SERVICIO =================== -->
 
-
-    <!-- SCRIPT -->
     <script>
-
-        // NAVBAR
+        // NAVBAR scroll
         const navbar = document.getElementById("navbar");
         window.addEventListener("scroll", () => {
             navbar.classList.toggle("scrolled", window.scrollY > 50);
+        });
+
+        // HAMBURGER MENU
+        const hamburger = document.getElementById("hamburger");
+        const mainMenu = document.getElementById("mainMenu");
+        const academyItem = document.getElementById("academyItem");
+
+        hamburger.addEventListener("click", () => {
+            const isOpen = mainMenu.classList.toggle("open");
+            hamburger.classList.toggle("open", isOpen);
+            hamburger.setAttribute("aria-expanded", isOpen);
+        });
+
+        // Academy dropdown en móvil — tap para abrir/cerrar
+        const academyLink = academyItem.querySelector("a");
+        academyLink.addEventListener("click", (e) => {
+            if (window.innerWidth <= 900) {
+                e.preventDefault();
+                academyItem.classList.toggle("open");
+            }
+        });
+
+        // Cierra menú al hacer clic en un link del menú
+        mainMenu.querySelectorAll("a:not(.menu-item > a)").forEach(link => {
+            link.addEventListener("click", () => {
+                mainMenu.classList.remove("open");
+                hamburger.classList.remove("open");
+                hamburger.setAttribute("aria-expanded", "false");
+            });
         });
 
         // BOTONES HERO
         document.querySelector(".primary").onclick = () => {
             document.querySelector(".programs").scrollIntoView({ behavior: "smooth" });
         };
-
         document.querySelector(".secondary").onclick = () => {
             document.querySelector(".form-section").scrollIntoView({ behavior: "smooth" });
         };
-
         document.querySelector(".nav-btn").onclick = () => {
             document.querySelector(".form-section").scrollIntoView({ behavior: "smooth" });
         };
 
+        // Smooth scroll para links del menú con href=#
         document.querySelectorAll('.menu a[href^="#"]').forEach(link => {
             link.addEventListener('click', event => {
-                event.preventDefault();
-                const target = document.querySelector(link.getAttribute('href'));
-                if (target) {
-                    const offsetPosition = target.getBoundingClientRect().top + window.pageYOffset - 90;
-                    window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                if (window.innerWidth > 900) {
+                    event.preventDefault();
+                    const target = document.querySelector(link.getAttribute('href'));
+                    if (target) {
+                        const offsetPosition = target.getBoundingClientRect().top + window.pageYOffset - 90;
+                        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                    }
                 }
             });
         });
@@ -687,7 +623,8 @@
                 setTimeout(() => el.classList.add("active"), i * 100);
             });
         });
-        // Form submission with SweetAlert2
+
+        // FORMULARIO PRINCIPAL
         const form = document.getElementById('registroForm');
         if (form) {
             form.addEventListener('submit', async (e) => {
@@ -695,7 +632,6 @@
                 const btn = form.querySelector('button[type="submit"]');
                 btn.disabled = true;
                 btn.textContent = 'Enviando...';
-
                 try {
                     const res = await fetch(form.action, {
                         method: 'POST',
@@ -704,24 +640,11 @@
                     });
                     const data = await res.json();
                     if (data.success === 'true' || data.success === true) {
-                        Swal.fire({
-                            icon: 'success',
-                            title: '¡Solicitud enviada!',
-                            text: 'Nos pondremos en contacto contigo pronto.',
-                            confirmButtonColor: '#ff5a3c',
-                            confirmButtonText: 'Entendido'
-                        });
+                        Swal.fire({ icon: 'success', title: '¡Solicitud enviada!', text: 'Nos pondremos en contacto contigo pronto.', confirmButtonColor: '#ff5a3c', confirmButtonText: 'Entendido' });
                         form.reset();
-                    } else {
-                        throw new Error();
-                    }
+                    } else { throw new Error(); }
                 } catch {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Error al enviar',
-                        text: 'Por favor intenta nuevamente o escríbenos directamente.',
-                        confirmButtonColor: '#c9a96e'
-                    });
+                    Swal.fire({ icon: 'error', title: 'Error al enviar', text: 'Por favor intenta nuevamente o escríbenos directamente.', confirmButtonColor: '#c9a96e' });
                 } finally {
                     btn.disabled = false;
                     btn.textContent = 'Enviar solicitud';
@@ -729,21 +652,7 @@
             });
         }
 
-        // Active nav link on scroll
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav-links a');
-        window.addEventListener('scroll', () => {
-            const pos = window.scrollY + 120;
-            sections.forEach(sec => {
-                if (pos >= sec.offsetTop && pos < sec.offsetTop + sec.offsetHeight) {
-                    navLinks.forEach(a => {
-                        a.classList.toggle('active', a.getAttribute('href') === `#${sec.id}`);
-                    });
-                }
-            });
-        }, { passive: true });
-
-        // ===================== PANEL DE INFORMACIÓN DE SERVICIO =====================
+        // MODAL DE SERVICIO
         const serviceModalOverlay = document.getElementById('serviceModalOverlay');
         const serviceModalClose = document.getElementById('serviceModalClose');
         const serviceModalImage = document.getElementById('serviceModalImage');
@@ -764,19 +673,15 @@
             serviceModalSummary.textContent = data.summary;
             serviceModalDescription.textContent = data.description;
             serviceModalDescription1.textContent = data.description1;
-            // Puntos clave
             serviceModalPoints.innerHTML = '';
             (data.points || []).forEach(point => {
                 const li = document.createElement('li');
                 li.textContent = point;
                 serviceModalPoints.appendChild(li);
             });
-
-            // Formulario preseleccionado con este servicio únicamente
             serviceModalFormService.textContent = data.title;
             serviceFormProgram.value = data.title;
             serviceFormProgramDisplay.textContent = data.title;
-
             serviceModalOverlay.classList.add('active');
             document.body.classList.add('modal-open');
         }
@@ -800,16 +705,8 @@
         });
 
         serviceModalClose.addEventListener('click', closeServiceModal);
-
-        serviceModalOverlay.addEventListener('click', (e) => {
-            if (e.target === serviceModalOverlay) closeServiceModal();
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && serviceModalOverlay.classList.contains('active')) {
-                closeServiceModal();
-            }
-        });
+        serviceModalOverlay.addEventListener('click', (e) => { if (e.target === serviceModalOverlay) closeServiceModal(); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && serviceModalOverlay.classList.contains('active')) closeServiceModal(); });
 
         if (serviceForm) {
             serviceForm.addEventListener('submit', async (e) => {
@@ -817,7 +714,6 @@
                 const btn = serviceForm.querySelector('button[type="submit"]');
                 btn.disabled = true;
                 btn.textContent = 'Enviando...';
-
                 try {
                     const res = await fetch(serviceForm.action, {
                         method: 'POST',
@@ -826,34 +722,19 @@
                     });
                     const data = await res.json();
                     if (data.success === 'true' || data.success === true) {
-                        Swal.fire({
-                            icon: 'success',
-                            title: '¡Solicitud enviada!',
-                            text: 'Nos pondremos en contacto contigo pronto.',
-                            confirmButtonColor: '#ff5a3c',
-                            confirmButtonText: 'Entendido'
-                        });
+                        Swal.fire({ icon: 'success', title: '¡Solicitud enviada!', text: 'Nos pondremos en contacto contigo pronto.', confirmButtonColor: '#ff5a3c', confirmButtonText: 'Entendido' });
                         serviceForm.reset();
                         closeServiceModal();
-                    } else {
-                        throw new Error();
-                    }
+                    } else { throw new Error(); }
                 } catch {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Error al enviar',
-                        text: 'Por favor intenta nuevamente o escríbenos directamente.',
-                        confirmButtonColor: '#c9a96e'
-                    });
+                    Swal.fire({ icon: 'error', title: 'Error al enviar', text: 'Por favor intenta nuevamente o escríbenos directamente.', confirmButtonColor: '#c9a96e' });
                 } finally {
                     btn.disabled = false;
                     btn.textContent = 'Enviar solicitud';
                 }
             });
         }
-        // =================== FIN PANEL DE INFORMACIÓN DE SERVICIO ===================
     </script>
 
 </body>
-
 </html>

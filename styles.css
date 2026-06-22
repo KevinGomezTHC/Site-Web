@@ -815,135 +815,12 @@ img, picture, video, canvas, svg {
   font-size: 14px;
 }
 
-@media (max-width: 900px) {
-  .navbar {
-    padding: 18px 20px;
-  }
-
-  .menu {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 14px;
-  }
-
-  .nav-btn {
-    width: 100%;
-    max-width: 260px;
-    margin: 16px auto 0;
-  }
-
-  .hero {
-    padding: 140px 20px 40px;
-  }
-
-  .hero-content {
-    width: 100%;
-    flex-wrap: wrap;
-  }
-
-  .hero h1 {
-    font-size: 48px;
-    text-align: center;
-  }
-
-  .hero p {
-    font-size: 16px;
-    text-align: center;
-    max-width: 100%;
-  }
-
-  .hero-brand {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero-brand h1 {
-    text-align: center;
-    max-width: 100%;
-  }
-
-  .hero-side-logo img {
-    width: 120px;
-  }
-
-  .buttons {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .stats {
-    position: static;
-    transform: none;
-    padding-top: 30px;
-    gap: 20px;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .form-section {
-    flex-direction: column;
-    padding: 60px 20px;
-    gap: 30px;
-  }
-
-  .form-text,
-  .form-box {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .mission-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .partner-marquee {
-    padding: 32px 18px;
-  }
-
-  .marquee-track,
-  .marquee-group {
-    gap: 16px;
-  }
-  .marquee-track1,
-  .marquee-group1 {
-    gap: 16px;
-  }
-  .partner-logo {
-    min-width: 140px;
-    width: 140px;
-    height: 80px;
-  }
-
-  .footer-container {
-    grid-template-columns: 1fr;
-    max-width: 100%;
-  }
-
-  .programs,
-  .travel-section,
-  .form-section,
-  .cert,
-  .testimonials,
-  .footer {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .hero h1 {
-    font-size: 44px;
-  }
-}
-
 .reveal {
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.8s ease;
 }
 
-/* estado visible */
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
@@ -1129,7 +1006,6 @@ body.modal-open {
   grid-template-columns: 1.15fr 0.85fr;
 }
 
-/* Columna izquierda: info */
 .service-modal-info {
   padding: 44px 40px;
 }
@@ -1147,6 +1023,8 @@ body.modal-open {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  image-rendering: auto;
+  image-rendering: smooth;
 }
 
 .service-modal-eyebrow {
@@ -1213,7 +1091,6 @@ body.modal-open {
   background: #ff5a3c;
 }
 
-/* Columna derecha: formulario */
 .service-modal-form-box {
   background: white;
   padding: 44px 36px;
@@ -1288,8 +1165,358 @@ body.modal-open {
   transform: none;
 }
 
-/* Responsive */
+/* =====================================================
+   MOBILE — max-width: 900px
+   ===================================================== */
+
+/* Botón hamburguesa — oculto en desktop */
+.hamburger {
+  display: none;
+}
+
 @media (max-width: 900px) {
+
+  /* ---------- NAVBAR ---------- */
+  .navbar {
+    padding: 16px 20px;
+    flex-wrap: wrap;
+    gap: 0;
+    background: rgba(0,0,0,0.92);
+  }
+
+  .logo {
+    flex: 1;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    z-index: 1100;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .navbar.scrolled .hamburger span {
+    background: #111;
+  }
+
+  .hamburger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    width: 100%;
+    padding: 12px 0 8px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    margin-top: 12px;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .menu a {
+    margin: 0;
+    padding: 12px 4px;
+    font-size: 15px;
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .navbar.scrolled .menu {
+    border-top-color: rgba(0,0,0,0.1);
+  }
+
+  .navbar.scrolled .menu a {
+    border-bottom-color: rgba(0,0,0,0.07);
+  }
+
+  .menu-item .dropdown {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    background: rgba(255,255,255,0.06);
+    border-radius: 10px;
+    padding: 4px 0 4px 12px;
+    margin: 4px 0 8px;
+    display: none;
+  }
+
+  .menu-item.open .dropdown {
+    display: block;
+  }
+
+  .menu-item .dropdown a {
+    color: rgba(255,255,255,0.85);
+    padding: 10px 12px;
+    font-size: 14px;
+    border-bottom: none;
+    margin: 0;
+  }
+
+  .navbar.scrolled .menu-item .dropdown a {
+    color: #333;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    padding: 120px 20px 100px;
+    align-items: flex-start;
+    min-height: 100svh;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+  }
+
+  .hero-side-logo {
+    width: 110px;
+    margin: 0 auto;
+  }
+
+  .hero-copy {
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero-pretitle {
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  .hero-brand h1 {
+    font-size: 42px;
+    line-height: 1.05;
+  }
+
+  .hero p {
+    font-size: 15px;
+    margin-top: 16px;
+    max-width: 100%;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .buttons .primary,
+  .buttons .secondary {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    padding: 15px 24px;
+    font-size: 15px;
+  }
+
+  /* ---------- STATS ---------- */
+  .stats {
+    position: static;
+    transform: none;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    background: rgba(0,0,0,0.55);
+    padding: 20px 10px;
+    margin-top: 32px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .stat {
+    flex: 1;
+    padding: 0 8px;
+    min-width: 0;
+    border-right: 1px solid rgba(255,255,255,0.15);
+  }
+
+  .stat:last-child {
+    border-right: none;
+  }
+
+  .stat h2 {
+    font-size: 28px;
+  }
+
+  .stat p {
+    font-size: 12px;
+  }
+
+  /* ---------- NOSOTROS ---------- */
+  .mission-vision {
+    padding: 60px 20px;
+  }
+
+  .about-text {
+    margin-bottom: 28px;
+  }
+
+  .about-text p {
+    font-size: 15px;
+  }
+
+  .mission-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .mission-card {
+    padding: 28px 22px;
+    border-radius: 20px;
+  }
+
+  /* ---------- MARQUEE ---------- */
+  .partner-marquee {
+    padding: 40px 0;
+  }
+
+  .partner-marquee .section-header {
+    padding: 0 20px;
+  }
+
+  .marquee-track,
+  .marquee-track1,
+  .marquee-group,
+  .marquee-group1 {
+    gap: 14px;
+  }
+
+  .partner-logo {
+    min-width: 130px;
+    width: 130px;
+    height: 72px;
+    border-radius: 16px;
+    padding: 10px 12px;
+  }
+
+  /* ---------- SERVICIOS ---------- */
+  .programs {
+    padding: 60px 20px;
+    scroll-margin-top: 70px;
+  }
+
+  .programs h2 {
+    font-size: 32px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 32px;
+  }
+
+  .card img {
+    height: 180px;
+  }
+
+  /* ---------- THC TRAVEL ---------- */
+  .travel-section {
+    padding: 60px 20px;
+  }
+
+  .travel-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .travel-copy h2 {
+    font-size: 36px;
+  }
+
+  .travel-copy .description {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  .travel-stats {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .travel-stats div {
+    min-width: 80px;
+  }
+
+  .travel-stats strong {
+    font-size: 28px;
+  }
+
+  .travel-copy button {
+    width: 100%;
+    max-width: 320px;
+    margin-top: 24px;
+  }
+
+  .travel-card {
+    padding: 24px 20px;
+  }
+
+  /* ---------- FORMULARIO ---------- */
+  .form-section {
+    flex-direction: column;
+    padding: 60px 20px;
+    gap: 32px;
+    align-items: stretch;
+  }
+
+  .form-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .form-text h2 {
+    font-size: 32px;
+  }
+
+  .form-text ul {
+    text-align: left;
+    display: inline-block;
+  }
+
+  .form-box {
+    width: 100%;
+    max-width: 100%;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  }
+
+  /* ---------- MODAL ---------- */
   .service-modal-overlay {
     padding: 0;
     align-items: flex-end;
@@ -1306,20 +1533,58 @@ body.modal-open {
   }
 
   .service-modal-info {
-    padding: 36px 24px 24px;
+    padding: 36px 20px 20px;
   }
 
   .service-modal-image {
-    height: 180px;
+    height: 170px;
   }
 
   .service-modal-info h2 {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .service-modal-form-box {
     border-left: none;
     border-top: 1px solid #ece8e4;
-    padding: 28px 24px 36px;
+    padding: 24px 20px 36px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .main-footer {
+    padding: 36px 20px 24px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+    padding: 0 4px;
+  }
+
+  .footer-links > div {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .footer-top {
+    margin-bottom: 24px;
+  }
+}
+
+/* Extra pequeño < 390px */
+@media (max-width: 390px) {
+  .hero-brand h1 {
+    font-size: 34px;
+  }
+
+  .stat h2 {
+    font-size: 22px;
+  }
+
+  .partner-logo {
+    min-width: 110px;
+    width: 110px;
+    height: 64px;
   }
 }
