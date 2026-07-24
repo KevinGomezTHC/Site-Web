@@ -10,7 +10,7 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="stylesheet" type="text/css" href="stylesV3.css">
+    <link rel="stylesheet" type="text/css" href="stylesV4.css">
 </head>
 
 <body>
@@ -413,7 +413,31 @@
                         <input type="text" name="nombre" placeholder="Nombre completo*" required>
                         <input type="email" name="correo" placeholder="Correo electrónico*" required>
                         <input type="text" name="telefono" placeholder="Teléfono / WhatsApp*" required>
-                        <input type="text" name="pais" placeholder="País desde donde solicitas el empleo*" required>
+
+                        <select name="ciudad" class="cv-cargo-select" required>
+                            <option value="">Ciudad*</option>
+                            <optgroup label="Colombia">
+                                <option>Bogotá</option>
+                                <option>Medellín</option>
+                                <option>Cali</option>
+                                <option>Cartagena</option>
+                                <option>Barranquilla</option>
+                            </optgroup>
+                            <optgroup label="Costa Rica">
+                                <option>San José</option>
+                                <option>Escazú</option>
+                                <option>Heredia</option>
+                                <option>Alajuela</option>
+                            </optgroup>
+                            <optgroup label="El Salvador">
+                                <option>San Salvador</option>
+                                <option>Santa Tecla</option>
+                                <option>Soyapango</option>
+                                <option>Antiguo Cuscatlán</option>
+                            </optgroup>
+                            <option value="Otra ciudad">Otra ciudad</option>
+                        </select>
+
                         <select name="cargo" class="cv-cargo-select">
                             <option value="">Cargo de interés</option>
                             <optgroup label="FRONT OFFICE Y RECEPCIÓN">
