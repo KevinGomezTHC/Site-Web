@@ -924,6 +924,154 @@ img, picture, video, canvas, svg {
 }
 
 /* ========================================================= */
+/* TRABAJA CON NOSOTROS — HOJA DE VIDA                        */
+/* ========================================================= */
+
+.careers-section {
+  padding: 100px 80px;
+  background: #fff;
+  scroll-margin-top: 90px;
+}
+
+.careers-content {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.careers-image {
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(15, 15, 15, 0.1);
+}
+
+.careers-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.careers-copy {
+  text-align: left;
+}
+
+.careers-copy h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  line-height: 1.05;
+  margin: 16px 0 20px;
+}
+
+.careers-copy h2 span {
+  color: #ff5a3c;
+  font-style: italic;
+}
+
+.careers-copy .description {
+  max-width: 560px;
+  color: #555;
+  margin-bottom: 32px;
+}
+
+.careers-form-box {
+  background: #faf8f5;
+  border: 1px solid #ece8e4;
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 18px 40px rgba(15, 15, 15, 0.05);
+}
+
+.careers-form-box h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.careers-form-box .contact-form input[type="text"],
+.careers-form-box .contact-form input[type="email"] {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+
+.cv-cargo-select {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #1a1a1a;
+  background: white;
+  cursor: pointer;
+}
+
+.cv-upload {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px dashed #ff5a3c;
+  background: rgba(255, 90, 60, 0.06);
+  color: #ff5a3c;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cv-upload:hover {
+  background: rgba(255, 90, 60, 0.12);
+}
+
+.cv-upload-icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.cv-upload-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.careers-form-box button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  background: #ff5a3c;
+  border: none;
+  color: white;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.careers-form-box button[type="submit"]:hover {
+  background: #e6492e;
+  transform: translateY(-1px);
+}
+
+.careers-form-box button[type="submit"]:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ========================================================= */
 /* PANEL DE INFORMACIÓN DE SERVICIO (MODAL)                   */
 /* ========================================================= */
 
@@ -1459,6 +1607,73 @@ body.modal-open {
 
   .card img {
     height: 180px;
+  }
+
+  /* ---------- TRABAJA CON NOSOTROS ---------- */
+  .careers-section {
+    padding: 60px 20px;
+  }
+
+  .careers-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .careers-image {
+    order: -1;
+    min-height: 280px;
+    border-radius: 22px;
+  }
+
+  .careers-copy {
+    text-align: center;
+  }
+
+  .careers-copy h2 {
+    font-size: 34px;
+  }
+
+  .careers-copy .description {
+    max-width: 100%;
+    font-size: 15px;
+  }
+
+  .careers-form-box {
+    padding: 24px 20px;
+    text-align: left;
+  }
+
+  .careers-form-box h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .panel-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-title {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .panel-label {
+    margin: 18px 0 10px;
+  }
+
+  .cv-upload {
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+
+  .upload-note {
+    font-size: 12px;
+    margin-bottom: 18px;
+  }
+
+  .careers-form-box button[type="submit"] {
+    padding: 14px;
+    font-size: 15px;
   }
 
   /* ---------- THC TRAVEL ---------- */

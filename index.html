@@ -384,7 +384,136 @@
             </div>
         </div>
     </section>
+    <section class="careers-section reveal" id="careers">
+        <div class="careers-content">
+            <div class="careers-image">
+                <img src="image/HojaDeVida.jpeg" alt="Trabaja con nosotros en The Hospitality Center">
+            </div>
 
+            <div class="careers-copy">
+                <p class="subtitle">TALENTO HUMANO</p>
+                <h2>
+                    Trabaja <br>
+                    <span>con nosotros</span>
+                </h2>
+                <p class="description">
+                    ¿Quieres ser parte de The Hospitality Center? Anexa tu hoja de vida y nuestro equipo de
+                    talento humano se pondrá en contacto contigo para explorar las oportunidades disponibles.
+                </p>
+
+                <div class="careers-form-box">
+                    <h3>Anexa tu hoja de vida</h3>
+                    <form id="cvForm" action="https://formsubmit.co/Directoracademico@thehospitalitycenter.net"
+                        method="POST" enctype="multipart/form-data" class="contact-form">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_subject" value="Nueva hoja de vida - THC">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="" id="cvFormNext">
+
+                        <input type="text" name="nombre" placeholder="Nombre completo*" required>
+                        <input type="email" name="correo" placeholder="Correo electrónico*" required>
+                        <input type="text" name="telefono" placeholder="Teléfono / WhatsApp*" required>
+                        <input type="text" name="pais" placeholder="País desde donde solicitas el empleo*" required>
+                        <select name="cargo" class="cv-cargo-select">
+                            <option value="">Cargo de interés</option>
+                            <optgroup label="FRONT OFFICE Y RECEPCIÓN">
+                                <option>Recepcionista</option>
+                                <option>Auxiliar de Recepción</option>
+                                <option>Agente de Reservas</option>
+                                <option>Auditor Nocturno</option>
+                                <option>Botones</option>
+                                <option>Concierge</option>
+                                <option>Portero</option>
+                                <option>Telefonista</option>
+                                <option>Anfitrión de Hotel</option>
+                            </optgroup>
+                            <optgroup label="HOUSEKEEPING Y LIMPIEZA">
+                                <option>Ama de Llaves</option>
+                                <option>Supervisora de Habitaciones</option>
+                                <option>Camarera de Habitaciones</option>
+                                <option>Auxiliar de Housekeeping</option>
+                                <option>Operario de Limpieza</option>
+                                <option>Auxiliar de Áreas Públicas</option>
+                                <option>Auxiliar de Lavandería</option>
+                                <option>Operario de Sanitización</option>
+                            </optgroup>
+                            <optgroup label="ALIMENTOS Y BEBIDAS">
+                                <option>Mesero</option>
+                                <option>Capitán de Servicio</option>
+                                <option>Bartender</option>
+                                <option>Barista</option>
+                                <option>Host o Anfitrión</option>
+                                <option>Cajero de Restaurante</option>
+                                <option>Sommelier</option>
+                                <option>Auxiliar de Mesa y Bar</option>
+                            </optgroup>
+                            <optgroup label="COCINA">
+                                <option>Chef</option>
+                                <option>Chef Ejecutivo</option>
+                                <option>Jefe de Cocina</option>
+                                <option>Cocinero</option>
+                                <option>Auxiliar de Cocina</option>
+                                <option>Panadero</option>
+                                <option>Pastelero</option>
+                                <option>Steward</option>
+                                <option>Parrillero</option>
+                                <option>Pizzero</option>
+                            </optgroup>
+                            <optgroup label="ADMINISTRATIVO Y COMERCIAL">
+                                <option>Ejecutivo Comercial</option>
+                                <option>Gestor Comercial</option>
+                                <option>Coordinador Comercial</option>
+                                <option>Auxiliar Administrativo</option>
+                                <option>Asistente Administrativo</option>
+                                <option>Coordinador de Talento Humano</option>
+                                <option>Analista de Compras</option>
+                                <option>Community Manager</option>
+                                <option>Coordinador de Eventos</option>
+                                <option>Auxiliar Contable</option>
+                            </optgroup>
+                            <optgroup label="OPERACIÓN HOTELERA">
+                                <option>Gerente de Hotel</option>
+                                <option>Gerente de Restaurante</option>
+                                <option>Supervisor de Operaciones</option>
+                                <option>Coordinador de Operaciones</option>
+                                <option>Coordinador de Mantenimiento</option>
+                                <option>Técnico de Mantenimiento</option>
+                                <option>Auxiliar de Mantenimiento</option>
+                                <option>Coordinador de Seguridad</option>
+                                <option>Guarda de Seguridad</option>
+                                <option>Operador Hotelero</option>
+                            </optgroup>
+                            <optgroup label="EVENTOS Y TURISMO">
+                                <option>Coordinador de Eventos</option>
+                                <option>Auxiliar de Eventos</option>
+                                <option>Ejecutivo de Banquetes</option>
+                                <option>Coordinador de Banquetes</option>
+                                <option>Guía Turístico</option>
+                                <option>Agente de Viajes</option>
+                                <option>Coordinador de Turismo</option>
+                                <option>Recreacionista</option>
+                            </optgroup>
+                            <optgroup label="OTRA OPCIÓN">
+                                <option>Otro cargo</option>
+                                <option>No tengo un cargo definido</option>
+                                <option>Prácticas o pasantías</option>
+                            </optgroup>
+                        </select>
+
+                        
+
+                        <label class="cv-upload" for="cvFile">
+                            <span class="cv-upload-icon">⬆</span>
+                            <span class="cv-upload-text" id="cvFileName">Adjuntar hoja de vida (PDF o Word)*</span>
+                        </label>
+                        <input type="file" id="cvFile" name="hojaDeVida" accept=".pdf,.doc,.docx" required hidden>
+
+                        <button type="submit" class="btn btn-primary btn-full">Enviar hoja de vida</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="travel-section reveal" id="travel">
         <div class="travel-content">
             <div class="travel-copy">
@@ -703,6 +832,50 @@
                 }
             });
         }
+
+        // FORMULARIO HOJA DE VIDA
+        const cvForm = document.getElementById('cvForm');
+        const cvFileInput = document.getElementById('cvFile');
+        const cvFileName = document.getElementById('cvFileName');
+        const cvFormNext = document.getElementById('cvFormNext');
+
+        if (cvFileInput) {
+            cvFileInput.addEventListener('change', () => {
+                if (cvFileInput.files && cvFileInput.files.length > 0) {
+                    cvFileName.textContent = cvFileInput.files[0].name;
+                } else {
+                    cvFileName.textContent = 'Adjuntar hoja de vida (PDF o Word)*';
+                }
+            });
+        }
+
+        // El envío de este formulario NO usa fetch/AJAX: FormSubmit solo procesa
+        // los archivos adjuntos cuando el navegador hace un POST normal
+        // (multipart/form-data) al endpoint sin "/ajax/". Por eso dejamos que
+        // el formulario navegue de forma normal y usamos "_next" para volver
+        // a esta misma página, donde detectamos el regreso y mostramos el aviso.
+        if (cvForm && cvFormNext) {
+            const returnUrl = window.location.origin + window.location.pathname + '?hoja_enviada=1#careers';
+            cvFormNext.value = returnUrl;
+
+            cvForm.addEventListener('submit', () => {
+                const btn = cvForm.querySelector('button[type="submit"]');
+                btn.disabled = true;
+                btn.textContent = 'Enviando...';
+            });
+        }
+
+        // Si venimos de regreso de un envío exitoso de hoja de vida, mostramos el aviso
+        (function checkCvSubmission() {
+            const params = new URLSearchParams(window.location.search);
+            if (params.get('hoja_enviada') === '1') {
+                Swal.fire({ icon: 'success', title: '¡Hoja de vida enviada!', text: 'Nos pondremos en contacto contigo pronto.', confirmButtonColor: '#ff5a3c', confirmButtonText: 'Entendido' });
+                params.delete('hoja_enviada');
+                const cleanQuery = params.toString();
+                const cleanUrl = window.location.pathname + (cleanQuery ? '?' + cleanQuery : '') + '#careers';
+                window.history.replaceState({}, document.title, cleanUrl);
+            }
+        })();
 
         // MODAL DE SERVICIO
         const serviceModalOverlay = document.getElementById('serviceModalOverlay');
