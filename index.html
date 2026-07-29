@@ -48,8 +48,18 @@
 
 
     <!-- HERO -->
-    <section class="hero">
-        <div class="overlay"></div>
+<section class="hero">
+    <div class="hero-media">
+        <video class="hero-video" id="heroVideo" autoplay playsinline
+               poster="image/home.jpg">
+            <source src="image/home.mp4" type="video/mp4">
+        </video>
+        <img class="hero-fallback-img" id="heroFallbackImg" src="image/home.jpg" alt="">
+    </div>
+    <div class="overlay"></div>
+    <button class="hero-mute-btn" id="heroMuteBtn" type="button" aria-label="Silenciar video" title="Silenciar video">
+        �
+    </button>
         <div class="hero-content">
             <div class="hero-side-logo reveal delay-2">
                 <img src="image/thc-logo.png" alt="THC Logo">
@@ -797,6 +807,18 @@
             });
         });
 
+        const heroMuteBtn = document.getElementById("heroMuteBtn");
+        const heroVideo = document.querySelector(".hero-video");
+
+        if (heroMuteBtn && heroVideo) {
+            heroMuteBtn.addEventListener("click", () => {
+                heroVideo.muted = !heroVideo.muted;
+                heroMuteBtn.textContent = heroVideo.muted ? "🔇" : "🔊";
+                heroMuteBtn.setAttribute("aria-label", heroVideo.muted ? "Silenciar video" : "Activar audio");
+                heroMuteBtn.title = heroVideo.muted ? "Silenciar video" : "Activar audio";
+            });
+        }
+
         // BOTONES HERO
         document.querySelector(".primary").onclick = () => {
             document.querySelector(".programs").scrollIntoView({ behavior: "smooth" });
@@ -983,6 +1005,16 @@
                 }
             });
         }
+        const heroVideoEl = document.getElementById('heroVideo');
+const heroSection = document.querySelector('.hero');
+const heroFallbackImg = document.getElementById('heroFallbackImg');
+
+if (heroVideoEl && heroSection) {
+    heroVideoEl.addEventListener('ended', () => {
+        heroSection.classList.add('video-ended');
+        if (heroFallbackImg) heroFallbackImg.classList.add('show');
+    });
+}
     </script>
 
 </body>
