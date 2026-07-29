@@ -52,7 +52,7 @@
     <div class="hero-media">
         <video class="hero-video"
        id="heroVideo"
-       muted
+       autoplay
        playsinline
        preload="none"
        poster="image/home.jpg">
@@ -1101,9 +1101,24 @@
         // el estado "video terminado" (imagen de fondo + contenido visible).
         // En desktop, se reproduce una vez y al terminar pasa a ese mismo estado.
         const heroVideoEl = document.getElementById('heroVideo');
+        const heroMuteBtn = document.getElementById('heroMuteBtn');
         const heroSection = document.querySelector('.hero');
         const heroFallbackImg = document.getElementById('heroFallbackImg');
         const isMobileHero = window.matchMedia('(max-width: 900px)').matches;
+
+        function updateHeroMuteButton() {
+            if (!heroMuteBtn || !heroVideoEl) return;
+            const isMuted = heroVideoEl.muted;
+            heroMuteBtn.textContent = isMuted ? '🔈' : '🔊';
+            heroMuteBtn.setAttribute('aria-label', isMuted ? 'Activar sonido' : 'Silenciar video');
+            heroMuteBtn.title = isMuted ? 'Activar sonido' : 'Silenciar video';
+        }
+
+        function toggleHeroMute() {
+            if (!heroVideoEl) return;
+            heroVideoEl.muted = !heroVideoEl.muted;
+            updateHeroMuteButton();
+        }
 
         function showHeroEndedState() {
             heroSection.classList.add('video-ended');
@@ -1112,6 +1127,12 @@
         }
 
         if (heroVideoEl && heroSection) {
+            heroVideoEl.volume = 1;
+            heroVideoEl.muted = false;
+            updateHeroMuteButton();
+            if (heroMuteBtn) {
+                heroMuteBtn.addEventListener('click', toggleHeroMute);
+            }
             if (isMobileHero) {
                 // En móvil: no cargamos ni reproducimos el video, va directo al estado final
                 heroVideoEl.pause();
