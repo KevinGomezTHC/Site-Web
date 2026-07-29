@@ -1242,21 +1242,109 @@ img, picture, video, canvas, svg {
 
 @media (max-width: 980px) {
   .careers-section {
-    padding: 80px 24px;
+    padding: 70px 20px 60px;
+  }
+
+  .careers-shell {
+    width: 100%;
+    padding: 0;
+  }
+
+  .careers-toggle {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+
+  .careers-switch {
+    flex: 1 1 45%;
+    min-width: 130px;
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  .careers-card {
+    min-height: auto;
+    max-width: 100%;
   }
 
   .careers-card-face {
+    position: relative;
+    inset: auto;
+    display: grid;
     grid-template-columns: 1fr;
-    gap: 24px;
-    padding: 18px;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 24px;
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+    pointer-events: auto;
+    box-shadow: 0 18px 40px rgba(15, 15, 15, 0.08);
+  }
+
+  .careers-card-face:not(.active) {
+    display: none;
+  }
+
+  .careers-card-media {
+    max-height: none;
+    min-height: 320px;
   }
 
   .careers-card-copy {
     padding: 0;
   }
 
-  .careers-card {
-    min-height: auto;
+  .careers-card-copy .subtitle {
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+  }
+
+  .careers-card-copy h2 {
+    font-size: 38px;
+    margin-bottom: 18px;
+  }
+
+  .careers-card-copy .description {
+    margin-bottom: 20px;
+  }
+
+  .careers-form-box {
+    padding: 20px;
+  }
+
+  .careers-card-face.active {
+    display: grid;
+  }
+}
+
+@media (max-width: 660px) {
+  .hero-content {
+    padding: 100px 16px 30px;
+    gap: 24px;
+  }
+
+  .hero-brand h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .careers-switch {
+    flex: 1 1 100%;
+  }
+
+  .careers-card-copy h2 {
+    font-size: 32px;
+  }
+
+  .careers-card-media {
+    min-height: 260px;
   }
 }
 
@@ -2344,8 +2432,21 @@ body.modal-open {
   }
 
   .careers-card-face {
+    position: relative;
+    inset: auto;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 18px;
-    padding: 20px;
+    padding: 22px;
+    border-radius: 24px;
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .careers-card-face:not(.active) {
+    display: none;
   }
 
   .careers-card-media {
@@ -2361,10 +2462,12 @@ body.modal-open {
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
   }
 
   .careers-switch {
-    flex: 1 1 auto;
+    flex: 1 1 100%;
     min-width: 140px;
     text-align: center;
   }
