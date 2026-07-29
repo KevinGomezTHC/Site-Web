@@ -2293,3 +2293,79 @@ body.modal-open {
     display: none;
   }
 }
+@media (max-width: 900px) {
+  .navbar {
+    padding: 18px 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 14px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    padding: 120px 20px 40px;
+    gap: 28px;
+  }
+
+  .hero-side-logo {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .hero-brand h1 {
+    font-size: 42px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  .hero-mute-btn {
+    right: 16px;
+    top: 16px;
+    bottom: auto;
+  }
+
+  .stats {
+    display: none !important;
+  }
+
+  .careers-shell {
+    width: 100%;
+  }
+
+  .careers-card-face {
+    gap: 18px;
+    padding: 20px;
+  }
+
+  .careers-card-media {
+    max-height: none;
+    min-height: 300px;
+  }
+
+  .careers-card-copy h2 {
+    font-size: 38px;
+  }
+
+  .careers-toggle {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .careers-switch {
+    flex: 1 1 auto;
+    min-width: 140px;
+    text-align: center;
+  }
+}
