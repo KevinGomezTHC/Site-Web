@@ -52,9 +52,9 @@
     <div class="hero-media">
         <video class="hero-video"
        id="heroVideo"
-       autoplay
        muted
        playsinline
+       preload="none"
        poster="image/home.jpg">
     <source src="image/VIDEOTHC2026.mp4" type="video/mp4">
 </video>
@@ -399,155 +399,204 @@
         </div>
     </section>
     <section class="careers-section reveal" id="careers">
-        <div class="careers-content">
-            <div class="careers-image">
-                <img src="image/HojaDeVida.jpeg" alt="Trabaja con nosotros en The Hospitality Center">
+        <div class="careers-shell">
+            <div class="careers-toggle" role="tablist" aria-label="Opciones de talento humano">
+                <button class="careers-switch active" type="button" data-mode="candidate" aria-pressed="true">
+                    Trabaja con nosotros
+                </button>
+                <button class="careers-switch" type="button" data-mode="company" aria-pressed="false">
+                    Buscas personal?
+                </button>
             </div>
 
-            <div class="careers-copy">
-                <p class="subtitle">TALENTO HUMANO</p>
-                <h2>
-                    Trabaja <br>
-                    <span>con nosotros</span>
-                </h2>
-                <p class="description">
-                    ¿Quieres ser parte de The Hospitality Center? Anexa tu hoja de vida y nuestro equipo de
-                    talento humano se pondrá en contacto contigo para explorar las oportunidades disponibles.
-                </p>
+            <div class="careers-stage">
+                <div class="careers-card" id="careersCard">
+                    <div class="careers-card-face careers-card-front active">
+                        <div class="careers-card-media">
+                            <img src="image/HojaDeVida.jpeg" alt="Trabaja con nosotros en The Hospitality Center">
+                        </div>
 
-                <div class="careers-form-box">
-                    <h3>Anexa tu hoja de vida</h3>
-                    <form id="cvForm" action="https://formsubmit.co/Directoracademico@thehospitalitycenter.net"
-                        method="POST" enctype="multipart/form-data" class="contact-form">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_subject" value="Nueva hoja de vida - THC">
-                        <input type="hidden" name="_template" value="table">
-                        <input type="hidden" name="_next" value="" id="cvFormNext">
+                        <div class="careers-card-copy">
+                            <p class="subtitle">TALENTO HUMANO</p>
+                            <h2>
+                                Trabaja <br>
+                                <span>con nosotros</span>
+                            </h2>
+                            <p class="description">
+                                ¿Quieres ser parte de The Hospitality Center? Anexa tu hoja de vida y nuestro equipo te
+                                contactará con las oportunidades disponibles.
+                            </p>
 
-                        <input type="text" name="nombre" placeholder="Nombre completo*" required>
-                        <input type="email" name="correo" placeholder="Correo electrónico*" required>
-                        <input type="text" name="telefono" placeholder="Teléfono / WhatsApp*" required>
+                            <div class="careers-form-box">
+                                <h3>Anexa tu hoja de vida</h3>
+                                <form id="cvForm" action="https://formsubmit.co/Directoracademico@thehospitalitycenter.net"
+                                    method="POST" enctype="multipart/form-data" class="contact-form">
+                                    <input type="hidden" name="_captcha" value="false">
+                                    <input type="hidden" name="_subject" value="Nueva hoja de vida - THC">
+                                    <input type="hidden" name="_template" value="table">
+                                    <input type="hidden" name="_next" value="" id="cvFormNext">
 
-                        <select name="ciudad" class="cv-cargo-select" required>
-                            <option value="">Ciudad*</option>
-                            <optgroup label="Colombia">
-                                <option>Bogotá</option>
-                                <option>Medellín</option>
-                                <option>Cali</option>
-                                <option>Cartagena</option>
-                                <option>Barranquilla</option>
-                            </optgroup>
-                            <optgroup label="Costa Rica">
-                                <option>San José</option>
-                                <option>Escazú</option>
-                                <option>Heredia</option>
-                                <option>Alajuela</option>
-                            </optgroup>
-                            <optgroup label="El Salvador">
-                                <option>San Salvador</option>
-                                <option>Santa Tecla</option>
-                                <option>Soyapango</option>
-                                <option>Antiguo Cuscatlán</option>
-                            </optgroup>
-                            <option value="Otra ciudad">Otra ciudad</option>
-                        </select>
+                                    <input type="text" name="nombre" placeholder="Nombre completo*" required>
+                                    <input type="email" name="correo" placeholder="Correo electrónico*" required>
+                                    <input type="text" name="telefono" placeholder="Teléfono / WhatsApp*" required>
 
-                        <select name="cargo" class="cv-cargo-select">
-                            <option value="">Cargo de interés</option>
-                            <optgroup label="FRONT OFFICE Y RECEPCIÓN">
-                                <option>Recepcionista</option>
-                                <option>Auxiliar de Recepción</option>
-                                <option>Agente de Reservas</option>
-                                <option>Auditor Nocturno</option>
-                                <option>Botones</option>
-                                <option>Concierge</option>
-                                <option>Portero</option>
-                                <option>Telefonista</option>
-                                <option>Anfitrión de Hotel</option>
-                            </optgroup>
-                            <optgroup label="HOUSEKEEPING Y LIMPIEZA">
-                                <option>Ama de Llaves</option>
-                                <option>Supervisora de Habitaciones</option>
-                                <option>Camarera de Habitaciones</option>
-                                <option>Auxiliar de Housekeeping</option>
-                                <option>Operario de Limpieza</option>
-                                <option>Auxiliar de Áreas Públicas</option>
-                                <option>Auxiliar de Lavandería</option>
-                                <option>Operario de Sanitización</option>
-                            </optgroup>
-                            <optgroup label="ALIMENTOS Y BEBIDAS">
-                                <option>Mesero</option>
-                                <option>Capitán de Servicio</option>
-                                <option>Bartender</option>
-                                <option>Barista</option>
-                                <option>Host o Anfitrión</option>
-                                <option>Cajero de Restaurante</option>
-                                <option>Sommelier</option>
-                                <option>Auxiliar de Mesa y Bar</option>
-                            </optgroup>
-                            <optgroup label="COCINA">
-                                <option>Chef</option>
-                                <option>Chef Ejecutivo</option>
-                                <option>Jefe de Cocina</option>
-                                <option>Cocinero</option>
-                                <option>Auxiliar de Cocina</option>
-                                <option>Panadero</option>
-                                <option>Pastelero</option>
-                                <option>Steward</option>
-                                <option>Parrillero</option>
-                                <option>Pizzero</option>
-                            </optgroup>
-                            <optgroup label="ADMINISTRATIVO Y COMERCIAL">
-                                <option>Ejecutivo Comercial</option>
-                                <option>Gestor Comercial</option>
-                                <option>Coordinador Comercial</option>
-                                <option>Auxiliar Administrativo</option>
-                                <option>Asistente Administrativo</option>
-                                <option>Coordinador de Talento Humano</option>
-                                <option>Analista de Compras</option>
-                                <option>Community Manager</option>
-                                <option>Coordinador de Eventos</option>
-                                <option>Auxiliar Contable</option>
-                            </optgroup>
-                            <optgroup label="OPERACIÓN HOTELERA">
-                                <option>Gerente de Hotel</option>
-                                <option>Gerente de Restaurante</option>
-                                <option>Supervisor de Operaciones</option>
-                                <option>Coordinador de Operaciones</option>
-                                <option>Coordinador de Mantenimiento</option>
-                                <option>Técnico de Mantenimiento</option>
-                                <option>Auxiliar de Mantenimiento</option>
-                                <option>Coordinador de Seguridad</option>
-                                <option>Guarda de Seguridad</option>
-                                <option>Operador Hotelero</option>
-                            </optgroup>
-                            <optgroup label="EVENTOS Y TURISMO">
-                                <option>Coordinador de Eventos</option>
-                                <option>Auxiliar de Eventos</option>
-                                <option>Ejecutivo de Banquetes</option>
-                                <option>Coordinador de Banquetes</option>
-                                <option>Guía Turístico</option>
-                                <option>Agente de Viajes</option>
-                                <option>Coordinador de Turismo</option>
-                                <option>Recreacionista</option>
-                            </optgroup>
-                            <optgroup label="OTRA OPCIÓN">
-                                <option>Otro cargo</option>
-                                <option>No tengo un cargo definido</option>
-                                <option>Prácticas o pasantías</option>
-                            </optgroup>
-                        </select>
+                                    <select name="ciudad" class="cv-cargo-select" required>
+                                        <option value="">Ciudad*</option>
+                                        <optgroup label="Colombia">
+                                            <option>Bogotá</option>
+                                            <option>Medellín</option>
+                                            <option>Cali</option>
+                                            <option>Cartagena</option>
+                                            <option>Barranquilla</option>
+                                        </optgroup>
+                                        <optgroup label="Costa Rica">
+                                            <option>San José</option>
+                                            <option>Escazú</option>
+                                            <option>Heredia</option>
+                                            <option>Alajuela</option>
+                                        </optgroup>
+                                        <optgroup label="El Salvador">
+                                            <option>San Salvador</option>
+                                            <option>Santa Tecla</option>
+                                            <option>Soyapango</option>
+                                            <option>Antiguo Cuscatlán</option>
+                                        </optgroup>
+                                        <option value="Otra ciudad">Otra ciudad</option>
+                                    </select>
 
-                        
+                                    <select name="cargo" class="cv-cargo-select">
+                                        <option value="">Cargo de interés</option>
+                                        <optgroup label="FRONT OFFICE Y RECEPCIÓN">
+                                            <option>Recepcionista</option>
+                                            <option>Auxiliar de Recepción</option>
+                                            <option>Agente de Reservas</option>
+                                            <option>Auditor Nocturno</option>
+                                            <option>Botones</option>
+                                            <option>Concierge</option>
+                                            <option>Portero</option>
+                                            <option>Telefonista</option>
+                                            <option>Anfitrión de Hotel</option>
+                                        </optgroup>
+                                        <optgroup label="HOUSEKEEPING Y LIMPIEZA">
+                                            <option>Ama de Llaves</option>
+                                            <option>Supervisora de Habitaciones</option>
+                                            <option>Camarera de Habitaciones</option>
+                                            <option>Auxiliar de Housekeeping</option>
+                                            <option>Operario de Limpieza</option>
+                                            <option>Auxiliar de Áreas Públicas</option>
+                                            <option>Auxiliar de Lavandería</option>
+                                            <option>Operario de Sanitización</option>
+                                        </optgroup>
+                                        <optgroup label="ALIMENTOS Y BEBIDAS">
+                                            <option>Mesero</option>
+                                            <option>Capitán de Servicio</option>
+                                            <option>Bartender</option>
+                                            <option>Barista</option>
+                                            <option>Host o Anfitrión</option>
+                                            <option>Cajero de Restaurante</option>
+                                            <option>Sommelier</option>
+                                            <option>Auxiliar de Mesa y Bar</option>
+                                        </optgroup>
+                                        <optgroup label="COCINA">
+                                            <option>Chef</option>
+                                            <option>Chef Ejecutivo</option>
+                                            <option>Jefe de Cocina</option>
+                                            <option>Cocinero</option>
+                                            <option>Auxiliar de Cocina</option>
+                                            <option>Panadero</option>
+                                            <option>Pastelero</option>
+                                            <option>Steward</option>
+                                            <option>Parrillero</option>
+                                            <option>Pizzero</option>
+                                        </optgroup>
+                                        <optgroup label="ADMINISTRATIVO Y COMERCIAL">
+                                            <option>Ejecutivo Comercial</option>
+                                            <option>Gestor Comercial</option>
+                                            <option>Coordinador Comercial</option>
+                                            <option>Auxiliar Administrativo</option>
+                                            <option>Asistente Administrativo</option>
+                                            <option>Coordinador de Talento Humano</option>
+                                            <option>Analista de Compras</option>
+                                            <option>Community Manager</option>
+                                            <option>Coordinador de Eventos</option>
+                                            <option>Auxiliar Contable</option>
+                                        </optgroup>
+                                        <optgroup label="OPERACIÓN HOTELERA">
+                                            <option>Gerente de Hotel</option>
+                                            <option>Gerente de Restaurante</option>
+                                            <option>Supervisor de Operaciones</option>
+                                            <option>Coordinador de Operaciones</option>
+                                            <option>Coordinador de Mantenimiento</option>
+                                            <option>Técnico de Mantenimiento</option>
+                                            <option>Auxiliar de Mantenimiento</option>
+                                            <option>Coordinador de Seguridad</option>
+                                            <option>Guarda de Seguridad</option>
+                                            <option>Operador Hotelero</option>
+                                        </optgroup>
+                                        <optgroup label="EVENTOS Y TURISMO">
+                                            <option>Coordinador de Eventos</option>
+                                            <option>Auxiliar de Eventos</option>
+                                            <option>Ejecutivo de Banquetes</option>
+                                            <option>Coordinador de Banquetes</option>
+                                            <option>Guía Turístico</option>
+                                            <option>Agente de Viajes</option>
+                                            <option>Coordinador de Turismo</option>
+                                            <option>Recreacionista</option>
+                                        </optgroup>
+                                        <optgroup label="OTRA OPCIÓN">
+                                            <option>Otro cargo</option>
+                                            <option>No tengo un cargo definido</option>
+                                            <option>Prácticas o pasantías</option>
+                                        </optgroup>
+                                    </select>
 
-                        <label class="cv-upload" for="cvFile">
-                            <span class="cv-upload-icon">⬆</span>
-                            <span class="cv-upload-text" id="cvFileName">Adjuntar hoja de vida (PDF o Word)*</span>
-                        </label>
-                        <input type="file" id="cvFile" name="hojaDeVida" accept=".pdf,.doc,.docx" required hidden>
+                                    <label class="cv-upload" for="cvFile">
+                                        <span class="cv-upload-icon">⬆</span>
+                                        <span class="cv-upload-text" id="cvFileName">Adjuntar hoja de vida (PDF o Word)*</span>
+                                    </label>
+                                    <input type="file" id="cvFile" name="hojaDeVida" accept=".pdf,.doc,.docx" required hidden>
 
-                        <button type="submit" class="btn btn-primary btn-full">Enviar hoja de vida</button>
-                    </form>
+                                    <button type="submit" class="btn btn-primary btn-full">Enviar hoja de vida</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="careers-card-face careers-card-back">
+                        <div class="careers-card-media">
+                            <img src="image/Personal.png" alt="Buscas personal para tu empresa">
+                        </div>
+
+                        <div class="careers-card-copy">
+                            <p class="subtitle">TALENTO HUMANO</p>
+                            <h2>
+                                Buscas <br>
+                                <span>personal?</span>
+                            </h2>
+                            <p class="description">
+                                Te ayudamos a encontrar el talento adecuado para tu operación con procesos ágiles,
+                                evaluaciones y acompañamiento estratégico.
+                            </p>
+
+                            <div class="careers-form-box">
+                                <h3>Cuéntanos tu necesidad</h3>
+                                <form id="recruitForm" action="https://formsubmit.co/Directoracademico@thehospitalitycenter.net"
+                                    method="POST" class="contact-form">
+                                    <input type="hidden" name="_captcha" value="false">
+                                    <input type="hidden" name="_subject" value="Nueva solicitud de personal - THC">
+                                    <input type="hidden" name="_template" value="table">
+
+                                    <input type="text" name="empresa" placeholder="Nombre de la empresa*" required>
+                                    <input type="text" name="nit" placeholder="NIT*" required>
+                                    <input type="email" name="correo_corporativo" placeholder="Correo corporativo*" required>
+                                    <input type="text" name="telefono_corporativo" placeholder="Teléfono corporativo*" required>
+                                    <input type="text" name="tipo_personal" placeholder="Tipo de personal que necesita*" required>
+
+                                    <button type="submit" class="btn btn-primary btn-full">Solicitar asesoría</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -811,18 +860,6 @@
             });
         });
 
-        const heroMuteBtn = document.getElementById("heroMuteBtn");
-        const heroVideo = document.querySelector(".hero-video");
-
-        if (heroMuteBtn && heroVideo) {
-            heroMuteBtn.addEventListener("click", () => {
-                heroVideo.muted = !heroVideo.muted;
-                heroMuteBtn.textContent = heroVideo.muted ? "🔇" : "🔊";
-                heroMuteBtn.setAttribute("aria-label", heroVideo.muted ? "Silenciar video" : "Activar audio");
-                heroMuteBtn.title = heroVideo.muted ? "Silenciar video" : "Activar audio";
-            });
-        }
-
         // BOTONES HERO
         document.querySelector(".primary").onclick = () => {
             document.querySelector(".programs").scrollIntoView({ behavior: "smooth" });
@@ -855,6 +892,29 @@
             });
         });
 
+        // TOGGLE DE TALENTO HUMANO
+        const careersSwitches = document.querySelectorAll('.careers-switch');
+        const careersCard = document.getElementById('careersCard');
+
+        if (careersSwitches.length && careersCard) {
+            const frontFace = careersCard.querySelector('.careers-card-front');
+            const backFace = careersCard.querySelector('.careers-card-back');
+            careersSwitches.forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    const isCompany = btn.dataset.mode === 'company';
+                    careersSwitches.forEach((switchBtn) => {
+                        const isActive = switchBtn === btn;
+                        switchBtn.classList.toggle('active', isActive);
+                        switchBtn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+                    });
+                    if (frontFace && backFace) {
+                        frontFace.classList.toggle('active', !isCompany);
+                        backFace.classList.toggle('active', isCompany);
+                    }
+                });
+            });
+        }
+
         // FORMULARIO PRINCIPAL
         const form = document.getElementById('registroForm');
         if (form) {
@@ -885,6 +945,7 @@
 
         // FORMULARIO HOJA DE VIDA
         const cvForm = document.getElementById('cvForm');
+        const recruitForm = document.getElementById('recruitForm');
         const cvFileInput = document.getElementById('cvFile');
         const cvFileName = document.getElementById('cvFileName');
         const cvFormNext = document.getElementById('cvFormNext');
@@ -912,6 +973,32 @@
                 const btn = cvForm.querySelector('button[type="submit"]');
                 btn.disabled = true;
                 btn.textContent = 'Enviando...';
+            });
+        }
+
+        if (recruitForm) {
+            recruitForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const btn = recruitForm.querySelector('button[type="submit"]');
+                btn.disabled = true;
+                btn.textContent = 'Enviando...';
+                try {
+                    const res = await fetch(recruitForm.action, {
+                        method: 'POST',
+                        body: new FormData(recruitForm),
+                        headers: { 'Accept': 'application/json' }
+                    });
+                    const data = await res.json();
+                    if (data.success === 'true' || data.success === true) {
+                        Swal.fire({ icon: 'success', title: '¡Solicitud enviada!', text: 'Nos pondremos en contacto contigo pronto.', confirmButtonColor: '#ff5a3c', confirmButtonText: 'Entendido' });
+                        recruitForm.reset();
+                    } else { throw new Error(); }
+                } catch {
+                    Swal.fire({ icon: 'error', title: 'Error al enviar', text: 'Por favor intenta nuevamente o escríbenos directamente.', confirmButtonColor: '#c9a96e' });
+                } finally {
+                    btn.disabled = false;
+                    btn.textContent = 'Solicitar asesoría';
+                }
             });
         }
 
@@ -1009,16 +1096,34 @@
                 }
             });
         }
-        const heroVideoEl = document.getElementById('heroVideo');
-const heroSection = document.querySelector('.hero');
-const heroFallbackImg = document.getElementById('heroFallbackImg');
 
-if (heroVideoEl && heroSection) {
-    heroVideoEl.addEventListener('ended', () => {
-        heroSection.classList.add('video-ended');
-        if (heroFallbackImg) heroFallbackImg.classList.add('show');
-    });
-}
+        // VIDEO DEL HERO: en móvil no reproducimos el video, mostramos directamente
+        // el estado "video terminado" (imagen de fondo + contenido visible).
+        // En desktop, se reproduce una vez y al terminar pasa a ese mismo estado.
+        const heroVideoEl = document.getElementById('heroVideo');
+        const heroSection = document.querySelector('.hero');
+        const heroFallbackImg = document.getElementById('heroFallbackImg');
+        const isMobileHero = window.matchMedia('(max-width: 900px)').matches;
+
+        function showHeroEndedState() {
+            heroSection.classList.add('video-ended');
+            heroVideoEl.classList.add('video-ended');
+            if (heroFallbackImg) heroFallbackImg.classList.add('show');
+        }
+
+        if (heroVideoEl && heroSection) {
+            if (isMobileHero) {
+                // En móvil: no cargamos ni reproducimos el video, va directo al estado final
+                heroVideoEl.pause();
+                heroVideoEl.removeAttribute('src');
+                heroVideoEl.querySelectorAll('source').forEach(src => src.remove());
+                heroVideoEl.load();
+                showHeroEndedState();
+            } else {
+                heroVideoEl.play().catch(() => {});
+                heroVideoEl.addEventListener('ended', showHeroEndedState);
+            }
+        }
     </script>
 
 </body>
