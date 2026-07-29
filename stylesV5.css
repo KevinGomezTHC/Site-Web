@@ -1548,7 +1548,8 @@ body.modal-open {
     padding: 0 16px;
     overflow: hidden;
   }
-  .hero-content .h1 {
+  .hero-content h1,
+  .hero-brand h1 {
     max-width: 100%;
     word-wrap: break-word;
     text-align: center;
@@ -1895,8 +1896,64 @@ body.modal-open {
   }
 }
 
-/* Extra pequeño < 390px */
-@media (max-width: 390px) {
+/* Tablet / medium screens */
+@media (max-width: 1100px) {
+  .navbar {
+    padding: 18px 32px;
+  }
+
+  .menu a {
+    font-size: 13px;
+  }
+
+  .hero-content {
+    padding: 140px 28px 0;
+    gap: 32px;
+  }
+
+  .hero-brand h1 {
+    font-size: 56px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .stats {
+    gap: 40px;
+    padding: 18px 22px;
+    max-width: 100%;
+  }
+
+  .mission-vision,
+  .programs,
+  .travel-section,
+  .careers-section,
+  .form-section,
+  .testimonials,
+  .cert,
+  .partner-marquee {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+  }
+
+  .partner-logo {
+    min-width: 150px;
+    width: 150px;
+    height: 78px;
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+  }
+}
+
+@media (max-width: 900px) {
   .hero-brand h1 {
     font-size: 34px;
   }
@@ -1911,6 +1968,123 @@ body.modal-open {
     height: 64px;
   }
 }
+
+@media (max-width: 700px) {
+  .navbar {
+    padding: 12px 16px;
+  }
+
+  .menu a {
+    font-size: 14px;
+    padding: 12px 8px;
+  }
+
+  .hero {
+    padding: 100px 14px 40px;
+  }
+
+  .hero-content {
+    padding: 0 14px;
+  }
+
+  .hero-brand h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .buttons .primary,
+  .buttons .secondary {
+    width: 100%;
+    max-width: 100%;
+    padding: 14px 18px;
+  }
+
+  .stats {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 14px 12px;
+    max-width: 100%;
+  }
+
+  .stat {
+    border-right: none;
+    padding: 10px 4px;
+  }
+
+  .mission-vision,
+  .programs,
+  .travel-section,
+  .careers-section,
+  .form-section,
+  .testimonials,
+  .cert,
+  .partner-marquee {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .careers-content,
+  .travel-content,
+  .service-modal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .careers-image {
+    min-height: 260px;
+  }
+
+  .service-modal-image {
+    height: 200px;
+  }
+
+  .service-modal-info h2 {
+    font-size: 22px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero-brand h1 {
+    font-size: 28px;
+  }
+
+  .hero-pretitle {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .hero p {
+    max-width: 100%;
+  }
+
+  .partner-logo {
+    min-width: 100px;
+    width: 100px;
+    height: 60px;
+  }
+
+  .form-text h2,
+  .careers-copy h2,
+  .travel-copy h2 {
+    font-size: 28px;
+  }
+
+  .footer-links {
+    gap: 14px;
+  }
+}
+
 .hero-media {
   position: absolute;
   inset: 0;
