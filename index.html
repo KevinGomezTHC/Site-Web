@@ -48,20 +48,24 @@
 
 
     <!-- HERO -->
-<section class="hero">
-    <div class="hero-media">
-        <video class="hero-video"
-       id="heroVideo"
-       autoplay
-       muted
-       playsinline
-       preload="auto"
-       poster="image/home.jpg">
-       
-    <source src="image/Thc-Video.mp4" type="video/mp4">
-</video>
-        <img class="hero-fallback-img" id="heroFallbackImg" src="image/home.jpg" alt="">
-    </div>
+<section class="hero" id="hero">
+  <div class="hero-media">
+    <video
+      class="hero-video"
+      id="heroVideo"
+      src="image/VIDEOTHC2026.mp4"
+      autoplay
+      muted
+      playsinline
+      preload="auto"
+    ></video>
+    <img
+      class="hero-fallback-img"
+      id="heroFallback"
+      src="image/hero-fallback.jpg"
+      alt="The Hospitality Center"
+    />
+  </div>
     <div class="overlay"></div>
     <button class="hero-mute-btn" id="heroMuteBtn" type="button" aria-label="Silenciar video" title="Silenciar video">
         ⏸️
@@ -1105,7 +1109,8 @@
         const heroVideoEl = document.getElementById('heroVideo');
         const heroMuteBtn = document.getElementById('heroMuteBtn');
         const heroSection = document.querySelector('.hero');
-        const heroFallbackImg = document.getElementById('heroFallbackImg');
+        // FIX: el id real en el HTML es "heroFallback", no "heroFallbackImg"
+        const heroFallbackImg = document.getElementById('heroFallback');
         const isMobileHero = window.matchMedia('(max-width: 900px)').matches;
 
         function updateHeroMuteButton() {
@@ -1129,8 +1134,6 @@
         }
 
         if (heroVideoEl && heroSection) {
-            heroVideoEl.volume = 1;
-            heroVideoEl.muted = false;
             updateHeroMuteButton();
             if (heroMuteBtn) {
                 heroMuteBtn.addEventListener('click', toggleHeroMute);
@@ -1143,7 +1146,21 @@
                 heroVideoEl.load();
                 showHeroEndedState();
             } else {
-                heroVideoEl.play().catch(() => {});
+                // Intentamos reproducir CON sonido. Los navegadores bloquean el
+                // autoplay con audio si el usuario no ha interactuado antes con
+                // el sitio; si eso pasa, caemos automáticamente a silenciado
+                // para que el video al menos arranque, y el botón queda listo
+                // para que el usuario active el sonido manualmente.
+                heroVideoEl.volume = 1;
+                heroVideoEl.muted = false;
+                updateHeroMuteButton();
+
+                heroVideoEl.play().catch(() => {
+                    heroVideoEl.muted = true;
+                    updateHeroMuteButton();
+                    heroVideoEl.play().catch(() => {});
+                });
+
                 heroVideoEl.addEventListener('ended', showHeroEndedState);
             }
         }
