@@ -695,6 +695,7 @@ img, picture, video, canvas, svg {
   background: #e94f37;
   padding: 4px;
 }
+
 .footer-links {
   display: flex;
   justify-content: center;
@@ -702,9 +703,24 @@ img, picture, video, canvas, svg {
   gap: 32px;
   margin-top: 10px;
 }
+.footer-colombia-social {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  margin-top: 14px;
+}
 .footer-links > div {
   min-width: 140px;
   max-width: 220px;
+}
+.footer-links > .footer-colombia-social {
+  flex: 0 0 100%;
+  min-width: 100%;
+  max-width: none;
+  margin-top: 14px;
 }
 .footer-links h4 {
   font-size: 1rem;
