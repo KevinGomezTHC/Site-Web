@@ -697,30 +697,45 @@ img, picture, video, canvas, svg {
 }
 
 .footer-links {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(140px, 220px));
+  grid-template-areas: "costa bogota medellin cartagena";
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: start;
   gap: 32px;
   margin-top: 10px;
 }
+.footer-links > div:nth-child(1) {
+  grid-area: costa;
+}
+.footer-links > div:nth-child(2) {
+  grid-area: bogota;
+}
+.footer-links > div:nth-child(3) {
+  grid-area: medellin;
+}
+.footer-links > div:nth-child(4) {
+  grid-area: cartagena;
+}
 .footer-colombia-social {
-  flex-basis: 100%;
+  grid-column: 3;
+  grid-row: 1;
+  align-self: start;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
   text-align: center;
-  margin-top: 14px;
+  margin-top: 188px;
 }
 .footer-links > div {
   min-width: 140px;
   max-width: 220px;
 }
 .footer-links > .footer-colombia-social {
-  flex: 0 0 100%;
-  min-width: 100%;
-  max-width: none;
-  margin-top: 14px;
+  min-width: 0;
+  max-width: 300px;
+  margin-top: 188px;
 }
 .footer-links h4 {
   font-size: 1rem;
@@ -748,4 +763,32 @@ img, picture, video, canvas, svg {
   height: 32px;
   margin-right: 6px;
   vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .footer-links {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "costa"
+      "bogota"
+      "medellin"
+      "cartagena"
+      "colombia-social";
+    gap: 24px;
+  }
+
+  .footer-links > div,
+  .footer-links > .footer-colombia-social {
+    grid-column: 1;
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .footer-links > .footer-colombia-social {
+    grid-area: colombia-social;
+    grid-row: auto;
+    order: 5;
+    margin-top: 0;
+  }
 }

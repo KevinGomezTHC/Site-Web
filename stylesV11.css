@@ -981,6 +981,8 @@ img, picture, video, canvas, svg {
   max-width: none;
   text-align: center;
   margin-top: 4px;
+  position: relative;
+  left: 120px;
 }
 .footer-links h4 {
   font-size: 1rem;
