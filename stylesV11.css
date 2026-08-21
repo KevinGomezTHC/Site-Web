@@ -1022,7 +1022,7 @@ img, picture, video, canvas, svg {
 
 .careers-section {
   padding: 50px 40px 100px;
-  background: linear-gradient(180deg, #fff 0%, #fdf8f1 100%);
+  background: #f6f4f2;
   scroll-margin-top: 90px;
 }
 
@@ -1156,6 +1156,82 @@ img, picture, video, canvas, svg {
   box-shadow: 0 18px 40px rgba(15, 15, 15, 0.06);
 }
 
+/* EN PC: Mostrar ambas tarjetas lado a lado, sin botones ni imágenes */
+@media (min-width: 981px) {
+  .careers-toggle {
+    display: none !important;
+  }
+
+  .careers-card {
+    position: relative;
+    min-height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+
+  .careers-card-face {
+    position: static !important;
+    inset: auto !important;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    align-items: start;
+    padding: 34px;
+    border-radius: 32px;
+    background: #fff;
+    box-shadow: 0 24px 60px rgba(15, 15, 15, 0.08);
+    opacity: 1 !important;
+    transform: none;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    z-index: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 6px solid #ff5a3c;
+  }
+
+  .careers-card-face.careers-card-back {
+    border-left-color: #ff9a7f;
+  }
+
+  .careers-card-face:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 32px 72px rgba(15, 15, 15, 0.12);
+  }
+
+  .careers-card-face:not(.active) {
+    display: grid !important;
+  }
+
+  .careers-card-media {
+    display: none !important;
+  }
+
+  .careers-card-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .careers-card-copy .subtitle {
+    color: transparent;
+    font-size: 0.9rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    height: 1.2em;
+    position: relative;
+  }
+
+  .careers-card-copy .subtitle::before {
+    content: attr(data-desktop);
+    color: #ff5a3c;
+    position: absolute;
+    left: 0;
+  }
+}
+
 .careers-form-box h3 {
   font-family: 'Playfair Display', serif;
   font-size: 22px;
@@ -1277,6 +1353,7 @@ img, picture, video, canvas, svg {
   }
 
   .careers-toggle {
+    display: flex !important;
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
@@ -1292,13 +1369,17 @@ img, picture, video, canvas, svg {
   }
 
   .careers-card {
+    position: relative;
     min-height: auto;
     max-width: 100%;
+    display: block;
+    grid-template-columns: unset;
+    gap: unset;
   }
 
   .careers-card-face {
-    position: relative;
-    inset: auto;
+    position: absolute !important;
+    inset: 0 !important;
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
@@ -1309,6 +1390,18 @@ img, picture, video, canvas, svg {
     visibility: visible;
     pointer-events: auto;
     box-shadow: 0 18px 40px rgba(15, 15, 15, 0.08);
+    background: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 6px solid #ff5a3c;
+  }
+
+  .careers-card-face.careers-card-back {
+    border-left-color: #ff9a7f;
+  }
+
+  .careers-card-face:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 50px rgba(15, 15, 15, 0.12);
   }
 
   .careers-card-face:not(.active) {
@@ -1316,6 +1409,7 @@ img, picture, video, canvas, svg {
   }
 
   .careers-card-media {
+    display: block !important;
     max-height: none;
     min-height: 320px;
   }
@@ -1325,8 +1419,16 @@ img, picture, video, canvas, svg {
   }
 
   .careers-card-copy .subtitle {
+    color: #5c5149 !important;
     font-size: 0.8rem;
     margin-bottom: 10px;
+    height: auto;
+    position: static;
+  }
+
+  .careers-card-copy .subtitle::before {
+    content: none !important;
+    position: static;
   }
 
   .careers-card-copy h2 {
@@ -2506,5 +2608,272 @@ body.modal-open {
     flex: 1 1 100%;
     min-width: 140px;
     text-align: center;
+  }
+}
+
+/* PORTÁTILES Y PANTALLAS INTERMEDIAS */
+@media (max-width: 1440px) {
+  .hero-content {
+    padding: 140px 60px 0 60px;
+    gap: 32px;
+  }
+
+  .hero-brand h1 {
+    font-size: 72px;
+  }
+
+  .hero p {
+    font-size: 17px;
+    max-width: 550px;
+  }
+
+  .hero-side-logo {
+    width: 160px;
+  }
+
+  .section-header {
+    max-width: 900px;
+  }
+
+  .section-header h2 {
+    font-size: 48px;
+  }
+
+  .programs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+
+  .about-content {
+    gap: 32px;
+  }
+
+  .about-copy h2 {
+    font-size: 48px;
+  }
+
+  .travel-content {
+    gap: 32px;
+  }
+
+  .travel-copy h2 {
+    font-size: 48px;
+  }
+
+  .careers-shell {
+    max-width: 1300px;
+    padding: 0 40px;
+  }
+
+  .careers-card {
+    gap: 36px;
+  }
+
+  .careers-card-face {
+    padding: 28px;
+    border-radius: 28px;
+  }
+
+  .careers-card-copy h2 {
+    font-size: 42px;
+    margin-bottom: 14px;
+  }
+
+  .form-box {
+    max-width: 500px;
+    padding: 36px;
+  }
+
+  .form-box h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero-content {
+    padding: 120px 50px 0 50px;
+    gap: 28px;
+  }
+
+  .hero-brand h1 {
+    font-size: 64px;
+  }
+
+  .hero-side-logo {
+    width: 140px;
+  }
+
+  .section-header {
+    max-width: 850px;
+  }
+
+  .section-header h2 {
+    font-size: 44px;
+  }
+
+  .section-header p {
+    font-size: 17px;
+  }
+
+  .programs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding: 0 30px;
+  }
+
+  .program-card {
+    padding: 28px 24px;
+  }
+
+  .about-content {
+    gap: 28px;
+    padding: 60px 30px;
+  }
+
+  .about-copy h2 {
+    font-size: 44px;
+  }
+
+  .about-media {
+    max-width: 100%;
+  }
+
+  .travel-content {
+    gap: 28px;
+    padding: 60px 30px;
+  }
+
+  .travel-copy h2 {
+    font-size: 44px;
+  }
+
+  .careers-shell {
+    max-width: 1200px;
+    padding: 0 30px;
+  }
+
+  .careers-card {
+    gap: 32px;
+  }
+
+  .careers-card-face {
+    padding: 26px;
+  }
+
+  .careers-card-copy h2 {
+    font-size: 40px;
+  }
+
+  .form-text {
+    padding: 60px 30px 0;
+  }
+
+  .form-text h2 {
+    font-size: 44px;
+  }
+
+  .form-box {
+    max-width: 480px;
+    padding: 32px;
+  }
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+
+  .hero-content {
+    padding: 100px 40px 0 40px;
+    gap: 24px;
+  }
+
+  .hero-brand h1 {
+    font-size: 56px;
+  }
+
+  .hero p {
+    font-size: 16px;
+    max-width: 500px;
+  }
+
+  .hero-side-logo {
+    width: 120px;
+  }
+
+  .section-header {
+    max-width: 800px;
+  }
+
+  .section-header h2 {
+    font-size: 40px;
+  }
+
+  .programs-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 0 24px;
+  }
+
+  .program-card {
+    padding: 24px 20px;
+    border-radius: 20px;
+  }
+
+  .about-content {
+    gap: 24px;
+    padding: 50px 24px;
+  }
+
+  .about-copy h2 {
+    font-size: 40px;
+  }
+
+  .travel-content {
+    gap: 24px;
+    padding: 50px 24px;
+  }
+
+  .travel-copy h2 {
+    font-size: 40px;
+  }
+
+  .careers-section {
+    padding: 40px 24px 80px;
+  }
+
+  .careers-shell {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .careers-card {
+    gap: 28px;
+  }
+
+  .careers-card-face {
+    padding: 24px;
+    border-radius: 24px;
+  }
+
+  .careers-card-copy h2 {
+    font-size: 36px;
+  }
+
+  .form-section {
+    padding: 40px 24px;
+  }
+
+  .form-text {
+    padding: 0;
+  }
+
+  .form-text h2 {
+    font-size: 40px;
+  }
+
+  .form-box {
+    max-width: 100%;
+    padding: 28px;
   }
 }
