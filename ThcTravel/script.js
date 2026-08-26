@@ -40,6 +40,39 @@ if (form) {
   });
 }
 
+// Mantiene la portada limpia durante el video y revela la información al terminar.
+const travelHero = document.querySelector('.hero');
+const travelHeroVideo = document.getElementById('travelHeroVideo');
+const travelHeroSoundBtn = document.getElementById('travelHeroSoundBtn');
+
+function revealTravelHero() {
+  if (!travelHero) return;
+  travelHero.classList.add('video-ended');
+}
+
+if (travelHero && travelHeroVideo) {
+  travelHeroVideo.addEventListener('ended', revealTravelHero);
+  travelHeroVideo.addEventListener('error', () => {
+    travelHeroVideo.controls = true;
+  });
+  travelHeroVideo.play().catch(() => {
+    travelHeroVideo.muted = true;
+    travelHeroVideo.play().catch(() => {
+      travelHeroVideo.controls = true;
+    });
+  });
+
+  if (travelHeroSoundBtn) {
+    travelHeroSoundBtn.addEventListener('click', () => {
+      travelHeroVideo.muted = false;
+      travelHeroVideo.volume = 1;
+      travelHeroVideo.play().catch(() => {});
+      travelHeroSoundBtn.innerHTML = '<i class="ti ti-volume"></i> Sonido activado';
+      travelHeroSoundBtn.disabled = true;
+    });
+  }
+}
+
 // Active nav link on scroll
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a');
