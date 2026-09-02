@@ -27,7 +27,7 @@ img, picture, video, canvas, svg {
 .menu a:hover,
 .menu-item > a:hover {
   opacity: 1;
-  color: #ff5a3c;
+  color: #e21c1f;
 }
 
 /* ================= NAVBAR ================= */
@@ -110,13 +110,13 @@ img, picture, video, canvas, svg {
 }
 
 .nav-btn {
-  background: #ff5a3c;
+  background: #e21c1f;
   border: none;
   padding: 12px 24px;
   border-radius: 999px;
   color: white;
   cursor: pointer;
-  box-shadow: 0 10px 25px rgba(255,90,60,0.25);
+  box-shadow: 0 10px 25px rgba(180,35,47,0.25);
 }
 
 .navbar.scrolled {
@@ -269,7 +269,7 @@ img, picture, video, canvas, svg {
 }
 
 .hero-pretitle {
-  color: #ff5a3c;
+  color: #e21c1f;
   font-size: 12px;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -292,7 +292,7 @@ img, picture, video, canvas, svg {
 }
 
 .hero span {
-  color: #ff5a3c;
+  color: #e21c1f;
   font-style: italic;
 }
 
@@ -395,7 +395,7 @@ img, picture, video, canvas, svg {
 }
 
 .primary {
-  background: #ff5a3c;
+  background: #e21c1f;
   color: white;
   padding: 16px 32px;
   border-radius: 999px;
@@ -446,7 +446,7 @@ img, picture, video, canvas, svg {
 .stat h2 {
   margin: 0;
   font-size: 36px;
-  color: #ff5a3c;
+  color: #e21c1f;
 }
 
 .stat p {
@@ -501,7 +501,7 @@ img, picture, video, canvas, svg {
   position: absolute;
   left: 0;
   top: 0.2em;
-  color: #ff5a3c;
+  color: #e21c1f;
 }
 
 .mission-grid {
@@ -564,7 +564,7 @@ img, picture, video, canvas, svg {
 }
 
 .travel-copy h2 span {
-  color: #ff5a3c;
+  color: #e21c1f;
   font-style: italic;
 }
 
@@ -587,7 +587,7 @@ img, picture, video, canvas, svg {
 .travel-stats strong {
   display: block;
   font-size: 36px;
-  color: #ff5a3c;
+  color: #e21c1f;
 }
 
 .travel-stats p {
@@ -610,7 +610,7 @@ img, picture, video, canvas, svg {
   justify-content: center;
   width: 56px;
   height: 56px;
-  background: #ff5a3c;
+  background: #e21c1f;
   border-radius: 16px;
   font-weight: 700;
   margin-bottom: 22px;
@@ -623,7 +623,7 @@ img, picture, video, canvas, svg {
 
 .travel-card-stars {
   margin: 28px 0 10px;
-  color: #ffb36d;
+  color: #e21c1f;
   letter-spacing: 2px;
 }
 
@@ -645,7 +645,7 @@ img, picture, video, canvas, svg {
 }
 
 .subtitle {
-  color: #ff5a3c;
+  color: #e21c1f;
   font-size: 16px;
   letter-spacing: 2px;
   margin-bottom: 10px;
@@ -718,7 +718,7 @@ img, picture, video, canvas, svg {
   position: absolute;
   top: 15px;
   left: 15px;
-  background: #ff5a3c;
+  background: #e21c1f;
   color: white;
   font-size: 12px;
   padding: 5px 10px;
@@ -743,7 +743,7 @@ img, picture, video, canvas, svg {
 }
 
 .form-text span {
-  color: #ff5a3c;
+  color: #e21c1f;
   font-style: italic;
 }
 
@@ -780,7 +780,7 @@ img, picture, video, canvas, svg {
 .form-box button {
   width: 100%;
   padding: 14px;
-  background: #ff5a3c;
+  background: #e21c1f;
   border: none;
   color: white;
   border-radius: 999px;
@@ -813,7 +813,7 @@ img, picture, video, canvas, svg {
 
 .cert button {
   padding: 12px 20px;
-  background: #ff5a3c;
+  background: #e21c1f;
   border: none;
   color: white;
 }
@@ -961,7 +961,7 @@ img, picture, video, canvas, svg {
   height: 32px;
   width: 32px;
   border-radius: 50%;
-  background: #e94f37;
+  background: #e21c1f;
   padding: 4px;
 }
 .footer-links {
@@ -987,7 +987,7 @@ img, picture, video, canvas, svg {
 .footer-links h4 {
   font-size: 1rem;
   margin-bottom: 8px;
-  color: #e94f37;
+  color: #e21c1f;
   font-weight: bold;
 }
 .footer-links ul {
@@ -1055,9 +1055,9 @@ img, picture, video, canvas, svg {
 }
 
 .careers-switch.active {
-  background: #ff5a3c;
+  background: #e21c1f;
   color: #fff;
-  box-shadow: 0 10px 25px rgba(255, 90, 60, 0.18);
+  box-shadow: 0 10px 25px rgba(180, 35, 47, 0.18);
 }
 
 .careers-stage {
@@ -1126,7 +1126,7 @@ img, picture, video, canvas, svg {
   font-size: 0.9rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: #ff5a3c;
+  color: #e21c1f;
   margin-bottom: 12px;
 }
 
@@ -1138,7 +1138,7 @@ img, picture, video, canvas, svg {
 }
 
 .careers-card-copy h2 span {
-  color: #ff5a3c;
+  color: #e21c1f;
   font-style: italic;
 }
 
@@ -1149,7 +1149,7 @@ img, picture, video, canvas, svg {
 }
 
 .careers-form-box {
-  background: linear-gradient(145deg, #ffffff 0%, #fdf8f1 100%);
+  background: linear-gradient(145deg, #ffffff 0%, #fff7f7 100%);
   border: 1px solid #efe5db;
   border-radius: 24px;
   padding: 24px;
@@ -1187,11 +1187,11 @@ img, picture, video, canvas, svg {
     pointer-events: auto !important;
     z-index: auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-left: 6px solid #ff5a3c;
+    border-left: 6px solid #e21c1f;
   }
 
   .careers-card-face.careers-card-back {
-    border-left-color: #ff9a7f;
+    border-left-color: #e21c1f;
   }
 
   .careers-card-face:hover {
@@ -1226,7 +1226,7 @@ img, picture, video, canvas, svg {
 
   .careers-card-copy .subtitle::before {
     content: attr(data-desktop);
-    color: #ff5a3c;
+    color: #e21c1f;
     position: absolute;
     left: 0;
   }
@@ -1256,7 +1256,7 @@ img, picture, video, canvas, svg {
 
 .careers-form-box .contact-form select {
   appearance: none;
-  background-image: linear-gradient(45deg, transparent 50%, #ff5a3c 50%), linear-gradient(135deg, #ff5a3c 50%, transparent 50%);
+  background-image: linear-gradient(45deg, transparent 50%, #e21c1f 50%), linear-gradient(135deg, #e21c1f 50%, transparent 50%);
   background-position: calc(100% - 20px) calc(50% - 3px), calc(100% - 14px) calc(50% - 3px);
   background-size: 6px 6px, 6px 6px;
   background-repeat: no-repeat;
@@ -1294,9 +1294,9 @@ img, picture, video, canvas, svg {
   margin-bottom: 18px;
   padding: 14px;
   border-radius: 8px;
-  border: 1px dashed #ff5a3c;
-  background: rgba(255, 90, 60, 0.06);
-  color: #ff5a3c;
+  border: 1px dashed #e21c1f;
+  background: rgba(180, 35, 47, 0.06);
+  color: #e21c1f;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
@@ -1304,7 +1304,7 @@ img, picture, video, canvas, svg {
 }
 
 .cv-upload:hover {
-  background: rgba(255, 90, 60, 0.12);
+  background: rgba(180, 35, 47, 0.12);
 }
 
 .cv-upload-icon {
@@ -1321,7 +1321,7 @@ img, picture, video, canvas, svg {
 .careers-form-box button[type="submit"] {
   width: 100%;
   padding: 14px;
-  background: #ff5a3c;
+  background: #e21c1f;
   border: none;
   color: white;
   border-radius: 999px;
@@ -1392,11 +1392,11 @@ img, picture, video, canvas, svg {
     box-shadow: 0 18px 40px rgba(15, 15, 15, 0.08);
     background: #fff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-left: 6px solid #ff5a3c;
+    border-left: 6px solid #e21c1f;
   }
 
   .careers-card-face.careers-card-back {
-    border-left-color: #ff9a7f;
+    border-left-color: #e21c1f;
   }
 
   .careers-card-face:hover {
@@ -1549,7 +1549,7 @@ body.modal-open {
 }
 
 .service-modal-close:hover {
-  background: #ff5a3c;
+  background: #e21c1f;
   color: white;
   transform: rotate(90deg);
 }
@@ -1581,7 +1581,7 @@ body.modal-open {
 }
 
 .service-modal-eyebrow {
-  color: #ff5a3c;
+  color: #e21c1f;
   font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -1641,7 +1641,7 @@ body.modal-open {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #ff5a3c;
+  background: #e21c1f;
 }
 
 .service-modal-form-box {
@@ -1668,7 +1668,7 @@ body.modal-open {
 }
 
 .service-modal-form-sub span {
-  color: #ff5a3c;
+  color: #e21c1f;
   font-weight: 600;
 }
 
@@ -1687,9 +1687,9 @@ body.modal-open {
   margin-bottom: 18px;
   padding: 12px 14px;
   border-radius: 8px;
-  border: 1px dashed #ff5a3c;
-  background: rgba(255, 90, 60, 0.06);
-  color: #ff5a3c;
+  border: 1px dashed #e21c1f;
+  background: rgba(180, 35, 47, 0.06);
+  color: #e21c1f;
   font-size: 14px;
   font-weight: 600;
 }
@@ -1697,7 +1697,7 @@ body.modal-open {
 .service-modal-form-box button[type="submit"] {
   width: 100%;
   padding: 14px;
-  background: #ff5a3c;
+  background: #e21c1f;
   border: none;
   color: white;
   border-radius: 999px;
