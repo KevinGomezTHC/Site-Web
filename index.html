@@ -6,12 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Hospitality Center</title>
     <link rel="icon" href="/image/icono.png" type="image/png" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" type="text/css" href="stylesV17.css">
-    
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '4584566261869585');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=4584566261869585&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 
 <body>
@@ -54,831 +71,985 @@
 
     <!-- HERO -->
     <main id="pageViews">
-    <section class="hero page-view is-active" id="hero" data-view="home">
-        <div class="home-grid">
-        <div class="hero-content">
-            <div class="home-carousel" aria-label="Imágenes de The Hospitality Center">
-                <div class="carousel-track">
-                    <img class="carousel-slide is-active" src="image/ThcAcademy.png" alt="THC Academy">
-                    <img class="carousel-slide" src="image/Sanitacion.png" alt="Sanitización profesional">
-                    <img class="carousel-slide" src="image/operadorHotelero.png" alt="Operación hotelera">
-                    <img class="carousel-slide" src="image/headHunting.png" alt="Head Hunting">
+        <section class="hero page-view is-active" id="hero" data-view="home">
+            <div class="home-grid">
+                <div class="hero-content">
+                    <div class="home-carousel" aria-label="Imágenes de The Hospitality Center">
+                        <div class="carousel-track">
+                            <img class="carousel-slide is-active" src="image/ThcAcademy.png" alt="THC Academy">
+                            <img class="carousel-slide" src="image/Sanitacion.png" alt="Sanitización profesional">
+                            <img class="carousel-slide" src="image/operadorHotelero.png" alt="Operación hotelera">
+                            <img class="carousel-slide" src="image/headHunting.png" alt="Head Hunting">
+                        </div>
+                        <button class="carousel-control carousel-prev" type="button"
+                            aria-label="Imagen anterior">‹</button>
+                        <button class="carousel-control carousel-next" type="button"
+                            aria-label="Imagen siguiente">›</button>
+                        <div class="carousel-dots" aria-label="Seleccionar imagen">
+                            <button class="carousel-dot is-active" type="button" aria-label="Imagen 1"></button>
+                            <button class="carousel-dot" type="button" aria-label="Imagen 2"></button>
+                            <button class="carousel-dot" type="button" aria-label="Imagen 3"></button>
+                            <button class="carousel-dot" type="button" aria-label="Imagen 4"></button>
+                        </div>
+                    </div>
+                    <div class="hero-copy">
+                        <div class="hero-brand reveal delay-2">
+
+                            <h1><br>The Hospitality Center</h1>
+                        </div>
+
+                        <p class="reveal delay-3">
+                            Somos una empresa consolidada en hospitalidad que ofrece servicios estratégicos, consultoría
+                            y
+                            formación para equipos, líderes y destinos.
+                        </p>
+                        <div class="buttons reveal delay-4">
+                            <button class="primary" data-view="programs">Servicios</button>
+                        </div>
+                    </div>
                 </div>
-                <button class="carousel-control carousel-prev" type="button" aria-label="Imagen anterior">‹</button>
-                <button class="carousel-control carousel-next" type="button" aria-label="Imagen siguiente">›</button>
-                <div class="carousel-dots" aria-label="Seleccionar imagen">
-                    <button class="carousel-dot is-active" type="button" aria-label="Imagen 1"></button>
-                    <button class="carousel-dot" type="button" aria-label="Imagen 2"></button>
-                    <button class="carousel-dot" type="button" aria-label="Imagen 3"></button>
-                    <button class="carousel-dot" type="button" aria-label="Imagen 4"></button>
+
+                <div class="home-grid-actions" aria-label="Explorar The Hospitality Center">
+                    <div class="home-action-row">
+                        <button class="home-tile tile-about" type="button" data-view="thc-academy">
+                            <strong>THC Academy</strong>
+                            <span class="tile-arrow">→</span>
+                        </button>
+                    </div>
+                    <div class="home-action-row">
+                        <button class="home-tile tile-services" type="button" data-view="sanitizacion">
+                            <strong>Sanitización</strong>
+                            <span class="tile-arrow">→</span>
+                        </button>
+                    </div>
+                    <div class="home-action-row">
+                        <button class="home-tile tile-talent" type="button" data-view="operador-hotelero">
+                            <strong>Operador Hotelero</strong>
+                            <span class="tile-arrow">→</span>
+                        </button>
+                    </div>
+                    <div class="home-action-row">
+                        <button class="home-tile tile-contact" type="button" data-view="head-hunting">
+                            <strong>Head Hunting</strong>
+                            <span class="tile-arrow">→</span>
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div class="hero-copy">
-                <div class="hero-brand reveal delay-2">
 
-                    <h1><br>The Hospitality Center</h1>
-                </div>
- 
-                <p class="reveal delay-3">
-                    Somos una empresa consolidada en hospitalidad que ofrece servicios estratégicos, consultoría y
-                    formación para equipos, líderes y destinos.
-                </p>
-                <div class="buttons reveal delay-4">
-                    <button class="primary" data-view="programs">Servicios</button>
-                </div>
+        </section>
+
+
+
+        <section class="mission-vision page-view" id="about" data-view="about">
+            <button class="back-home" type="button" data-view="home">← Volver al inicio</button>
+            <div class="section-header reveal" id="mission-vision">
+                <p class="subtitle">NOSOTROS</p>
             </div>
-        </div>
 
-            <div class="home-grid-actions" aria-label="Explorar The Hospitality Center">
-                <div class="home-action-row">
-                    <button class="home-tile tile-about" type="button" data-view="thc-academy">
-                        <strong>THC Academy</strong>
-                        <span class="tile-arrow">→</span>
-                    </button>
-                </div>
-                <div class="home-action-row">
-                    <button class="home-tile tile-services" type="button" data-view="sanitizacion">
-                        <strong>Sanitización</strong>
-                        <span class="tile-arrow">→</span>
-                    </button>
-                </div>
-                <div class="home-action-row">
-                    <button class="home-tile tile-talent" type="button" data-view="operador-hotelero">
-                        <strong>Operador Hotelero</strong>
-                        <span class="tile-arrow">→</span>
-                    </button>
-                </div>
-                <div class="home-action-row">
-                    <button class="home-tile tile-contact" type="button" data-view="head-hunting">
-                        <strong>Head Hunting</strong>
-                        <span class="tile-arrow">→</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-
-
-    <section class="mission-vision page-view" id="about" data-view="about">
-        <button class="back-home" type="button" data-view="home">← Volver al inicio</button>
-        <div class="section-header reveal" id="mission-vision">
-            <p class="subtitle">NOSOTROS</p>
-        </div>
-
-        <div class="about-text reveal delay-1">
-            <p>The Hospitality Center es una transnacional americana, especializada en el fortalecimiento integral de la
-                industria de la hospitalidad, el turismo, la gastronomía, los servicios y los entornos corporativos. Con
-                presencia en Colombia, Costa Rica y El Salvador, desarrolla soluciones académicas, operativas,
-                sanitarias y de gestión del talento humano, alineadas con estándares internacionales de calidad,
-                servicio y eficiencia.
-                <br><br>
-                Su modelo corporativo integra formación especializada, operación hotelera, procesos de sanitizacion
-                profesional y selección estratégica de talento, acompañando a hoteles, restaurantes, empresas,
-                instituciones, operadores turísticos, centros corporativos y proyectos de servicios en la optimización
-                de procesos, el fortalecimiento de equipos y la mejora continua de la experiencia del cliente.
-            </p>
-        </div>
-
-        <div class="mission-grid reveal delay-2">
-            <div class="mission-card">
-                <h3>Misión</h3>
-                <p>
-                    En The Hospitality Center, como transnacional de origen americano con presencia en Latinoamérica
-                    fortalecemos la industria de la hospitalidad mediante soluciones integrales de formación, sanitizacion
-                    profesional, operación hotelera y gestión del talento humano. <br><br>
-                    A través de THC Academy, formamos y certificamos talento; mediante nuestra línea de Sanitizacion,
-                    prestamos servicios técnicos con estándares internacionales y grado hospitalario; como Operador
-                    Hotelero, administramos, supervisamos y optimizamos establecimientos de alojamiento; y con Head
-                    Hunting, conectamos empresas con talento calificado para el sector HORECA y de servicios.
-                </p>
-            </div>
-            <div class="mission-card">
-                <h3>Visión</h3>
-                <p>
-                    Ser una transnacional referente en Latinoamérica en soluciones integrales para la industria de la
-                    hospitalidad, reconocida por la calidad de sus servicios académicos, sanitarios, operativos y de
-                    gestión del talento humano.
+            <div class="about-text reveal delay-1">
+                <p>The Hospitality Center es una transnacional americana, especializada en el fortalecimiento integral
+                    de la
+                    industria de la hospitalidad, el turismo, la gastronomía, los servicios y los entornos corporativos.
+                    Con
+                    presencia en Colombia, Costa Rica y El Salvador, desarrolla soluciones académicas, operativas,
+                    sanitarias y de gestión del talento humano, alineadas con estándares internacionales de calidad,
+                    servicio y eficiencia.
                     <br><br>
-                    Al mismo tiempo, aspiramos a transformar la atención del sector HORECA en experiencias memorables,
-                    impulsando el crecimiento profesional a través de programas técnicos laborales de calidad. Queremos
-                    construir una industria más humana, innovadora y sostenible, donde cada servicio genere impacto
-                    positivo en las personas, las empresas y las comunidades.
+                    Su modelo corporativo integra formación especializada, operación hotelera, procesos de sanitizacion
+                    profesional y selección estratégica de talento, acompañando a hoteles, restaurantes, empresas,
+                    instituciones, operadores turísticos, centros corporativos y proyectos de servicios en la
+                    optimización
+                    de procesos, el fortalecimiento de equipos y la mejora continua de la experiencia del cliente.
                 </p>
             </div>
-        </div>
-    </section>
 
-    <section class="partner-marquee page-view reveal" id="partners" data-view="about" data-about-content="true">
-        <div class="section-header">
-            <p class="subtitle">SOCIOS</p>
-            <h2>Organizaciones que confían en nosotros</h2>
-        </div>
-        <div class="marquee-track1">
-            <div class="marquee-group1">
-                <div class="partner-logo"><img src="/image/SociosTHC/ALABAMA.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/Aloft.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/ALTASVISTAS.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/ANDRESCR.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/Art_Basel.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/compas.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/COTELCO.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/courtyard.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/ELON.webp" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/embassy.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/FAENA.webp" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/HILTON HOTEL.png" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/Home2.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/ISLAMUCURA.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/JMU.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/JWMARRIOT.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/KNOXVILLE.webp" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/lenoir-rhyne.webp" alt="Socio" loading="lazy">
+            <div class="mission-grid reveal delay-2">
+                <div class="mission-card">
+                    <h3>Misión</h3>
+                    <p>
+                        En The Hospitality Center, como transnacional de origen americano con presencia en Latinoamérica
+                        fortalecemos la industria de la hospitalidad mediante soluciones integrales de formación,
+                        sanitizacion
+                        profesional, operación hotelera y gestión del talento humano. <br><br>
+                        A través de THC Academy, formamos y certificamos talento; mediante nuestra línea de
+                        Sanitizacion,
+                        prestamos servicios técnicos con estándares internacionales y grado hospitalario; como Operador
+                        Hotelero, administramos, supervisamos y optimizamos establecimientos de alojamiento; y con Head
+                        Hunting, conectamos empresas con talento calificado para el sector HORECA y de servicios.
+                    </p>
                 </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/Logo_of_Broward_County,_Florida.svg.png"
-                        alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-American_Airlines_Arena.webp" alt="Socio"
-                        loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-aramark.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-barrymore.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-bath-club.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logocasalolamalaga.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-capitalVacations.png" alt="Socio"
-                        loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-centerplate.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-convention center.png" alt="Socio"
-                        loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-deliverlean.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-franismarion.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-hadRock.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-hilton.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-Holiday.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-Hyatt-Regency.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-Jockey-Club.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-levy.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/Logo-MarriotBonvoy.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-performance.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-sheraton.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-soodexo.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-spoon.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-terranum.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-western.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-westin.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-william.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-wilmington.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/MARRIOT.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/Mercedes-Benz.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/MIAMIOPEN.jpg" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/Montreat.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/NASCAR.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/NATIONS.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/STATE UNIVERSITY.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/WHotels.png" alt="Socio" loading="lazy"></div>
-            </div>
-            <div class="marquee-group">
-                <div class="partner-logo"><img src="/image/SociosTHC/ALABAMA.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/Aloft.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/ALTASVISTAS.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/ANDRESCR.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/Art_Basel.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/compas.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/COTELCO.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/courtyard.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/ELON.webp" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/embassy.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/FAENA.webp" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/HILTON HOTEL.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/Home2.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/ISLAMUCURA.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/JMU.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/JWMARRIOT.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/KNOXVILLE.webp" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/lenoir-rhyne.webp" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/Logo_of_Broward_County,_Florida.svg.png"
-                        alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-American_Airlines_Arena.webp" alt="Socio"
-                        loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-aramark.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-barrymore.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-bath-club.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logocasalolamalaga.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-capitalVacations.png" alt="Socio"
-                        loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-centerplate.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-convention center.png" alt="Socio"
-                        loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-deliverlean.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-franismarion.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-hadRock.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-hilton.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-Holiday.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-Hyatt-Regency.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-Jockey-Club.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-levy.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/Logo-MarriotBonvoy.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-performance.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-sheraton.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-soodexo.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-spoon.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-terranum.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-western.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-westin.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-william.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/logo-wilmington.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/MARRIOT.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/Mercedes-Benz.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/MIAMIOPEN.jpg" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/Montreat.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/NASCAR.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/NATIONS.png" alt="Socio" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/SociosTHC/STATE UNIVERSITY.png" alt="Socio" loading="lazy">
-                </div>
-                <div class="partner-logo"><img src="/image/SociosTHC/WHotels.png" alt="Socio" loading="lazy"></div>
-            </div>
-        </div>
-    </section>
-
-    <section class="programs page-view" id="programs" data-view="programs">
-        <button class="back-home" type="button" data-view="home">← Volver al inicio</button>
-        <div class="section-header reveal">
-            <p class="subtitle">SERVICIOS</p>
-            <h2>Soluciones para empresas y talento</h2>
-            <p class="description">
-                Servicios empresariales integrados con programas formativos diseñados para acelerar resultados en la
-                industria de la hospitalidad.
-            </p>
-        </div>
-
-        <div class="grid">
-            <div class="card reveal delay-1">
-                <div class="badge">Contenido de nuestro servicio</div>
-                <img src="image/ThcAcademy.png" alt="">
-                <div class="card-content">
-                    <h3>THC Academy</h3>
-                    <p>THC Academy es la unidad académica de The Hospitality Center, enfocada en el diseño, desarrollo e
-                        implementación de programas de formación, entrenamiento y certificación para el fortalecimiento
-                        de competencias laborales en sectores de alta demanda.</p>
-                    <button class="info-bt" type="button" data-view="thc-academy">
-                        Más información →
-                    </button>
+                <div class="mission-card">
+                    <h3>Visión</h3>
+                    <p>
+                        Ser una transnacional referente en Latinoamérica en soluciones integrales para la industria de
+                        la
+                        hospitalidad, reconocida por la calidad de sus servicios académicos, sanitarios, operativos y de
+                        gestión del talento humano.
+                        <br><br>
+                        Al mismo tiempo, aspiramos a transformar la atención del sector HORECA en experiencias
+                        memorables,
+                        impulsando el crecimiento profesional a través de programas técnicos laborales de calidad.
+                        Queremos
+                        construir una industria más humana, innovadora y sostenible, donde cada servicio genere impacto
+                        positivo en las personas, las empresas y las comunidades.
+                    </p>
                 </div>
             </div>
+        </section>
 
-            <div class="card reveal delay-2">
-                <div class="badge">Contenido de nuestro servicio</div>
-                <img src="image/Sanitacion.png" alt="">
-                <div class="card-content">
-                    <h3>Sanitizacion</h3>
-                    <p>El servicio de Sanitizacion de The Hospitality Center corresponde a una línea operativa
-                        especializada en la prestación directa de servicios profesionales de limpieza avanzada,
-                        desinfección técnica, sanitización de espacios y control higiénico ambiental, bajo estándares
-                        internacionales y con enfoque de grado hospitalario.</p>
-                    <button class="info-bt" type="button" data-view="sanitizacion">
-                        Más información →
-                    </button>
-                </div>
+        <section class="partner-marquee page-view reveal" id="partners" data-view="about" data-about-content="true">
+            <div class="section-header">
+                <p class="subtitle">SOCIOS</p>
+                <h2>Organizaciones que confían en nosotros</h2>
             </div>
-
-            <div class="card reveal delay-3">
-                <div class="badge">Contenido de nuestro servicio</div>
-                <img src="image/operadorHotelero.png" alt="">
-                <div class="card-content">
-                    <h3>Operador Hotelero</h3>
-                    <p>Como Operador Hotelero, The Hospitality Center ofrece soluciones integrales para la
-                        administración, gestión, supervisión y optimización operativa de hoteles, hostales, alojamientos
-                        turísticos, rentas cortas y proyectos de hospitalidad.</p>
-                    <button class="info-bt" type="button" data-view="operador-hotelero">
-                        Más información →
-                    </button>
-                </div>
-            </div>
-
-            <div class="card reveal delay-1">
-                <div class="badge">Contenido de nuestro servicio</div>
-                <img src="image/headHunting.png" alt="">
-                <div class="card-content">
-                    <h3>Head Hunting</h3>
-                    <p>El servicio de Head Hunting de The Hospitality Center está enfocado en la identificación,
-                        evaluación, selección y presentación de talento humano especializado para empresas del sector
-                        hotelero, gastronómico, turístico, comercial, corporativo y de servicios.</p>
-                    <button class="info-bt" type="button" data-view="head-hunting">
-                        Más información →
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="head-hunting-view page-view" id="head-hunting" data-view="head-hunting">
-        <button class="back-home" type="button" data-view="home">← Volver al inicio</button>
-        <div class="head-hunting-header">
-            <p class="subtitle">HEADHUNTING THC</p>
-            <h2>Encontramos el talento que su empresa necesita</h2>
-            <p>Servicios especializados de búsqueda, evaluación y selección de talento para hoteles, restaurantes,
-                empresas turísticas y organizaciones del sector servicios.</p>
-        </div>
-        <h3 class="head-hunting-title">Nuestro proceso</h3>
-        <div class="head-hunting-process">
-            <div class="process-step"><b>1</b><span>Identificación de la necesidad</span></div>
-            <div class="process-step"><b>2</b><span>Levantamiento del perfil</span></div>
-            <div class="process-step"><b>3</b><span>Publicación y búsqueda</span></div>
-            <div class="process-step"><b>4</b><span>Preselección</span></div>
-            <div class="process-step"><b>5</b><span>Entrevistas</span></div>
-            <div class="process-step"><b>6</b><span>Pruebas técnicas</span></div>
-            <div class="process-step"><b>7</b><span>Evaluación integral</span></div>
-            <div class="process-step"><b>8</b><span>Presentación de candidatos</span></div>
-            <div class="process-step"><b>9</b><span>Acompañamiento en contratación</span></div>
-            <div class="process-step"><b>10</b><span>Seguimiento inicial</span></div>
-        </div>
-        <h3 class="head-hunting-title profiles-title">Perfiles que gestionamos</h3>
-        <div class="profile-tags">
-            <span>Gerentes hoteleros</span><span>Administradores</span><span>Jefes de operaciones</span>
-            <span>Personal de recepción</span><span>Ejecutivos comerciales</span><span>Personal de A&amp;B</span>
-            <span>Meseros</span><span>Bartenders</span><span>Baristas</span><span>Cocineros</span>
-            <span>Chefs</span><span>Supervisores</span><span>Personal de housekeeping</span>
-            <span>Personal administrativo</span><span>Personal operativo</span>
-        </div>
-        <div class="head-hunting-cta">
-            <p>¿Necesita este servicio para su empresa?</p>
-            <button class="info-btn" type="button" data-service="head-hunting" data-title="Head Hunting"
-                data-image="image/headHunting.png" data-summary="Identificación y selección estratégica de talento especializado."
-                data-description="El servicio de Head Hunting de The Hospitality Center está enfocado en la identificación, evaluación, selección y presentación de talento humano especializado para empresas del sector hotelero, gastronómico, turístico, comercial, corporativo y de servicios."
-                data-description1="Mediante procesos técnicos de reclutamiento, validación de experiencia, análisis de perfil y evaluación de competencias, facilita el acceso a talento calificado para cargos operativos, técnicos, administrativos, comerciales y gerenciales.">
-                Solicitar información
-            </button>
-        </div>
-    </section>
-    <section class="academy-view page-view" id="thc-academy" data-view="thc-academy">
-        <button class="back-home" type="button" data-view="home">← Volver al inicio</button>
-        <div class="academy-header">
-            <p class="subtitle">THC ACADEMIA</p>
-            <h2>Formación especializada para la industria hotelera, gastronómica y de servicios</h2>
-            <p>Diseñamos programas de formación, capacitaciones, talleres y entrenamientos adaptados a las necesidades
-                de hoteles, restaurantes, empresas, instituciones y equipos de trabajo.</p>
-        </div>
-        <div class="academy-options">
-            <article class="academy-option"><span class="academy-icon">▣</span><div><h3>Cursos</h3><p>Programas certificados para profesionales del sector</p></div><span></span></article>
-            <article class="academy-option"><span class="academy-icon">▤</span><div><h3>Capacitaciones corporativas</h3><p>Programas a la medida para su empresa</p></div><span></span></article>
-            <article class="academy-option"><span class="academy-icon">☆</span><div><h3>Talleres y experiencias</h3><p>Aprendizaje práctico, dinámico e impactante</p></div><span></span></article>
-            <article class="academy-option"><span class="academy-icon">⊕</span><div><h3>Sedes y cobertura</h3><p>Presencia nacional e internacional para llevar la formación a donde usted la necesita</p></div><span></span></article>
-        </div>
-        <div class="academy-cta">
-            <p>¿Necesita formación para su equipo?</p>
-            <button class="info-btn" type="button" data-service="thc-academy" data-title="THC Academy"
-                data-image="image/ThcAcademy.png" data-summary="Formación especializada para profesionales de la hospitalidad."
-                data-description="THC Academy diseña programas de formación, capacitación y certificación para empresas y profesionales del sector.">
-                Solicitar información
-            </button>
-        </div>
-    </section>
-    <section class="sanitizacion-view page-view" id="sanitizacion" data-view="sanitizacion">
-        <button class="back-home" type="button" data-view="home">← Volver al inicio</button>
-        <div class="sanitizacion-header">
-            <p class="subtitle">SANITIZACIÓN THC</p>
-            <h2>Sanitización para restaurantes, cocinas y negocios gastronómicos</h2>
-            <p>Implementamos procesos especializados de limpieza, desinfección, sanitización y control de puntos críticos para restaurantes, hoteles, cocinas industriales y establecimientos gastronómicos.</p>
-        </div>
-        <div class="sanitizacion-columns">
-            <div>
-                <h3>Puntos críticos de una cocina</h3>
-                <div class="sanitizacion-tags">
-                    <span>Pisos</span><span>Paredes</span><span>Techos</span><span>Equipos</span><span>Utensilios</span>
-                    <span>Cámaras de refrigeración</span><span>Congeladores</span><span>Campanas</span><span>Extractores</span>
-                    <span>Áreas de almacenamiento</span><span>Áreas de residuos</span><span>Zonas de preparación</span>
-                    <span>Áreas de lavado</span><span>Superficies de contacto</span><span>Menaje</span><span>Trampas de grasa</span><span>Áreas de servicio</span>
-                </div>
-            </div>
-            <div>
-                <h3>Servicios que ofrecemos</h3>
-                <ul class="sanitizacion-services">
-                    <li>Limpieza general</li><li>Limpieza profunda</li><li>Sanitización gastronómica</li><li>Desinfección de superficies</li>
-                    <li>Limpieza de cocinas industriales</li><li>Limpieza de equipos</li><li>Limpieza de campanas y extractores</li>
-                    <li>Control de puntos críticos</li><li>Protocolos de limpieza y desinfección</li><li>Verificación de BPM</li>
-                    <li>Acompañamiento en seguridad alimentaria</li><li>Capacitación al personal</li><li>Planes periódicos de sanitización</li>
-                    <li>Informes de servicio</li><li>Evidencias fotográficas</li><li>Recomendaciones de mejora</li>
-                </ul>
-            </div>
-        </div>
-        <h3 class="sanitizacion-title">Nuestra secuencia de servicio</h3>
-        <div class="sanitizacion-sequence">
-            <div><b>1</b><strong>Inspección</strong><span>Evaluamos el estado de las instalaciones.</span></div>
-            <div><b>2</b><strong>Identificación</strong><span>Mapeamos los puntos críticos de riesgo.</span></div>
-            <div><b>3</b><strong>Planeación</strong><span>Diseñamos el protocolo específico.</span></div>
-            <div><b>4</b><strong>Limpieza</strong><span>Removemos suciedad y residuos.</span></div>
-            <div><b>5</b><strong>Desinfección</strong><span>Eliminamos microorganismos patógenos.</span></div>
-            <div><b>6</b><strong>Sanitización</strong><span>Reducimos carga microbiana a niveles seguros.</span></div>
-            <div><b>7</b><strong>Verificación</strong><span>Comprobamos resultados del proceso.</span></div>
-            <div><b>8</b><strong>Informe</strong><span>Entregamos documentación y evidencias.</span></div>
-        </div>
-        <div class="sanitizacion-cta">
-            <p>¿Necesita este servicio para su empresa?</p>
-            <button class="info-btn" type="button" data-service="sanitacion" data-title="Sanitización"
-                data-image="image/Sanitacion.png" data-summary="Limpieza avanzada y control higiénico bajo estándares de grado hospitalario."
-                data-description="El servicio de Sanitización de The Hospitality Center ofrece limpieza avanzada, desinfección técnica, sanitización de espacios y control higiénico ambiental.">
-                Solicitar información
-            </button>
-        </div>
-    </section>
-    <section class="operator-view page-view" id="operador-hotelero" data-view="operador-hotelero">
-        <button class="back-home" type="button" data-view="home">← Volver al inicio</button>
-        <div class="operator-header">
-            <p class="subtitle">OPERACIONES HOTELERAS</p>
-            <h2>Operadores hoteleros</h2>
-            <p>Acompañamos la estructuración, administración, puesta en marcha y optimización de proyectos hoteleros, gastronómicos y turísticos.</p>
-        </div>
-        <div class="operator-solutions">
-            <div><b>▣</b><strong>Operación integral de hoteles</strong><span>Gestión completa de la operación hotelera bajo estándares de excelencia.</span></div>
-            <div><b>⌑</b><strong>Administración hotelera</strong><span>Dirección estratégica y operativa del establecimiento.</span></div>
-            <div><b>⚙</b><strong>Apertura y puesta en marcha</strong><span>Acompañamiento total en el lanzamiento de nuevos proyectos hoteleros.</span></div>
-            <div><b>▥</b><strong>Diagnóstico de operaciones</strong><span>Evaluación integral del estado actual de su hotel o restaurante.</span></div>
-            <div><b>▣</b><strong>Estructuración de procesos</strong><span>Diseño de flujos operativos eficientes.</span></div>
-            <div><b>▤</b><strong>Manuales operativos</strong><span>Creación de manuales de procedimientos.</span></div>
-            <div><b>♧</b><strong>Perfiles de cargo</strong><span>Diseño de descriptores de cargos alineados a su operación.</span></div>
-            <div><b>⚙</b><strong>Implementación de estándares</strong><span>Adopción de estándares operativos nacionales e internacionales.</span></div>
-            <div><b>♧</b><strong>Supervisión de departamentos</strong><span>Control y apoyo continuo a cada área del hotel.</span></div>
-            <div><b>▣</b><strong>Gestión de experiencia del huésped</strong><span>Diseño de la experiencia completa del huésped.</span></div>
-            <div><b>▥</b><strong>Control de costos</strong><span>Optimización de gastos operativos en cada área.</span></div>
-            <div><b>↗</b><strong>Gestión comercial</strong><span>Estrategias para incrementar ingresos y posicionamiento.</span></div>
-            <div><b>▣</b><strong>Gestión de reservas</strong><span>Optimización de canales y procesos de reservas.</span></div>
-            <div><b>⚙</b><strong>Alimentos y bebidas</strong><span>Gestión especializada del área de A&amp;B.</span></div>
-            <div><b>↗</b><strong>Revenue management</strong><span>Maximización de ingresos mediante tarifas dinámicas.</span></div>
-            <div><b>▣</b><strong>Gestión de OTAs</strong><span>Administración de canales digitales de distribución.</span></div>
-            <div><b>♧</b><strong>Auditorías operativas</strong><span>Revisión sistemática de procesos, resultados y estándares.</span></div>
-            <div><b>⚙</b><strong>Acompañamiento gerencial</strong><span>Mentoría y apoyo directo a la gerencia.</span></div>
-            <div><b>▣</b><strong>Entrenamiento de equipo</strong><span>Formación integral adaptada a las necesidades del personal.</span></div>
-            <div><b>↗</b><strong>Optimización de rentabilidad</strong><span>Estrategias para mejorar el margen operativo del establecimiento.</span></div>
-        </div>
-        <div class="operator-model">
-            <h3>Nuestro modelo de operación</h3>
-            <div class="operator-steps">
-                <div><b>1</b><strong>Diagnóstico</strong><span>Evaluamos el estado actual de la operación.</span></div>
-                <div><b>2</b><strong>Planeación</strong><span>Diseñamos el plan estratégico de acción.</span></div>
-                <div><b>3</b><strong>Estructuración</strong><span>Organizamos procesos, perfiles y estándares.</span></div>
-                <div><b>4</b><strong>Implementación</strong><span>Ponemos en marcha todos los ajustes definidos.</span></div>
-                <div><b>5</b><strong>Operación</strong><span>Acompañamos la operación diaria del hotel.</span></div>
-                <div><b>6</b><strong>Supervisión</strong><span>Controlamos el cumplimiento de estándares.</span></div>
-                <div><b>7</b><strong>Evaluación</strong><span>Medimos resultados con indicadores clave.</span></div>
-                <div><b>8</b><strong>Mejora continua</strong><span>Ajustamos y optimizamos permanentemente.</span></div>
-            </div>
-        </div>
-        <div class="operator-cta">
-            <p>¿Necesita este servicio para su empresa?</p>
-            <button class="info-btn" type="button" data-service="operador-hotelero" data-title="Operador Hotelero" data-image="image/operadorHotelero.png" data-summary="Administración y operación integral de hoteles y alojamientos turísticos." data-description="Ofrecemos soluciones integrales para la administración, gestión, supervisión y optimización operativa de proyectos de hospitalidad.">Solicitar información</button>
-        </div>
-    </section>
-    <section class="careers-section page-view" id="careers" data-view="careers">
-        <button class="back-home" type="button" data-view="home">← Volver al inicio</button>
-        <div class="careers-shell">
-            <div class="careers-toggle" role="tablist" aria-label="Opciones de talento humano">
-                <button class="careers-switch active" type="button" data-mode="candidate" aria-pressed="true">
-                    Trabaja con nosotros
-                </button>
-                <button class="careers-switch" type="button" data-mode="company" aria-pressed="false">
-                    Si Buscas personal
-                </button>
-            </div>
-
-            <div class="careers-stage">
-                <div class="careers-card" id="careersCard">
-                    <div class="careers-card-face careers-card-front active">
-                        <div class="careers-card-media">
-                            <img src="image/HojaDeVida.jpeg" alt="Trabaja con nosotros en The Hospitality Center">
-                        </div>
-
-                        <div class="careers-card-copy">
-                            <p class="subtitle" data-desktop="Buscas empleo">TALENTO HUMANO</p>
-                            <h2>
-                                Trabaja <br>
-                                <span>con nosotros</span>
-                            </h2>
-                            <p class="description">
-                                ¿Quieres ser parte de The Hospitality Center? Anexa tu hoja de vida y nuestro equipo te
-                                contactará con las oportunidades disponibles.
-                            </p>
-
-                            <div class="careers-form-box">
-                                <h3>Anexa tu hoja de vida</h3>
-                                <form id="cvForm" action="https://formsubmit.co/logistica@thehospitalitycenter.net"
-                                    method="POST" enctype="multipart/form-data" class="contact-form">
-                                    <input type="hidden" name="_captcha" value="false">
-                                    <input type="hidden" name="_subject" value="Nueva hoja de vida - THC">
-                                    <input type="hidden" name="_template" value="table">
-                                    <input type="hidden" name="_next" value="" id="cvFormNext">
-
-                                    <input type="text" name="nombre" placeholder="Nombre completo*" required>
-                                    <input type="email" name="correo" placeholder="Correo electrónico*" required>
-                                    <input type="text" name="telefono" placeholder="Teléfono / WhatsApp*" required>
-
-                                    <select name="ciudad" class="cv-cargo-select" required>
-                                        <option value="">Ciudad*</option>
-                                        <optgroup label="Colombia">
-                                            <option>Bogotá</option>
-                                            <option>Medellín</option>
-                                            <option>Cali</option>
-                                            <option>Cartagena</option>
-                                            <option>Barranquilla</option>
-                                        </optgroup>
-                                        <optgroup label="Costa Rica">
-                                            <option>San José</option>
-                                            <option>Escazú</option>
-                                            <option>Heredia</option>
-                                            <option>Alajuela</option>
-                                        </optgroup>
-                                        <optgroup label="El Salvador">
-                                            <option>San Salvador</option>
-                                            <option>Santa Tecla</option>
-                                            <option>Soyapango</option>
-                                            <option>Antiguo Cuscatlán</option>
-                                        </optgroup>
-                                        <option value="Otra ciudad">Otra ciudad</option>
-                                    </select>
-
-                                    <select name="cargo" class="cv-cargo-select">
-                                        <option value="">Cargo de interés</option>
-                                        <optgroup label="FRONT OFFICE Y RECEPCIÓN">
-                                            <option>Recepcionista</option>
-                                            <option>Auxiliar de Recepción</option>
-                                            <option>Agente de Reservas</option>
-                                            <option>Auditor Nocturno</option>
-                                            <option>Botones</option>
-                                            <option>Concierge</option>
-                                            <option>Portero</option>
-                                            <option>Telefonista</option>
-                                            <option>Anfitrión de Hotel</option>
-                                        </optgroup>
-                                        <optgroup label="HOUSEKEEPING Y LIMPIEZA">
-                                            <option>Ama de Llaves</option>
-                                            <option>Supervisora de Habitaciones</option>
-                                            <option>Camarera de Habitaciones</option>
-                                            <option>Auxiliar de Housekeeping</option>
-                                            <option>Operario de Limpieza</option>
-                                            <option>Auxiliar de Áreas Públicas</option>
-                                            <option>Auxiliar de Lavandería</option>
-                                            <option>Operario de Sanitización</option>
-                                        </optgroup>
-                                        <optgroup label="ALIMENTOS Y BEBIDAS">
-                                            <option>Mesero</option>
-                                            <option>Capitán de Servicio</option>
-                                            <option>Bartender</option>
-                                            <option>Barista</option>
-                                            <option>Host o Anfitrión</option>
-                                            <option>Cajero de Restaurante</option>
-                                            <option>Sommelier</option>
-                                            <option>Auxiliar de Mesa y Bar</option>
-                                        </optgroup>
-                                        <optgroup label="COCINA">
-                                            <option>Chef</option>
-                                            <option>Chef Ejecutivo</option>
-                                            <option>Jefe de Cocina</option>
-                                            <option>Cocinero</option>
-                                            <option>Auxiliar de Cocina</option>
-                                            <option>Panadero</option>
-                                            <option>Pastelero</option>
-                                            <option>Steward</option>
-                                            <option>Parrillero</option>
-                                            <option>Pizzero</option>
-                                        </optgroup>
-                                        <optgroup label="ADMINISTRATIVO Y COMERCIAL">
-                                            <option>Ejecutivo Comercial</option>
-                                            <option>Gestor Comercial</option>
-                                            <option>Coordinador Comercial</option>
-                                            <option>Auxiliar Administrativo</option>
-                                            <option>Asistente Administrativo</option>
-                                            <option>Coordinador de Talento Humano</option>
-                                            <option>Analista de Compras</option>
-                                            <option>Community Manager</option>
-                                            <option>Coordinador de Eventos</option>
-                                            <option>Auxiliar Contable</option>
-                                        </optgroup>
-                                        <optgroup label="OPERACIÓN HOTELERA">
-                                            <option>Gerente de Hotel</option>
-                                            <option>Gerente de Restaurante</option>
-                                            <option>Supervisor de Operaciones</option>
-                                            <option>Coordinador de Operaciones</option>
-                                            <option>Coordinador de Mantenimiento</option>
-                                            <option>Técnico de Mantenimiento</option>
-                                            <option>Auxiliar de Mantenimiento</option>
-                                            <option>Coordinador de Seguridad</option>
-                                            <option>Guarda de Seguridad</option>
-                                            <option>Operador Hotelero</option>
-                                        </optgroup>
-                                        <optgroup label="EVENTOS Y TURISMO">
-                                            <option>Coordinador de Eventos</option>
-                                            <option>Auxiliar de Eventos</option>
-                                            <option>Ejecutivo de Banquetes</option>
-                                            <option>Coordinador de Banquetes</option>
-                                            <option>Guía Turístico</option>
-                                            <option>Agente de Viajes</option>
-                                            <option>Coordinador de Turismo</option>
-                                            <option>Recreacionista</option>
-                                        </optgroup>
-                                        <optgroup label="OTRA OPCIÓN">
-                                            <option>Otro cargo</option>
-                                            <option>No tengo un cargo definido</option>
-                                            <option>Prácticas o pasantías</option>
-                                        </optgroup>
-                                    </select>
-
-                                    <label class="cv-upload" for="cvFile">
-                                        <span class="cv-upload-icon">⬆</span>
-                                        <span class="cv-upload-text" id="cvFileName">Adjuntar hoja de vida (PDF o Word)*</span>
-                                    </label>
-                                    <input type="file" id="cvFile" name="hojaDeVida" accept=".pdf,.doc,.docx" required hidden>
-
-                                    <button type="submit" class="btn btn-primary btn-full">Enviar hoja de vida</button>
-                                </form>
-                            </div>
-                        </div>
+            <div class="marquee-track1">
+                <div class="marquee-group1">
+                    <div class="partner-logo"><img src="/image/SociosTHC/ALABAMA.png" alt="Socio" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/Aloft.png" alt="Socio" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/ALTASVISTAS.png" alt="Socio" loading="lazy">
                     </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/ANDRESCR.png" alt="Socio" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/Art_Basel.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/compas.png" alt="Socio" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/COTELCO.png" alt="Socio" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/courtyard.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/ELON.webp" alt="Socio" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/embassy.png" alt="Socio" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/FAENA.webp" alt="Socio" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/HILTON HOTEL.png" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/Home2.png" alt="Socio" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/ISLAMUCURA.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/JMU.png" alt="Socio" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/JWMARRIOT.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/KNOXVILLE.webp" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/lenoir-rhyne.webp" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/Logo_of_Broward_County,_Florida.svg.png"
+                            alt="Socio" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-American_Airlines_Arena.webp" alt="Socio"
+                            loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-aramark.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-barrymore.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-bath-club.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logocasalolamalaga.png" alt="Socio"
+                            loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-capitalVacations.png" alt="Socio"
+                            loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-centerplate.png" alt="Socio"
+                            loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-convention center.png" alt="Socio"
+                            loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-deliverlean.png" alt="Socio"
+                            loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-franismarion.png" alt="Socio"
+                            loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-hadRock.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-hilton.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-Holiday.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-Hyatt-Regency.png" alt="Socio"
+                            loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-Jockey-Club.png" alt="Socio"
+                            loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-levy.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/Logo-MarriotBonvoy.png" alt="Socio"
+                            loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-performance.png" alt="Socio"
+                            loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-sheraton.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-soodexo.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-spoon.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-terranum.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-western.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-westin.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-william.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-wilmington.png" alt="Socio"
+                            loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/MARRIOT.png" alt="Socio" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/Mercedes-Benz.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/MIAMIOPEN.jpg" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/Montreat.png" alt="Socio" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/NASCAR.png" alt="Socio" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/NATIONS.png" alt="Socio" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/STATE UNIVERSITY.png" alt="Socio"
+                            loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/WHotels.png" alt="Socio" loading="lazy"></div>
+                </div>
+                <div class="marquee-group">
+                    <div class="partner-logo"><img src="/image/SociosTHC/ALABAMA.png" alt="Socio" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/Aloft.png" alt="Socio" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/ALTASVISTAS.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/ANDRESCR.png" alt="Socio" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/Art_Basel.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/compas.png" alt="Socio" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/COTELCO.png" alt="Socio" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/courtyard.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/ELON.webp" alt="Socio" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/embassy.png" alt="Socio" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/FAENA.webp" alt="Socio" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/HILTON HOTEL.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/Home2.png" alt="Socio" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/ISLAMUCURA.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/JMU.png" alt="Socio" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/JWMARRIOT.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/KNOXVILLE.webp" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/lenoir-rhyne.webp" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/Logo_of_Broward_County,_Florida.svg.png"
+                            alt="Socio" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-American_Airlines_Arena.webp" alt="Socio"
+                            loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-aramark.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-barrymore.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-bath-club.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logocasalolamalaga.png" alt="Socio"
+                            loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-capitalVacations.png" alt="Socio"
+                            loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-centerplate.png" alt="Socio"
+                            loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-convention center.png" alt="Socio"
+                            loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-deliverlean.png" alt="Socio"
+                            loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-franismarion.png" alt="Socio"
+                            loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-hadRock.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-hilton.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-Holiday.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-Hyatt-Regency.png" alt="Socio"
+                            loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-Jockey-Club.png" alt="Socio"
+                            loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-levy.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/Logo-MarriotBonvoy.png" alt="Socio"
+                            loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-performance.png" alt="Socio"
+                            loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-sheraton.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-soodexo.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-spoon.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-terranum.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-western.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-westin.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-william.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/logo-wilmington.png" alt="Socio"
+                            loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/MARRIOT.png" alt="Socio" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/Mercedes-Benz.png" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/MIAMIOPEN.jpg" alt="Socio" loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/Montreat.png" alt="Socio" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/NASCAR.png" alt="Socio" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/NATIONS.png" alt="Socio" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/STATE UNIVERSITY.png" alt="Socio"
+                            loading="lazy">
+                    </div>
+                    <div class="partner-logo"><img src="/image/SociosTHC/WHotels.png" alt="Socio" loading="lazy"></div>
+                </div>
+            </div>
+        </section>
 
-                    <div class="careers-card-face careers-card-back">
-                        <div class="careers-card-media">
-                            <img src="image/Personal.png" alt="Buscas personal para tu empresa">
-                        </div>
+        <section class="programs page-view" id="programs" data-view="programs">
+            <button class="back-home" type="button" data-view="home">← Volver al inicio</button>
+            <div class="section-header reveal">
+                <p class="subtitle">SERVICIOS</p>
+                <h2>Soluciones para empresas y talento</h2>
+                <p class="description">
+                    Servicios empresariales integrados con programas formativos diseñados para acelerar resultados en la
+                    industria de la hospitalidad.
+                </p>
+            </div>
 
-                        <div class="careers-card-copy">
-                            <p class="subtitle" data-desktop="Buscas personal para tu organización">TALENTO HUMANO</p>
-                            <h2>
-                                ¿Buscas <br>
-                                <span>personal?</span>
-                            </h2>
-                            <p class="description"> 
-                                Te ayudamos a encontrar el talento adecuado para tu operación con procesos ágiles,
-                                evaluaciones y acompañamiento estratégico.
-                            </p>
+            <div class="grid">
+                <div class="card reveal delay-1">
+                    <div class="badge">Contenido de nuestro servicio</div>
+                    <img src="image/ThcAcademy.png" alt="">
+                    <div class="card-content">
+                        <h3>THC Academy</h3>
+                        <p>THC Academy es la unidad académica de The Hospitality Center, enfocada en el diseño,
+                            desarrollo e
+                            implementación de programas de formación, entrenamiento y certificación para el
+                            fortalecimiento
+                            de competencias laborales en sectores de alta demanda.</p>
+                        <button class="info-bt" type="button" data-view="thc-academy">
+                            Más información →
+                        </button>
+                    </div>
+                </div>
 
-                            <div class="careers-form-box">
-                                <h3>Cuéntanos tu necesidad</h3>
-                                <form id="recruitForm" action="https://formsubmit.co/logistica@thehospitalitycenter.net"
-                                    method="POST" class="contact-form">
-                                    <input type="hidden" name="_captcha" value="false">
-                                    <input type="hidden" name="_subject" value="Nueva solicitud de personal - THC">
-                                    <input type="hidden" name="_template" value="table">
+                <div class="card reveal delay-2">
+                    <div class="badge">Contenido de nuestro servicio</div>
+                    <img src="image/Sanitacion.png" alt="">
+                    <div class="card-content">
+                        <h3>Sanitizacion</h3>
+                        <p>El servicio de Sanitizacion de The Hospitality Center corresponde a una línea operativa
+                            especializada en la prestación directa de servicios profesionales de limpieza avanzada,
+                            desinfección técnica, sanitización de espacios y control higiénico ambiental, bajo
+                            estándares
+                            internacionales y con enfoque de grado hospitalario.</p>
+                        <button class="info-bt" type="button" data-view="sanitizacion">
+                            Más información →
+                        </button>
+                    </div>
+                </div>
 
-                                    <input type="text" name="empresa" placeholder="Nombre de la empresa*" required>
-                                    <input type="text" name="nit" placeholder="NIT*" required>
-                                    <input type="email" name="correo_corporativo" placeholder="Correo corporativo*" required>
-                                    <input type="text" name="telefono_corporativo" placeholder="Teléfono corporativo*" required>
-                                    <input type="text" name="tipo_personal" placeholder="Tipo de personal que necesita*" required>
+                <div class="card reveal delay-3">
+                    <div class="badge">Contenido de nuestro servicio</div>
+                    <img src="image/operadorHotelero.png" alt="">
+                    <div class="card-content">
+                        <h3>Operador Hotelero</h3>
+                        <p>Como Operador Hotelero, The Hospitality Center ofrece soluciones integrales para la
+                            administración, gestión, supervisión y optimización operativa de hoteles, hostales,
+                            alojamientos
+                            turísticos, rentas cortas y proyectos de hospitalidad.</p>
+                        <button class="info-bt" type="button" data-view="operador-hotelero">
+                            Más información →
+                        </button>
+                    </div>
+                </div>
 
-                                    <button type="submit" class="btn btn-primary btn-full">Solicitar asesoría</button>
-                                </form>
-                            </div>
-                        </div>
+                <div class="card reveal delay-1">
+                    <div class="badge">Contenido de nuestro servicio</div>
+                    <img src="image/headHunting.png" alt="">
+                    <div class="card-content">
+                        <h3>Head Hunting</h3>
+                        <p>El servicio de Head Hunting de The Hospitality Center está enfocado en la identificación,
+                            evaluación, selección y presentación de talento humano especializado para empresas del
+                            sector
+                            hotelero, gastronómico, turístico, comercial, corporativo y de servicios.</p>
+                        <button class="info-bt" type="button" data-view="head-hunting">
+                            Más información →
+                        </button>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="travel-section services-content page-view" id="travel" data-view="programs" data-services-content="true">
-        <div class="travel-content">
-            <div class="travel-copy">
-                <p class="subtitle">CONEXIÓN ESTRATÉGICA</p>
+        </section>
+        <section class="head-hunting-view page-view" id="head-hunting" data-view="head-hunting">
+            <button class="back-home" type="button" data-view="home">← Volver al inicio</button>
+            <div class="head-hunting-header">
+                <p class="subtitle">HEADHUNTING THC</p>
+                <h2>Encontramos el talento que su empresa necesita</h2>
+                <p>Servicios especializados de búsqueda, evaluación y selección de talento para hoteles, restaurantes,
+                    empresas turísticas y organizaciones del sector servicios.</p>
+            </div>
+            <h3 class="head-hunting-title">Nuestro proceso</h3>
+            <div class="head-hunting-process">
+                <div class="process-step"><b>1</b><span>Identificación de la necesidad</span></div>
+                <div class="process-step"><b>2</b><span>Levantamiento del perfil</span></div>
+                <div class="process-step"><b>3</b><span>Publicación y búsqueda</span></div>
+                <div class="process-step"><b>4</b><span>Preselección</span></div>
+                <div class="process-step"><b>5</b><span>Entrevistas</span></div>
+                <div class="process-step"><b>6</b><span>Pruebas técnicas</span></div>
+                <div class="process-step"><b>7</b><span>Evaluación integral</span></div>
+                <div class="process-step"><b>8</b><span>Presentación de candidatos</span></div>
+                <div class="process-step"><b>9</b><span>Acompañamiento en contratación</span></div>
+                <div class="process-step"><b>10</b><span>Seguimiento inicial</span></div>
+            </div>
+            <h3 class="head-hunting-title profiles-title">Perfiles que gestionamos</h3>
+            <div class="profile-tags">
+                <span>Gerentes hoteleros</span><span>Administradores</span><span>Jefes de operaciones</span>
+                <span>Personal de recepción</span><span>Ejecutivos comerciales</span><span>Personal de A&amp;B</span>
+                <span>Meseros</span><span>Bartenders</span><span>Baristas</span><span>Cocineros</span>
+                <span>Chefs</span><span>Supervisores</span><span>Personal de housekeeping</span>
+                <span>Personal administrativo</span><span>Personal operativo</span>
+            </div>
+            <div class="head-hunting-cta">
+                <p>¿Necesita este servicio para su empresa?</p>
+                <button class="info-btn" type="button" data-service="head-hunting" data-title="Head Hunting"
+                    data-image="image/headHunting.png"
+                    data-summary="Identificación y selección estratégica de talento especializado."
+                    data-description="El servicio de Head Hunting de The Hospitality Center está enfocado en la identificación, evaluación, selección y presentación de talento humano especializado para empresas del sector hotelero, gastronómico, turístico, comercial, corporativo y de servicios."
+                    data-description1="Mediante procesos técnicos de reclutamiento, validación de experiencia, análisis de perfil y evaluación de competencias, facilita el acceso a talento calificado para cargos operativos, técnicos, administrativos, comerciales y gerenciales.">
+                    Solicitar información
+                </button>
+            </div>
+        </section>
+        <section class="academy-view page-view" id="thc-academy" data-view="thc-academy">
+            <button class="back-home" type="button" data-view="home">← Volver al inicio</button>
+            <div class="academy-header">
+                <p class="subtitle">THC ACADEMIA</p>
+                <h2>Formación especializada para la industria hotelera, gastronómica y de servicios</h2>
+                <p>Diseñamos programas de formación, capacitaciones, talleres y entrenamientos adaptados a las
+                    necesidades
+                    de hoteles, restaurantes, empresas, instituciones y equipos de trabajo.</p>
+            </div>
+            <div class="academy-options">
+                <article class="academy-option"><span class="academy-icon">▣</span>
+                    <div>
+                        <h3>Cursos</h3>
+                        <p>Programas certificados para profesionales del sector</p>
+                    </div><span></span>
+                </article>
+                <article class="academy-option"><span class="academy-icon">▤</span>
+                    <div>
+                        <h3>Capacitaciones corporativas</h3>
+                        <p>Programas a la medida para su empresa</p>
+                    </div><span></span>
+                </article>
+                <article class="academy-option"><span class="academy-icon">☆</span>
+                    <div>
+                        <h3>Talleres y experiencias</h3>
+                        <p>Aprendizaje práctico, dinámico e impactante</p>
+                    </div><span></span>
+                </article>
+                <article class="academy-option"><span class="academy-icon">⊕</span>
+                    <div>
+                        <h3>Sedes y cobertura</h3>
+                        <p>Presencia nacional e internacional para llevar la formación a donde usted la necesita</p>
+                    </div><span></span>
+                </article>
+            </div>
+            <div class="academy-cta">
+                <p>¿Necesita formación para su equipo?</p>
+                <button class="info-btn" type="button" data-service="thc-academy" data-title="THC Academy"
+                    data-image="image/ThcAcademy.png"
+                    data-summary="Formación especializada para profesionales de la hospitalidad."
+                    data-description="THC Academy diseña programas de formación, capacitación y certificación para empresas y profesionales del sector.">
+                    Solicitar información
+                </button>
+            </div>
+        </section>
+        <section class="sanitizacion-view page-view" id="sanitizacion" data-view="sanitizacion">
+            <button class="back-home" type="button" data-view="home">← Volver al inicio</button>
+            <div class="sanitizacion-header">
+                <p class="subtitle">SANITIZACIÓN THC</p>
+                <h2>Sanitización para restaurantes, cocinas y negocios gastronómicos</h2>
+                <p>Implementamos procesos especializados de limpieza, desinfección, sanitización y control de puntos
+                    críticos para restaurantes, hoteles, cocinas industriales y establecimientos gastronómicos.</p>
+            </div>
+            <div class="sanitizacion-columns">
+                <div>
+                    <h3>Puntos críticos de una cocina</h3>
+                    <div class="sanitizacion-tags">
+                        <span>Pisos</span><span>Paredes</span><span>Techos</span><span>Equipos</span><span>Utensilios</span>
+                        <span>Cámaras de
+                            refrigeración</span><span>Congeladores</span><span>Campanas</span><span>Extractores</span>
+                        <span>Áreas de almacenamiento</span><span>Áreas de residuos</span><span>Zonas de
+                            preparación</span>
+                        <span>Áreas de lavado</span><span>Superficies de contacto</span><span>Menaje</span><span>Trampas
+                            de grasa</span><span>Áreas de servicio</span>
+                    </div>
+                </div>
+                <div>
+                    <h3>Servicios que ofrecemos</h3>
+                    <ul class="sanitizacion-services">
+                        <li>Limpieza general</li>
+                        <li>Limpieza profunda</li>
+                        <li>Sanitización gastronómica</li>
+                        <li>Desinfección de superficies</li>
+                        <li>Limpieza de cocinas industriales</li>
+                        <li>Limpieza de equipos</li>
+                        <li>Limpieza de campanas y extractores</li>
+                        <li>Control de puntos críticos</li>
+                        <li>Protocolos de limpieza y desinfección</li>
+                        <li>Verificación de BPM</li>
+                        <li>Acompañamiento en seguridad alimentaria</li>
+                        <li>Capacitación al personal</li>
+                        <li>Planes periódicos de sanitización</li>
+                        <li>Informes de servicio</li>
+                        <li>Evidencias fotográficas</li>
+                        <li>Recomendaciones de mejora</li>
+                    </ul>
+                </div>
+            </div>
+            <h3 class="sanitizacion-title">Nuestra secuencia de servicio</h3>
+            <div class="sanitizacion-sequence">
+                <div><b>1</b><strong>Inspección</strong><span>Evaluamos el estado de las instalaciones.</span></div>
+                <div><b>2</b><strong>Identificación</strong><span>Mapeamos los puntos críticos de riesgo.</span></div>
+                <div><b>3</b><strong>Planeación</strong><span>Diseñamos el protocolo específico.</span></div>
+                <div><b>4</b><strong>Limpieza</strong><span>Removemos suciedad y residuos.</span></div>
+                <div><b>5</b><strong>Desinfección</strong><span>Eliminamos microorganismos patógenos.</span></div>
+                <div><b>6</b><strong>Sanitización</strong><span>Reducimos carga microbiana a niveles seguros.</span>
+                </div>
+                <div><b>7</b><strong>Verificación</strong><span>Comprobamos resultados del proceso.</span></div>
+                <div><b>8</b><strong>Informe</strong><span>Entregamos documentación y evidencias.</span></div>
+            </div>
+            <div class="sanitizacion-cta">
+                <p>¿Necesita este servicio para su empresa?</p>
+                <button class="info-btn" type="button" data-service="sanitacion" data-title="Sanitización"
+                    data-image="image/Sanitacion.png"
+                    data-summary="Limpieza avanzada y control higiénico bajo estándares de grado hospitalario."
+                    data-description="El servicio de Sanitización de The Hospitality Center ofrece limpieza avanzada, desinfección técnica, sanitización de espacios y control higiénico ambiental.">
+                    Solicitar información
+                </button>
+            </div>
+        </section>
+        <section class="operator-view page-view" id="operador-hotelero" data-view="operador-hotelero">
+            <button class="back-home" type="button" data-view="home">← Volver al inicio</button>
+            <div class="operator-header">
+                <p class="subtitle">OPERACIONES HOTELERAS</p>
+                <h2>Operadores hoteleros</h2>
+                <p>Acompañamos la estructuración, administración, puesta en marcha y optimización de proyectos
+                    hoteleros, gastronómicos y turísticos.</p>
+            </div>
+            <div class="operator-solutions">
+                <div><b>▣</b><strong>Operación integral de hoteles</strong><span>Gestión completa de la operación
+                        hotelera bajo estándares de excelencia.</span></div>
+                <div><b>⌑</b><strong>Administración hotelera</strong><span>Dirección estratégica y operativa del
+                        establecimiento.</span></div>
+                <div><b>⚙</b><strong>Apertura y puesta en marcha</strong><span>Acompañamiento total en el lanzamiento de
+                        nuevos proyectos hoteleros.</span></div>
+                <div><b>▥</b><strong>Diagnóstico de operaciones</strong><span>Evaluación integral del estado actual de
+                        su hotel o restaurante.</span></div>
+                <div><b>▣</b><strong>Estructuración de procesos</strong><span>Diseño de flujos operativos
+                        eficientes.</span></div>
+                <div><b>▤</b><strong>Manuales operativos</strong><span>Creación de manuales de procedimientos.</span>
+                </div>
+                <div><b>♧</b><strong>Perfiles de cargo</strong><span>Diseño de descriptores de cargos alineados a su
+                        operación.</span></div>
+                <div><b>⚙</b><strong>Implementación de estándares</strong><span>Adopción de estándares operativos
+                        nacionales e internacionales.</span></div>
+                <div><b>♧</b><strong>Supervisión de departamentos</strong><span>Control y apoyo continuo a cada área del
+                        hotel.</span></div>
+                <div><b>▣</b><strong>Gestión de experiencia del huésped</strong><span>Diseño de la experiencia completa
+                        del huésped.</span></div>
+                <div><b>▥</b><strong>Control de costos</strong><span>Optimización de gastos operativos en cada
+                        área.</span></div>
+                <div><b>↗</b><strong>Gestión comercial</strong><span>Estrategias para incrementar ingresos y
+                        posicionamiento.</span></div>
+                <div><b>▣</b><strong>Gestión de reservas</strong><span>Optimización de canales y procesos de
+                        reservas.</span></div>
+                <div><b>⚙</b><strong>Alimentos y bebidas</strong><span>Gestión especializada del área de A&amp;B.</span>
+                </div>
+                <div><b>↗</b><strong>Revenue management</strong><span>Maximización de ingresos mediante tarifas
+                        dinámicas.</span></div>
+                <div><b>▣</b><strong>Gestión de OTAs</strong><span>Administración de canales digitales de
+                        distribución.</span></div>
+                <div><b>♧</b><strong>Auditorías operativas</strong><span>Revisión sistemática de procesos, resultados y
+                        estándares.</span></div>
+                <div><b>⚙</b><strong>Acompañamiento gerencial</strong><span>Mentoría y apoyo directo a la
+                        gerencia.</span></div>
+                <div><b>▣</b><strong>Entrenamiento de equipo</strong><span>Formación integral adaptada a las necesidades
+                        del personal.</span></div>
+                <div><b>↗</b><strong>Optimización de rentabilidad</strong><span>Estrategias para mejorar el margen
+                        operativo del establecimiento.</span></div>
+            </div>
+            <div class="operator-model">
+                <h3>Nuestro modelo de operación</h3>
+                <div class="operator-steps">
+                    <div><b>1</b><strong>Diagnóstico</strong><span>Evaluamos el estado actual de la operación.</span>
+                    </div>
+                    <div><b>2</b><strong>Planeación</strong><span>Diseñamos el plan estratégico de acción.</span></div>
+                    <div><b>3</b><strong>Estructuración</strong><span>Organizamos procesos, perfiles y
+                            estándares.</span></div>
+                    <div><b>4</b><strong>Implementación</strong><span>Ponemos en marcha todos los ajustes
+                            definidos.</span></div>
+                    <div><b>5</b><strong>Operación</strong><span>Acompañamos la operación diaria del hotel.</span></div>
+                    <div><b>6</b><strong>Supervisión</strong><span>Controlamos el cumplimiento de estándares.</span>
+                    </div>
+                    <div><b>7</b><strong>Evaluación</strong><span>Medimos resultados con indicadores clave.</span></div>
+                    <div><b>8</b><strong>Mejora continua</strong><span>Ajustamos y optimizamos permanentemente.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="operator-cta">
+                <p>¿Necesita este servicio para su empresa?</p>
+                <button class="info-btn" type="button" data-service="operador-hotelero" data-title="Operador Hotelero"
+                    data-image="image/operadorHotelero.png"
+                    data-summary="Administración y operación integral de hoteles y alojamientos turísticos."
+                    data-description="Ofrecemos soluciones integrales para la administración, gestión, supervisión y optimización operativa de proyectos de hospitalidad.">Solicitar
+                    información</button>
+            </div>
+        </section>
+        <section class="careers-section page-view" id="careers" data-view="careers">
+            <button class="back-home" type="button" data-view="home">← Volver al inicio</button>
+            <div class="careers-shell">
+                <div class="careers-toggle" role="tablist" aria-label="Opciones de talento humano">
+                    <button class="careers-switch active" type="button" data-mode="candidate" aria-pressed="true">
+                        Trabaja con nosotros
+                    </button>
+                    <button class="careers-switch" type="button" data-mode="company" aria-pressed="false">
+                        Si Buscas personal
+                    </button>
+                </div>
+
+                <div class="careers-stage">
+                    <div class="careers-card" id="careersCard">
+                        <div class="careers-card-face careers-card-front active">
+                            <div class="careers-card-media">
+                                <img src="image/HojaDeVida.jpeg" alt="Trabaja con nosotros en The Hospitality Center">
+                            </div>
+
+                            <div class="careers-card-copy">
+                                <p class="subtitle" data-desktop="Buscas empleo">TALENTO HUMANO</p>
+                                <h2>
+                                    Trabaja <br>
+                                    <span>con nosotros</span>
+                                </h2>
+                                <p class="description">
+                                    ¿Quieres ser parte de The Hospitality Center? Anexa tu hoja de vida y nuestro equipo
+                                    te
+                                    contactará con las oportunidades disponibles.
+                                </p>
+
+                                <div class="careers-form-box">
+                                    <h3>Anexa tu hoja de vida</h3>
+                                    <form id="cvForm" action="https://formsubmit.co/logistica@thehospitalitycenter.net"
+                                        method="POST" enctype="multipart/form-data" class="contact-form">
+                                        <input type="hidden" name="_captcha" value="false">
+                                        <input type="hidden" name="_subject" value="Nueva hoja de vida - THC">
+                                        <input type="hidden" name="_template" value="table">
+                                        <input type="hidden" name="_next" value="" id="cvFormNext">
+
+                                        <input type="text" name="nombre" placeholder="Nombre completo*" required>
+                                        <input type="email" name="correo" placeholder="Correo electrónico*" required>
+                                        <input type="text" name="telefono" placeholder="Teléfono / WhatsApp*" required>
+
+                                        <select name="ciudad" class="cv-cargo-select" required>
+                                            <option value="">Ciudad*</option>
+                                            <optgroup label="Colombia">
+                                                <option>Bogotá</option>
+                                                <option>Medellín</option>
+                                                <option>Cali</option>
+                                                <option>Cartagena</option>
+                                                <option>Barranquilla</option>
+                                            </optgroup>
+                                            <optgroup label="Costa Rica">
+                                                <option>San José</option>
+                                                <option>Escazú</option>
+                                                <option>Heredia</option>
+                                                <option>Alajuela</option>
+                                            </optgroup>
+                                            <optgroup label="El Salvador">
+                                                <option>San Salvador</option>
+                                                <option>Santa Tecla</option>
+                                                <option>Soyapango</option>
+                                                <option>Antiguo Cuscatlán</option>
+                                            </optgroup>
+                                            <option value="Otra ciudad">Otra ciudad</option>
+                                        </select>
+
+                                        <select name="cargo" class="cv-cargo-select">
+                                            <option value="">Cargo de interés</option>
+                                            <optgroup label="FRONT OFFICE Y RECEPCIÓN">
+                                                <option>Recepcionista</option>
+                                                <option>Auxiliar de Recepción</option>
+                                                <option>Agente de Reservas</option>
+                                                <option>Auditor Nocturno</option>
+                                                <option>Botones</option>
+                                                <option>Concierge</option>
+                                                <option>Portero</option>
+                                                <option>Telefonista</option>
+                                                <option>Anfitrión de Hotel</option>
+                                            </optgroup>
+                                            <optgroup label="HOUSEKEEPING Y LIMPIEZA">
+                                                <option>Ama de Llaves</option>
+                                                <option>Supervisora de Habitaciones</option>
+                                                <option>Camarera de Habitaciones</option>
+                                                <option>Auxiliar de Housekeeping</option>
+                                                <option>Operario de Limpieza</option>
+                                                <option>Auxiliar de Áreas Públicas</option>
+                                                <option>Auxiliar de Lavandería</option>
+                                                <option>Operario de Sanitización</option>
+                                            </optgroup>
+                                            <optgroup label="ALIMENTOS Y BEBIDAS">
+                                                <option>Mesero</option>
+                                                <option>Capitán de Servicio</option>
+                                                <option>Bartender</option>
+                                                <option>Barista</option>
+                                                <option>Host o Anfitrión</option>
+                                                <option>Cajero de Restaurante</option>
+                                                <option>Sommelier</option>
+                                                <option>Auxiliar de Mesa y Bar</option>
+                                            </optgroup>
+                                            <optgroup label="COCINA">
+                                                <option>Chef</option>
+                                                <option>Chef Ejecutivo</option>
+                                                <option>Jefe de Cocina</option>
+                                                <option>Cocinero</option>
+                                                <option>Auxiliar de Cocina</option>
+                                                <option>Panadero</option>
+                                                <option>Pastelero</option>
+                                                <option>Steward</option>
+                                                <option>Parrillero</option>
+                                                <option>Pizzero</option>
+                                            </optgroup>
+                                            <optgroup label="ADMINISTRATIVO Y COMERCIAL">
+                                                <option>Ejecutivo Comercial</option>
+                                                <option>Gestor Comercial</option>
+                                                <option>Coordinador Comercial</option>
+                                                <option>Auxiliar Administrativo</option>
+                                                <option>Asistente Administrativo</option>
+                                                <option>Coordinador de Talento Humano</option>
+                                                <option>Analista de Compras</option>
+                                                <option>Community Manager</option>
+                                                <option>Coordinador de Eventos</option>
+                                                <option>Auxiliar Contable</option>
+                                            </optgroup>
+                                            <optgroup label="OPERACIÓN HOTELERA">
+                                                <option>Gerente de Hotel</option>
+                                                <option>Gerente de Restaurante</option>
+                                                <option>Supervisor de Operaciones</option>
+                                                <option>Coordinador de Operaciones</option>
+                                                <option>Coordinador de Mantenimiento</option>
+                                                <option>Técnico de Mantenimiento</option>
+                                                <option>Auxiliar de Mantenimiento</option>
+                                                <option>Coordinador de Seguridad</option>
+                                                <option>Guarda de Seguridad</option>
+                                                <option>Operador Hotelero</option>
+                                            </optgroup>
+                                            <optgroup label="EVENTOS Y TURISMO">
+                                                <option>Coordinador de Eventos</option>
+                                                <option>Auxiliar de Eventos</option>
+                                                <option>Ejecutivo de Banquetes</option>
+                                                <option>Coordinador de Banquetes</option>
+                                                <option>Guía Turístico</option>
+                                                <option>Agente de Viajes</option>
+                                                <option>Coordinador de Turismo</option>
+                                                <option>Recreacionista</option>
+                                            </optgroup>
+                                            <optgroup label="OTRA OPCIÓN">
+                                                <option>Otro cargo</option>
+                                                <option>No tengo un cargo definido</option>
+                                                <option>Prácticas o pasantías</option>
+                                            </optgroup>
+                                        </select>
+
+                                        <label class="cv-upload" for="cvFile">
+                                            <span class="cv-upload-icon">⬆</span>
+                                            <span class="cv-upload-text" id="cvFileName">Adjuntar hoja de vida (PDF o
+                                                Word)*</span>
+                                        </label>
+                                        <input type="file" id="cvFile" name="hojaDeVida" accept=".pdf,.doc,.docx"
+                                            required hidden>
+
+                                        <button type="submit" class="btn btn-primary btn-full">Enviar hoja de
+                                            vida</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="careers-card-face careers-card-back">
+                            <div class="careers-card-media">
+                                <img src="image/Personal.png" alt="Buscas personal para tu empresa">
+                            </div>
+
+                            <div class="careers-card-copy">
+                                <p class="subtitle" data-desktop="Buscas personal para tu organización">TALENTO HUMANO
+                                </p>
+                                <h2>
+                                    ¿Buscas <br>
+                                    <span>personal?</span>
+                                </h2>
+                                <p class="description">
+                                    Te ayudamos a encontrar el talento adecuado para tu operación con procesos ágiles,
+                                    evaluaciones y acompañamiento estratégico.
+                                </p>
+
+                                <div class="careers-form-box">
+                                    <h3>Cuéntanos tu necesidad</h3>
+                                    <form id="recruitForm"
+                                        action="https://formsubmit.co/logistica@thehospitalitycenter.net" method="POST"
+                                        class="contact-form">
+                                        <input type="hidden" name="_captcha" value="false">
+                                        <input type="hidden" name="_subject" value="Nueva solicitud de personal - THC">
+                                        <input type="hidden" name="_template" value="table">
+
+                                        <input type="text" name="empresa" placeholder="Nombre de la empresa*" required>
+                                        <input type="text" name="nit" placeholder="NIT*" required>
+                                        <input type="email" name="correo_corporativo" placeholder="Correo corporativo*"
+                                            required>
+                                        <input type="text" name="telefono_corporativo"
+                                            placeholder="Teléfono corporativo*" required>
+                                        <input type="text" name="tipo_personal"
+                                            placeholder="Tipo de personal que necesita*" required>
+
+                                        <button type="submit" class="btn btn-primary btn-full">Solicitar
+                                            asesoría</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="travel-section services-content page-view" id="travel" data-view="programs"
+            data-services-content="true">
+            <div class="travel-content">
+                <div class="travel-copy">
+                    <p class="subtitle">CONEXIÓN ESTRATÉGICA</p>
+                    <h2>
+                        De la formación <br>
+                        <span>a la acción</span>
+                    </h2>
+                    <p class="description">
+                        Explora el mundo con <strong>THC Travel</strong>. Complementamos nuestros servicios con
+                        experiencias
+                        corporativas y programas de inmersión para profesionales de hospitalidad.
+                    </p>
+
+                    <div class="travel-stats">
+                        <div>
+                            <strong>50+</strong>
+                            <p>Destinos</p>
+                        </div>
+                        <div>
+                            <strong>20+</strong>
+                            <p>Tours exclusivos</p>
+                        </div>
+                        <div>
+                            <strong>4.9</strong>
+                            <p>Calificación</p>
+                        </div>
+                    </div>
+
+                    <button class="primary"><a href="/ThcTravel/indexTravel.html">Explorar THC Travel →</a></button>
+                </div>
+
+                <div class="travel-card">
+                    <img src="image/thcTravel2.png" alt="">
+                    <p>Experiencias de viaje de lujo diseñadas para profesionales de la hospitalidad.</p>
+                    <div class="travel-card-stars">★★★★★</div>
+                    <p class="travel-card-caption">Más de 3,000 viajeros satisfechos</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- FORMULARIO -->
+        <section class="form-section home-content page-view" id="form" data-view="form" data-home-content="true">
+            <div class="form-text reveal">
+                <p class="subtitle">CONTÁCTANOS</p>
                 <h2>
-                    De la formación <br>
-                    <span>a la acción</span>
+                    Consolida tu <br>
+                    <span>proyecto</span> hoy
                 </h2>
                 <p class="description">
-                    Explora el mundo con <strong>THC Travel</strong>. Complementamos nuestros servicios con experiencias
-                    corporativas y programas de inmersión para profesionales de hospitalidad.
+                    Solicita información sobre nuestros servicios empresariales y programas de academia para tu equipo.
                 </p>
+                <ul>
+                    <li>Certificación internacional reconocida</li>
+                    <li>Instructores con experiencia global</li>
+                    <li>Acceso de por vida al material</li>
+                    <li>Red de alumni en +15 países</li>
+                </ul>
+            </div>
 
-                <div class="travel-stats">
-                    <div>
-                        <strong>50+</strong>
-                        <p>Destinos</p>
-                    </div>
-                    <div>
-                        <strong>20+</strong>
-                        <p>Tours exclusivos</p>
-                    </div>
-                    <div>
-                        <strong>4.9</strong>
-                        <p>Calificación</p>
-                    </div>
+            <div class="form-box reveal delay-2">
+                <h3>Registro de Interés</h3>
+                <form id="registroForm" action="https://formsubmit.co/ajax/admin4@thehospitalitycenter.net"
+                    method="POST" class="contact-form">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="Nueva solicitud THC">
+                    <input type="hidden" name="_template" value="table">
+
+                    <input type="text" name="nombre" placeholder="Nombre completo*" required>
+                    <input type="text" name="pais" placeholder="País*" required>
+                    <input type="email" name="correo" placeholder="Correo electrónico*" required>
+                    <input type="text" name="telefono" placeholder="Teléfono / WhatsApp*" required>
+
+                    <select name="programa">
+                        <option>THC Academy</option>
+                        <option>Sanitizacion</option>
+                        <option>Operador Hotelero</option>
+                        <option>Head Hunting</option>
+                    </select>
+
+                    <button type="submit" class="btn btn-primary btn-full">Enviar solicitud</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- CERTIFICCIONES DE CALIDAD -->
+        <section class="partner-marquee page-view reveal" id="certifications" data-view="about"
+            data-about-content="true">
+            <div class="section-header">
+                <h2>Certificaciones de Calidad</h2>
+            </div>
+            <div class="marquee-track">
+                <div class="marquee-group">
+                    <div class="partner-logo"><img src="/image/CCTHC/FDA.png" alt="Socio 1" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/CCTHC/OSHA.png" alt="Socio 2" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/CCTHC/EPA.png" alt="Socio 3" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/CCTHC/USDA.png" alt="Socio 4" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/CCTHC/HACCP.webp" alt="Socio 5" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/CCTHC/FRLA.png" alt="Socio 6" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/CCTHC/AHLEI.png" alt="Socio 8" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/CCTHC/Servsafe.png" alt="Socio 9" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/CCTHC/nsf.png" alt="Socio 10" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/CCTHC/brcgs.png" alt="Socio 11" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/CCTHC/SQF.webp" alt="Socio 12" loading="lazy"></div>
                 </div>
-
-                <button class="primary"><a href="/ThcTravel/indexTravel.html">Explorar THC Travel →</a></button>
+                <div class="marquee-group">
+                    <div class="partner-logo"><img src="/image/CCTHC/FDA.png" alt="Socio 1" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/CCTHC/OSHA.png" alt="Socio 2" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/CCTHC/EPA.png" alt="Socio 3" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/CCTHC/USDA.png" alt="Socio 4" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/CCTHC/HACCP.webp" alt="Socio 5" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/CCTHC/FRLA.png" alt="Socio 6" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/CCTHC/AHLEI.png" alt="Socio 8" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/CCTHC/Servsafe.png" alt="Socio 9" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/CCTHC/nsf.png" alt="Socio 10" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/CCTHC/brcgs.png" alt="Socio 11" loading="lazy"></div>
+                    <div class="partner-logo"><img src="/image/CCTHC/SQF.webp" alt="Socio 12" loading="lazy"></div>
+                </div>
             </div>
-
-            <div class="travel-card">
-                <img src="image/thcTravel2.png" alt="">
-                <p>Experiencias de viaje de lujo diseñadas para profesionales de la hospitalidad.</p>
-                <div class="travel-card-stars">★★★★★</div>
-                <p class="travel-card-caption">Más de 3,000 viajeros satisfechos</p>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- FORMULARIO -->
-    <section class="form-section home-content page-view" id="form" data-view="form" data-home-content="true">
-        <div class="form-text reveal">
-            <p class="subtitle">CONTÁCTANOS</p>
-            <h2>
-                Consolida tu <br>
-                <span>proyecto</span> hoy
-            </h2>
-            <p class="description">
-                Solicita información sobre nuestros servicios empresariales y programas de academia para tu equipo.
-            </p>
-            <ul>
-                <li>Certificación internacional reconocida</li>
-                <li>Instructores con experiencia global</li>
-                <li>Acceso de por vida al material</li>
-                <li>Red de alumni en +15 países</li>
-            </ul>
-        </div>
-
-        <div class="form-box reveal delay-2">
-            <h3>Registro de Interés</h3>
-            <form id="registroForm" action="https://formsubmit.co/ajax/admin4@thehospitalitycenter.net"
-                method="POST" class="contact-form">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_subject" value="Nueva solicitud THC">
-                <input type="hidden" name="_template" value="table">
-
-                <input type="text" name="nombre" placeholder="Nombre completo*" required>
-                <input type="text" name="pais" placeholder="País*" required>
-                <input type="email" name="correo" placeholder="Correo electrónico*" required>
-                <input type="text" name="telefono" placeholder="Teléfono / WhatsApp*" required>
-
-                <select name="programa">
-                    <option>THC Academy</option>
-                    <option>Sanitizacion</option>
-                    <option>Operador Hotelero</option>
-                    <option>Head Hunting</option>
-                </select>
-
-                <button type="submit" class="btn btn-primary btn-full">Enviar solicitud</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- CERTIFICCIONES DE CALIDAD -->
-    <section class="partner-marquee page-view reveal" id="certifications" data-view="about" data-about-content="true">
-        <div class="section-header">
-            <h2>Certificaciones de Calidad</h2>
-        </div>
-        <div class="marquee-track">
-            <div class="marquee-group">
-                <div class="partner-logo"><img src="/image/CCTHC/FDA.png" alt="Socio 1" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/CCTHC/OSHA.png" alt="Socio 2" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/CCTHC/EPA.png" alt="Socio 3" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/CCTHC/USDA.png" alt="Socio 4" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/CCTHC/HACCP.webp" alt="Socio 5" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/CCTHC/FRLA.png" alt="Socio 6" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/CCTHC/AHLEI.png" alt="Socio 8" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/CCTHC/Servsafe.png" alt="Socio 9" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/CCTHC/nsf.png" alt="Socio 10" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/CCTHC/brcgs.png" alt="Socio 11" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/CCTHC/SQF.webp" alt="Socio 12" loading="lazy"></div>
-            </div>
-            <div class="marquee-group">
-                <div class="partner-logo"><img src="/image/CCTHC/FDA.png" alt="Socio 1" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/CCTHC/OSHA.png" alt="Socio 2" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/CCTHC/EPA.png" alt="Socio 3" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/CCTHC/USDA.png" alt="Socio 4" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/CCTHC/HACCP.webp" alt="Socio 5" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/CCTHC/FRLA.png" alt="Socio 6" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/CCTHC/AHLEI.png" alt="Socio 8" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/CCTHC/Servsafe.png" alt="Socio 9" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/CCTHC/nsf.png" alt="Socio 10" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/CCTHC/brcgs.png" alt="Socio 11" loading="lazy"></div>
-                <div class="partner-logo"><img src="/image/CCTHC/SQF.webp" alt="Socio 12" loading="lazy"></div>
-            </div>
-        </div>
-    </section>
+        </section>
 
 
     </main>
@@ -924,7 +1095,7 @@
                     </li>
                 </ul>
             </div>
-                        <div>
+            <div>
                 <h4>CARTAGENA</h4>
                 <ul>
                     <li><span>officecartagena@thehospitalitycenter.net</span></li>
@@ -933,26 +1104,27 @@
                     </li>
                 </ul>
             </div>
-                    <div class="footer-social footer-colombia-social">
-                    <a href="https://www.tiktok.com/@thehospitalitycen?lang=es" title="TikTok"><img
+            <div class="footer-social footer-colombia-social">
+                <a href="https://www.tiktok.com/@thehospitalitycen?lang=es" title="TikTok"><img
                         src="image/logos/LogoTiktok.a8b71481-8a43-465d-88d6-e63add92c112" alt="TikTok"></a>
-                    <a href="https://www.instagram.com/thehospitalitycentercolombia/" title="Instagram"><img
+                <a href="https://www.instagram.com/thehospitalitycentercolombia/" title="Instagram"><img
                         src="image/logos/logoInstagram.png" alt="Instagram"></a>
-                    <a href="https://x.com/_THCLATAM" title="X"><img src="image/logos/LogoX.webp" alt="X"></a>
-                    <a href="https://www.facebook.com/photo/?fbid=122191570718755524&set=a.122098842476755524"
-                        title="Facebook"><img src="image/logos/Facebook_Logo_.png" alt="Facebook"></a>
-                    </div>
+                <a href="https://x.com/_THCLATAM" title="X"><img src="image/logos/LogoX.webp" alt="X"></a>
+                <a href="https://www.facebook.com/photo/?fbid=122191570718755524&set=a.122098842476755524"
+                    title="Facebook"><img src="image/logos/Facebook_Logo_.png" alt="Facebook"></a>
+            </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/573243500719" target="_blank" rel="noopener noreferrer"
-        class="whatsapp-bubble whatsapp-main" aria-label="Contactar por WhatsApp">
+    <a href="https://wa.me/573243500719" target="_blank" rel="noopener noreferrer" class="whatsapp-bubble whatsapp-main"
+        aria-label="Contactar por WhatsApp">
         <img src="image/logos/logoWhatsapp.png" alt="WhatsApp">
     </a>
 
     <div class="video-popup" id="videoPopup" role="dialog" aria-modal="true" aria-label="Video promocional">
         <div class="video-popup-window">
-            <button class="video-popup-close" id="videoPopupClose" type="button" aria-label="Cerrar video">&times;</button>
+            <button class="video-popup-close" id="videoPopupClose" type="button"
+                aria-label="Cerrar video">&times;</button>
             <video id="popupVideo" src="image/VIDEOTHC2026.mp4" autoplay controls playsinline preload="auto"></video>
         </div>
     </div>
@@ -1389,7 +1561,7 @@
                 heroVideoEl.play().catch(() => {
                     heroVideoEl.muted = true;
                     updateHeroMuteButton();
-                    heroVideoEl.play().catch(() => {});
+                    heroVideoEl.play().catch(() => { });
                 });
 
                 heroVideoEl.addEventListener('ended', showHeroEndedState);
@@ -1414,7 +1586,7 @@
         popupVideo.volume = 1;
         popupVideo.play().catch(() => {
             popupVideo.muted = true;
-            popupVideo.play().catch(() => {});
+            popupVideo.play().catch(() => { });
         });
         videoPopupClose.addEventListener('click', closeVideoPopup);
         videoPopup.addEventListener('click', event => {
@@ -1424,25 +1596,25 @@
             if (event.key === 'Escape' && videoPopup.classList.contains('is-open')) closeVideoPopup();
         });
         window.addEventListener('pageshow', function (event) {
-    // 'event.persisted' es true si el navegador sacó la página de la caché (como al usar el botón atrás)
-    if (event.persisted) {
-        
-        
-        const pantallaTransicion = document.querySelector('.cuadro-rojo'); 
-        
-        if (pantallaTransicion) {
-            // Aquí lo ocultas. Dependiendo de cómo lo hayas programado, usa una de estas opciones:
-            
-            // Opción 1: Quitar la clase que activa la animación
-            pantallaTransicion.classList.remove('clase-activa'); 
-            
-            // Opción 2: Ocultarlo a la fuerza con CSS
-            pantallaTransicion.style.opacity = '0';
-            pantallaTransicion.style.visibility = 'hidden';
-            pantallaTransicion.style.display = 'none'; // Usa esta si lo muestras con display: block
-        }
-    }
-});
+            // 'event.persisted' es true si el navegador sacó la página de la caché (como al usar el botón atrás)
+            if (event.persisted) {
+
+
+                const pantallaTransicion = document.querySelector('.cuadro-rojo');
+
+                if (pantallaTransicion) {
+                    // Aquí lo ocultas. Dependiendo de cómo lo hayas programado, usa una de estas opciones:
+
+                    // Opción 1: Quitar la clase que activa la animación
+                    pantallaTransicion.classList.remove('clase-activa');
+
+                    // Opción 2: Ocultarlo a la fuerza con CSS
+                    pantallaTransicion.style.opacity = '0';
+                    pantallaTransicion.style.visibility = 'hidden';
+                    pantallaTransicion.style.display = 'none'; // Usa esta si lo muestras con display: block
+                }
+            }
+        });
     </script>
 
 </body>
