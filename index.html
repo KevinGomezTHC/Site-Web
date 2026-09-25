@@ -7,17 +7,18 @@
     <title>The Hospitality Center</title>
     <link rel="icon" href="/image/icono.png" type="image/png" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="stylesheet" type="text/css" href="stylesV14.css">
+    <link rel="stylesheet" type="text/css" href="stylesV17.css">
+    
 </head>
 
 <body>
 
     <!-- NAVBAR -->
     <header class="navbar" id="navbar">
-        <a href="index.html" class="logo">
+        <a href="#home" class="logo" data-view="home">
             <img src="image/icono.png" alt="THC Logo" class="logo-img">
             <span>THE HOSPITALITY CENTER</span>
         </a>
@@ -31,16 +32,20 @@
 
         <nav class="menu" id="mainMenu">
             <div class="menu-item has-dropdown" id="academyItem">
-                <a href="#programs">Academy</a>
+                <a href="#" aria-haspopup="true" aria-expanded="false">Academy</a>
                 <div class="dropdown">
                     <a href="https://thc-academy.onhercules.app/">THC Academy</a>
-                    <a href="https://thc-edu.onhercules.app/login">THC EDU</a>        
+                    <a href="https://thc-edu.onhercules.app/login">THC EDU</a>
                 </div>
             </div>
-            <a href="#about">Nosotros</a>
+            <div class="menu-item has-dropdown" id="aboutItem">
+                <a href="#about" data-view="about" aria-haspopup="true" aria-expanded="false">Nosotros</a>
+
+            </div>
+            <a href="#programs" data-view="programs">Nuestros Servicios</a>
+            <a href="#careers" data-view="careers">Talento humano</a>
             <a href="sedes/sedes.html">Nuestras Sedes</a>
             <a href="/ThcTravel/indexTravel.html">THC Travel</a>
-            <a href="https://thc-portfolio-of-services.onhercules.app">Portafolio de servicios</a>
         </nav>
 
         <button class="nav-btn" type="button">Inscríbete</button>
@@ -48,82 +53,77 @@
 
 
     <!-- HERO -->
-<section class="hero" id="hero">
-  <div class="hero-media">
-        <video
-            class="hero-video-bg"
-            src="image/VIDEOTHC2026.mp4"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="auto"
-            aria-hidden="true"
-        ></video>
-    <video
-      class="hero-video"
-      id="heroVideo"
-      src="image/VIDEOTHC2026.mp4"
-      autoplay
-      muted
-      playsinline
-      preload="auto"
-    ></video>
-    <img
-      class="hero-fallback-img"
-      id="heroFallback"
-      src="image/home.jpg"
-      alt="The Hospitality Center"
-    />
-  </div>
-    <div class="overlay"></div>
-    <button class="hero-mute-btn" id="heroMuteBtn" type="button" aria-label="Silenciar video" title="Silenciar video">
-        ⏸️
-    </button>
+    <main id="pageViews">
+    <section class="hero page-view is-active" id="hero" data-view="home">
+        <div class="home-grid">
         <div class="hero-content">
-            <div class="hero-side-logo reveal delay-2">
-                <img src="image/thc-logo.png" alt="THC Logo">
+            <div class="home-carousel" aria-label="Imágenes de The Hospitality Center">
+                <div class="carousel-track">
+                    <img class="carousel-slide is-active" src="image/ThcAcademy.png" alt="THC Academy">
+                    <img class="carousel-slide" src="image/Sanitacion.png" alt="Sanitización profesional">
+                    <img class="carousel-slide" src="image/operadorHotelero.png" alt="Operación hotelera">
+                    <img class="carousel-slide" src="image/headHunting.png" alt="Head Hunting">
+                </div>
+                <button class="carousel-control carousel-prev" type="button" aria-label="Imagen anterior">‹</button>
+                <button class="carousel-control carousel-next" type="button" aria-label="Imagen siguiente">›</button>
+                <div class="carousel-dots" aria-label="Seleccionar imagen">
+                    <button class="carousel-dot is-active" type="button" aria-label="Imagen 1"></button>
+                    <button class="carousel-dot" type="button" aria-label="Imagen 2"></button>
+                    <button class="carousel-dot" type="button" aria-label="Imagen 3"></button>
+                    <button class="carousel-dot" type="button" aria-label="Imagen 4"></button>
+                </div>
             </div>
             <div class="hero-copy">
                 <div class="hero-brand reveal delay-2">
-                    <p class="hero-pretitle">SOLUCIONES EMPRESARIALES EN HOSPITALIDAD</p>
-                    <h1>
-                        Impulsamos tu empresa y <span>talento</span>
-                    </h1>
-                </div>
 
+                    <h1><br>The Hospitality Center</h1>
+                </div>
+ 
                 <p class="reveal delay-3">
                     Somos una empresa consolidada en hospitalidad que ofrece servicios estratégicos, consultoría y
                     formación para equipos, líderes y destinos.
                 </p>
-
                 <div class="buttons reveal delay-4">
-                    <button class="primary">Servicios</button>
-                    <button class="secondary">Contáctanos</button>
+                    <button class="primary" data-view="programs">Servicios</button>
                 </div>
             </div>
         </div>
 
-        <div class="stats reveal delay-4">
-            <div class="stat">
-                <h2>25+</h2>
-                <p>Soluciones</p>
-            </div>
-            <div class="stat">
-                <h2>98%</h2>
-                <p>Satisfacción</p>
-            </div>
-            <div class="stat">
-                <h2>15+</h2>
-                <p>Países</p>
+            <div class="home-grid-actions" aria-label="Explorar The Hospitality Center">
+                <div class="home-action-row">
+                    <button class="home-tile tile-about" type="button" data-view="thc-academy">
+                        <strong>THC Academy</strong>
+                        <span class="tile-arrow">→</span>
+                    </button>
+                </div>
+                <div class="home-action-row">
+                    <button class="home-tile tile-services" type="button" data-view="sanitizacion">
+                        <strong>Sanitización</strong>
+                        <span class="tile-arrow">→</span>
+                    </button>
+                </div>
+                <div class="home-action-row">
+                    <button class="home-tile tile-talent" type="button" data-view="operador-hotelero">
+                        <strong>Operador Hotelero</strong>
+                        <span class="tile-arrow">→</span>
+                    </button>
+                </div>
+                <div class="home-action-row">
+                    <button class="home-tile tile-contact" type="button" data-view="head-hunting">
+                        <strong>Head Hunting</strong>
+                        <span class="tile-arrow">→</span>
+                    </button>
+                </div>
             </div>
         </div>
+
     </section>
 
 
 
-    <section class="mission-vision reveal" id="about">
-        <div class="section-header reveal">
+    <section class="mission-vision page-view" id="about" data-view="about">
+        <button class="back-home" type="button" data-view="home">← Volver al inicio</button>
+        <div class="section-header reveal" id="mission-vision">
             <p class="subtitle">NOSOTROS</p>
         </div>
 
@@ -170,7 +170,7 @@
         </div>
     </section>
 
-    <section class="partner-marquee reveal">
+    <section class="partner-marquee page-view reveal" id="partners" data-view="about" data-about-content="true">
         <div class="section-header">
             <p class="subtitle">SOCIOS</p>
             <h2>Organizaciones que confían en nosotros</h2>
@@ -329,7 +329,8 @@
         </div>
     </section>
 
-    <section class="programs" id="programs">
+    <section class="programs page-view" id="programs" data-view="programs">
+        <button class="back-home" type="button" data-view="home">← Volver al inicio</button>
         <div class="section-header reveal">
             <p class="subtitle">SERVICIOS</p>
             <h2>Soluciones para empresas y talento</h2>
@@ -348,11 +349,7 @@
                     <p>THC Academy es la unidad académica de The Hospitality Center, enfocada en el diseño, desarrollo e
                         implementación de programas de formación, entrenamiento y certificación para el fortalecimiento
                         de competencias laborales en sectores de alta demanda.</p>
-                    <button class="info-btn" type="button" data-service="thc-academy" data-title="THC Academy"
-                        data-image="image/ThcAcademy.png"
-                        data-summary="Formación, entrenamiento y certificación para el talento de la hospitalidad."
-                        data-description="THC Academy es la unidad académica de The Hospitality Center, enfocada en el diseño, desarrollo e implementación de programas de formación, entrenamiento y certificación para el fortalecimiento de competencias laborales en sectores de alta demanda."
-                        data-description1="A través de metodologías presenciales, virtuales e híbridas, ofrece cursos, entrenamientos, diplomados y programas especializados en hotelería, gastronomía, turismo, servicio al cliente, barismo, bartender, housekeeping, recepción hotelera, auditoría nocturna, ventas, emprendimiento, competencias laborales y habilidades corporativas.">
+                    <button class="info-bt" type="button" data-view="thc-academy">
                         Más información →
                     </button>
                 </div>
@@ -367,11 +364,7 @@
                         especializada en la prestación directa de servicios profesionales de limpieza avanzada,
                         desinfección técnica, sanitización de espacios y control higiénico ambiental, bajo estándares
                         internacionales y con enfoque de grado hospitalario.</p>
-                    <button class="info-btn" type="button" data-service="sanitacion" data-title="Sanitación"
-                        data-image="image/Sanitacion.png"
-                        data-summary="Limpieza avanzada y control higiénico bajo estándares de grado hospitalario."
-                        data-description="El servicio de Sanitizacion de The Hospitality Center corresponde a una línea operativa especializada en la prestación directa de servicios profesionales de limpieza avanzada, desinfección técnica, sanitización de espacios y control higiénico ambiental, bajo estándares internacionales y con enfoque de grado hospitalario."
-                        data-description1="Este servicio no corresponde a procesos de capacitación, sino a la ejecución operativa de protocolos especializados para hoteles, restaurantes, cocinas industriales, habitaciones, áreas comunes, oficinas, centros corporativos, espacios turísticos, instituciones y establecimientos que requieren altos niveles de higiene, bioseguridad, inocuidad y control sanitario.">
+                    <button class="info-bt" type="button" data-view="sanitizacion">
                         Más información →
                     </button>
                 </div>
@@ -385,11 +378,7 @@
                     <p>Como Operador Hotelero, The Hospitality Center ofrece soluciones integrales para la
                         administración, gestión, supervisión y optimización operativa de hoteles, hostales, alojamientos
                         turísticos, rentas cortas y proyectos de hospitalidad.</p>
-                    <button class="info-btn" type="button" data-service="operador-hotelero"
-                        data-title="Operador Hotelero" data-image="image/operadorHotelero.png"
-                        data-summary="Administración y operación integral de hoteles y alojamientos turísticos."
-                        data-description="Como Operador Hotelero, The Hospitality Center ofrece soluciones integrales para la administración, gestión, supervisión y optimización operativa de hoteles, hostales, alojamientos turísticos, rentas cortas y proyectos de hospitalidad."
-                        data-description1="Este servicio está orientado a mejorar la eficiencia operativa, la experiencia del huésped, la calidad del servicio, la rentabilidad y el cumplimiento de estándares internos e internacionales, mediante modelos de operación estructurados, indicadores de gestión, protocolos de servicio y seguimiento continuo.">
+                    <button class="info-bt" type="button" data-view="operador-hotelero">
                         Más información →
                     </button>
                 </div>
@@ -403,18 +392,172 @@
                     <p>El servicio de Head Hunting de The Hospitality Center está enfocado en la identificación,
                         evaluación, selección y presentación de talento humano especializado para empresas del sector
                         hotelero, gastronómico, turístico, comercial, corporativo y de servicios.</p>
-                    <button class="info-btn" type="button" data-service="head-hunting" data-title="Head Hunting"
-                        data-image="image/headHunting.png"
-                        data-summary="Identificación y selección estratégica de talento especializado."
-                        data-description="El servicio de Head Hunting de The Hospitality Center está enfocado en la identificación, evaluación, selección y presentación de talento humano especializado para empresas del sector hotelero, gastronómico, turístico, comercial, corporativo y de servicios."
-                        data-description1="Mediante procesos técnicos de reclutamiento, validación de experiencia, análisis de perfil y evaluación de competencias, facilita el acceso a talento calificado para cargos operativos, técnicos, administrativos, comerciales y gerenciales, reduciendo tiempos de búsqueda y fortaleciendo la estructura humana de cada operación.">
+                    <button class="info-bt" type="button" data-view="head-hunting">
                         Más información →
                     </button>
                 </div>
             </div>
         </div>
     </section>
-    <section class="careers-section reveal" id="careers">
+    <section class="head-hunting-view page-view" id="head-hunting" data-view="head-hunting">
+        <button class="back-home" type="button" data-view="home">← Volver al inicio</button>
+        <div class="head-hunting-header">
+            <p class="subtitle">HEADHUNTING THC</p>
+            <h2>Encontramos el talento que su empresa necesita</h2>
+            <p>Servicios especializados de búsqueda, evaluación y selección de talento para hoteles, restaurantes,
+                empresas turísticas y organizaciones del sector servicios.</p>
+        </div>
+        <h3 class="head-hunting-title">Nuestro proceso</h3>
+        <div class="head-hunting-process">
+            <div class="process-step"><b>1</b><span>Identificación de la necesidad</span></div>
+            <div class="process-step"><b>2</b><span>Levantamiento del perfil</span></div>
+            <div class="process-step"><b>3</b><span>Publicación y búsqueda</span></div>
+            <div class="process-step"><b>4</b><span>Preselección</span></div>
+            <div class="process-step"><b>5</b><span>Entrevistas</span></div>
+            <div class="process-step"><b>6</b><span>Pruebas técnicas</span></div>
+            <div class="process-step"><b>7</b><span>Evaluación integral</span></div>
+            <div class="process-step"><b>8</b><span>Presentación de candidatos</span></div>
+            <div class="process-step"><b>9</b><span>Acompañamiento en contratación</span></div>
+            <div class="process-step"><b>10</b><span>Seguimiento inicial</span></div>
+        </div>
+        <h3 class="head-hunting-title profiles-title">Perfiles que gestionamos</h3>
+        <div class="profile-tags">
+            <span>Gerentes hoteleros</span><span>Administradores</span><span>Jefes de operaciones</span>
+            <span>Personal de recepción</span><span>Ejecutivos comerciales</span><span>Personal de A&amp;B</span>
+            <span>Meseros</span><span>Bartenders</span><span>Baristas</span><span>Cocineros</span>
+            <span>Chefs</span><span>Supervisores</span><span>Personal de housekeeping</span>
+            <span>Personal administrativo</span><span>Personal operativo</span>
+        </div>
+        <div class="head-hunting-cta">
+            <p>¿Necesita este servicio para su empresa?</p>
+            <button class="info-btn" type="button" data-service="head-hunting" data-title="Head Hunting"
+                data-image="image/headHunting.png" data-summary="Identificación y selección estratégica de talento especializado."
+                data-description="El servicio de Head Hunting de The Hospitality Center está enfocado en la identificación, evaluación, selección y presentación de talento humano especializado para empresas del sector hotelero, gastronómico, turístico, comercial, corporativo y de servicios."
+                data-description1="Mediante procesos técnicos de reclutamiento, validación de experiencia, análisis de perfil y evaluación de competencias, facilita el acceso a talento calificado para cargos operativos, técnicos, administrativos, comerciales y gerenciales.">
+                Solicitar información
+            </button>
+        </div>
+    </section>
+    <section class="academy-view page-view" id="thc-academy" data-view="thc-academy">
+        <button class="back-home" type="button" data-view="home">← Volver al inicio</button>
+        <div class="academy-header">
+            <p class="subtitle">THC ACADEMIA</p>
+            <h2>Formación especializada para la industria hotelera, gastronómica y de servicios</h2>
+            <p>Diseñamos programas de formación, capacitaciones, talleres y entrenamientos adaptados a las necesidades
+                de hoteles, restaurantes, empresas, instituciones y equipos de trabajo.</p>
+        </div>
+        <div class="academy-options">
+            <article class="academy-option"><span class="academy-icon">▣</span><div><h3>Cursos</h3><p>Programas certificados para profesionales del sector</p></div><span></span></article>
+            <article class="academy-option"><span class="academy-icon">▤</span><div><h3>Capacitaciones corporativas</h3><p>Programas a la medida para su empresa</p></div><span></span></article>
+            <article class="academy-option"><span class="academy-icon">☆</span><div><h3>Talleres y experiencias</h3><p>Aprendizaje práctico, dinámico e impactante</p></div><span></span></article>
+            <article class="academy-option"><span class="academy-icon">⊕</span><div><h3>Sedes y cobertura</h3><p>Presencia nacional e internacional para llevar la formación a donde usted la necesita</p></div><span></span></article>
+        </div>
+        <div class="academy-cta">
+            <p>¿Necesita formación para su equipo?</p>
+            <button class="info-btn" type="button" data-service="thc-academy" data-title="THC Academy"
+                data-image="image/ThcAcademy.png" data-summary="Formación especializada para profesionales de la hospitalidad."
+                data-description="THC Academy diseña programas de formación, capacitación y certificación para empresas y profesionales del sector.">
+                Solicitar información
+            </button>
+        </div>
+    </section>
+    <section class="sanitizacion-view page-view" id="sanitizacion" data-view="sanitizacion">
+        <button class="back-home" type="button" data-view="home">← Volver al inicio</button>
+        <div class="sanitizacion-header">
+            <p class="subtitle">SANITIZACIÓN THC</p>
+            <h2>Sanitización para restaurantes, cocinas y negocios gastronómicos</h2>
+            <p>Implementamos procesos especializados de limpieza, desinfección, sanitización y control de puntos críticos para restaurantes, hoteles, cocinas industriales y establecimientos gastronómicos.</p>
+        </div>
+        <div class="sanitizacion-columns">
+            <div>
+                <h3>Puntos críticos de una cocina</h3>
+                <div class="sanitizacion-tags">
+                    <span>Pisos</span><span>Paredes</span><span>Techos</span><span>Equipos</span><span>Utensilios</span>
+                    <span>Cámaras de refrigeración</span><span>Congeladores</span><span>Campanas</span><span>Extractores</span>
+                    <span>Áreas de almacenamiento</span><span>Áreas de residuos</span><span>Zonas de preparación</span>
+                    <span>Áreas de lavado</span><span>Superficies de contacto</span><span>Menaje</span><span>Trampas de grasa</span><span>Áreas de servicio</span>
+                </div>
+            </div>
+            <div>
+                <h3>Servicios que ofrecemos</h3>
+                <ul class="sanitizacion-services">
+                    <li>Limpieza general</li><li>Limpieza profunda</li><li>Sanitización gastronómica</li><li>Desinfección de superficies</li>
+                    <li>Limpieza de cocinas industriales</li><li>Limpieza de equipos</li><li>Limpieza de campanas y extractores</li>
+                    <li>Control de puntos críticos</li><li>Protocolos de limpieza y desinfección</li><li>Verificación de BPM</li>
+                    <li>Acompañamiento en seguridad alimentaria</li><li>Capacitación al personal</li><li>Planes periódicos de sanitización</li>
+                    <li>Informes de servicio</li><li>Evidencias fotográficas</li><li>Recomendaciones de mejora</li>
+                </ul>
+            </div>
+        </div>
+        <h3 class="sanitizacion-title">Nuestra secuencia de servicio</h3>
+        <div class="sanitizacion-sequence">
+            <div><b>1</b><strong>Inspección</strong><span>Evaluamos el estado de las instalaciones.</span></div>
+            <div><b>2</b><strong>Identificación</strong><span>Mapeamos los puntos críticos de riesgo.</span></div>
+            <div><b>3</b><strong>Planeación</strong><span>Diseñamos el protocolo específico.</span></div>
+            <div><b>4</b><strong>Limpieza</strong><span>Removemos suciedad y residuos.</span></div>
+            <div><b>5</b><strong>Desinfección</strong><span>Eliminamos microorganismos patógenos.</span></div>
+            <div><b>6</b><strong>Sanitización</strong><span>Reducimos carga microbiana a niveles seguros.</span></div>
+            <div><b>7</b><strong>Verificación</strong><span>Comprobamos resultados del proceso.</span></div>
+            <div><b>8</b><strong>Informe</strong><span>Entregamos documentación y evidencias.</span></div>
+        </div>
+        <div class="sanitizacion-cta">
+            <p>¿Necesita este servicio para su empresa?</p>
+            <button class="info-btn" type="button" data-service="sanitacion" data-title="Sanitización"
+                data-image="image/Sanitacion.png" data-summary="Limpieza avanzada y control higiénico bajo estándares de grado hospitalario."
+                data-description="El servicio de Sanitización de The Hospitality Center ofrece limpieza avanzada, desinfección técnica, sanitización de espacios y control higiénico ambiental.">
+                Solicitar información
+            </button>
+        </div>
+    </section>
+    <section class="operator-view page-view" id="operador-hotelero" data-view="operador-hotelero">
+        <button class="back-home" type="button" data-view="home">← Volver al inicio</button>
+        <div class="operator-header">
+            <p class="subtitle">OPERACIONES HOTELERAS</p>
+            <h2>Operadores hoteleros</h2>
+            <p>Acompañamos la estructuración, administración, puesta en marcha y optimización de proyectos hoteleros, gastronómicos y turísticos.</p>
+        </div>
+        <div class="operator-solutions">
+            <div><b>▣</b><strong>Operación integral de hoteles</strong><span>Gestión completa de la operación hotelera bajo estándares de excelencia.</span></div>
+            <div><b>⌑</b><strong>Administración hotelera</strong><span>Dirección estratégica y operativa del establecimiento.</span></div>
+            <div><b>⚙</b><strong>Apertura y puesta en marcha</strong><span>Acompañamiento total en el lanzamiento de nuevos proyectos hoteleros.</span></div>
+            <div><b>▥</b><strong>Diagnóstico de operaciones</strong><span>Evaluación integral del estado actual de su hotel o restaurante.</span></div>
+            <div><b>▣</b><strong>Estructuración de procesos</strong><span>Diseño de flujos operativos eficientes.</span></div>
+            <div><b>▤</b><strong>Manuales operativos</strong><span>Creación de manuales de procedimientos.</span></div>
+            <div><b>♧</b><strong>Perfiles de cargo</strong><span>Diseño de descriptores de cargos alineados a su operación.</span></div>
+            <div><b>⚙</b><strong>Implementación de estándares</strong><span>Adopción de estándares operativos nacionales e internacionales.</span></div>
+            <div><b>♧</b><strong>Supervisión de departamentos</strong><span>Control y apoyo continuo a cada área del hotel.</span></div>
+            <div><b>▣</b><strong>Gestión de experiencia del huésped</strong><span>Diseño de la experiencia completa del huésped.</span></div>
+            <div><b>▥</b><strong>Control de costos</strong><span>Optimización de gastos operativos en cada área.</span></div>
+            <div><b>↗</b><strong>Gestión comercial</strong><span>Estrategias para incrementar ingresos y posicionamiento.</span></div>
+            <div><b>▣</b><strong>Gestión de reservas</strong><span>Optimización de canales y procesos de reservas.</span></div>
+            <div><b>⚙</b><strong>Alimentos y bebidas</strong><span>Gestión especializada del área de A&amp;B.</span></div>
+            <div><b>↗</b><strong>Revenue management</strong><span>Maximización de ingresos mediante tarifas dinámicas.</span></div>
+            <div><b>▣</b><strong>Gestión de OTAs</strong><span>Administración de canales digitales de distribución.</span></div>
+            <div><b>♧</b><strong>Auditorías operativas</strong><span>Revisión sistemática de procesos, resultados y estándares.</span></div>
+            <div><b>⚙</b><strong>Acompañamiento gerencial</strong><span>Mentoría y apoyo directo a la gerencia.</span></div>
+            <div><b>▣</b><strong>Entrenamiento de equipo</strong><span>Formación integral adaptada a las necesidades del personal.</span></div>
+            <div><b>↗</b><strong>Optimización de rentabilidad</strong><span>Estrategias para mejorar el margen operativo del establecimiento.</span></div>
+        </div>
+        <div class="operator-model">
+            <h3>Nuestro modelo de operación</h3>
+            <div class="operator-steps">
+                <div><b>1</b><strong>Diagnóstico</strong><span>Evaluamos el estado actual de la operación.</span></div>
+                <div><b>2</b><strong>Planeación</strong><span>Diseñamos el plan estratégico de acción.</span></div>
+                <div><b>3</b><strong>Estructuración</strong><span>Organizamos procesos, perfiles y estándares.</span></div>
+                <div><b>4</b><strong>Implementación</strong><span>Ponemos en marcha todos los ajustes definidos.</span></div>
+                <div><b>5</b><strong>Operación</strong><span>Acompañamos la operación diaria del hotel.</span></div>
+                <div><b>6</b><strong>Supervisión</strong><span>Controlamos el cumplimiento de estándares.</span></div>
+                <div><b>7</b><strong>Evaluación</strong><span>Medimos resultados con indicadores clave.</span></div>
+                <div><b>8</b><strong>Mejora continua</strong><span>Ajustamos y optimizamos permanentemente.</span></div>
+            </div>
+        </div>
+        <div class="operator-cta">
+            <p>¿Necesita este servicio para su empresa?</p>
+            <button class="info-btn" type="button" data-service="operador-hotelero" data-title="Operador Hotelero" data-image="image/operadorHotelero.png" data-summary="Administración y operación integral de hoteles y alojamientos turísticos." data-description="Ofrecemos soluciones integrales para la administración, gestión, supervisión y optimización operativa de proyectos de hospitalidad.">Solicitar información</button>
+        </div>
+    </section>
+    <section class="careers-section page-view" id="careers" data-view="careers">
+        <button class="back-home" type="button" data-view="home">← Volver al inicio</button>
         <div class="careers-shell">
             <div class="careers-toggle" role="tablist" aria-label="Opciones de talento humano">
                 <button class="careers-switch active" type="button" data-mode="candidate" aria-pressed="true">
@@ -445,7 +588,7 @@
 
                             <div class="careers-form-box">
                                 <h3>Anexa tu hoja de vida</h3>
-                                <form id="cvForm" action="https://formsubmit.co/Directoracademico@thehospitalitycenter.net"
+                                <form id="cvForm" action="https://formsubmit.co/logistica@thehospitalitycenter.net"
                                     method="POST" enctype="multipart/form-data" class="contact-form">
                                     <input type="hidden" name="_captcha" value="false">
                                     <input type="hidden" name="_subject" value="Nueva hoja de vida - THC">
@@ -596,7 +739,7 @@
 
                             <div class="careers-form-box">
                                 <h3>Cuéntanos tu necesidad</h3>
-                                <form id="recruitForm" action="https://formsubmit.co/Directoracademico@thehospitalitycenter.net"
+                                <form id="recruitForm" action="https://formsubmit.co/logistica@thehospitalitycenter.net"
                                     method="POST" class="contact-form">
                                     <input type="hidden" name="_captcha" value="false">
                                     <input type="hidden" name="_subject" value="Nueva solicitud de personal - THC">
@@ -617,7 +760,7 @@
             </div>
         </div>
     </section>
-    <section class="travel-section reveal" id="travel">
+    <section class="travel-section services-content page-view" id="travel" data-view="programs" data-services-content="true">
         <div class="travel-content">
             <div class="travel-copy">
                 <p class="subtitle">CONEXIÓN ESTRATÉGICA</p>
@@ -659,7 +802,7 @@
 
 
     <!-- FORMULARIO -->
-    <section class="form-section" id="form">
+    <section class="form-section home-content page-view" id="form" data-view="form" data-home-content="true">
         <div class="form-text reveal">
             <p class="subtitle">CONTÁCTANOS</p>
             <h2>
@@ -679,7 +822,7 @@
 
         <div class="form-box reveal delay-2">
             <h3>Registro de Interés</h3>
-            <form id="registroForm" action="https://formsubmit.co/ajax/Directoracademico@thehospitalitycenter.net"
+            <form id="registroForm" action="https://formsubmit.co/ajax/admin4@thehospitalitycenter.net"
                 method="POST" class="contact-form">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_subject" value="Nueva solicitud THC">
@@ -703,7 +846,7 @@
     </section>
 
     <!-- CERTIFICCIONES DE CALIDAD -->
-    <section class="partner-marquee reveal">
+    <section class="partner-marquee page-view reveal" id="certifications" data-view="about" data-about-content="true">
         <div class="section-header">
             <h2>Certificaciones de Calidad</h2>
         </div>
@@ -738,6 +881,8 @@
     </section>
 
 
+    </main>
+
     <footer class="main-footer">
         <div class="footer-top">
             <img src="image/thc-logo.png" alt="Logo THC" class="footer-logo">
@@ -748,7 +893,7 @@
             <div>
                 <h4>COSTA RICA</h4>
                 <ul>
-                    <li><span>info@thehospitalitycenter-latam.com</span></li>
+                    <li><span>admincr@thehospitalitycenter.net</span></li>
                     <li><span>Sede San José y Liberia</span></li>
                     <li><span>(+506) 6474 5123</span></li>
                 </ul>
@@ -764,7 +909,7 @@
             <div>
                 <h4>BOGOTÁ</h4>
                 <ul>
-                    <li><span>info@thehospitalitycenter-latam.com</span></li>
+                    <li><span>logistica@thehospitalitycenter.net</span></li>
                     <li><span>Bogotá</span></li>
                     <li><span>(+57) 324 3500719</span></li>
                     <li><span>Sede Galerias Cl. 57 #24-8</span></li>
@@ -773,7 +918,7 @@
             <div>
                 <h4>MEDELLÍN</h4>
                 <ul>
-                    <li><span>info@thehospitalitycenter-latam.com</span></li>
+                    <li><span>logistica@thehospitalitycenter.net</span></li>
                     <li><span>(+57) 324 4987120</span></li>
                     <li><span>Cl 7D #43-40, El Poblado, Medellín, Antioquia</span>
                     </li>
@@ -799,6 +944,18 @@
                     </div>
         </div>
     </footer>
+
+    <a href="https://wa.me/573243500719" target="_blank" rel="noopener noreferrer"
+        class="whatsapp-bubble whatsapp-main" aria-label="Contactar por WhatsApp">
+        <img src="image/logos/logoWhatsapp.png" alt="WhatsApp">
+    </a>
+
+    <div class="video-popup" id="videoPopup" role="dialog" aria-modal="true" aria-label="Video promocional">
+        <div class="video-popup-window">
+            <button class="video-popup-close" id="videoPopupClose" type="button" aria-label="Cerrar video">&times;</button>
+            <video id="popupVideo" src="image/VIDEOTHC2026.mp4" autoplay controls playsinline preload="auto"></video>
+        </div>
+    </div>
 
     <!-- PANEL DE INFORMACIÓN DE SERVICIO (MODAL) -->
     <div class="service-modal-overlay" id="serviceModalOverlay">
@@ -843,14 +1000,19 @@
     <script>
         // NAVBAR scroll
         const navbar = document.getElementById("navbar");
-        window.addEventListener("scroll", () => {
-            navbar.classList.toggle("scrolled", window.scrollY > 50);
-        });
+        function updateNavbar() {
+            const currentScroll = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
+            navbar.classList.toggle("scrolled", currentScroll > 50);
+        }
+        window.addEventListener("scroll", updateNavbar);
+        document.addEventListener("scroll", updateNavbar);
+        updateNavbar();
 
         // HAMBURGER MENU
         const hamburger = document.getElementById("hamburger");
         const mainMenu = document.getElementById("mainMenu");
         const academyItem = document.getElementById("academyItem");
+        const aboutItem = document.getElementById("aboutItem");
 
         hamburger.addEventListener("click", () => {
             const isOpen = mainMenu.classList.toggle("open");
@@ -859,13 +1021,26 @@
         });
 
         // Academy dropdown en móvil — tap para abrir/cerrar
-        const academyLink = academyItem.querySelector("a");
-        academyLink.addEventListener("click", (e) => {
-            if (window.innerWidth <= 900) {
+        if (academyItem) {
+            const academyLink = academyItem.querySelector("a");
+            academyLink.addEventListener("click", (e) => {
                 e.preventDefault();
-                academyItem.classList.toggle("open");
-            }
-        });
+                const isOpen = academyItem.classList.toggle("open");
+                academyLink.setAttribute("aria-expanded", isOpen ? "true" : "false");
+            });
+        }
+
+        // Nosotros dropdown en móvil - tap para abrir/cerrar
+        if (aboutItem) {
+            const aboutLink = aboutItem.querySelector(":scope > a");
+            aboutLink.addEventListener("click", (e) => {
+                if (window.matchMedia('(max-width: 900px)').matches) {
+                    e.preventDefault();
+                    const isOpen = aboutItem.classList.toggle("open");
+                    aboutLink.setAttribute("aria-expanded", isOpen ? "true" : "false");
+                }
+            });
+        }
 
         // Cierra menú al hacer clic en un link del menú
         mainMenu.querySelectorAll("a:not(.menu-item > a)").forEach(link => {
@@ -876,30 +1051,71 @@
             });
         });
 
-        // BOTONES HERO
-        document.querySelector(".primary").onclick = () => {
-            document.querySelector(".programs").scrollIntoView({ behavior: "smooth" });
-        };
-        document.querySelector(".secondary").onclick = () => {
-            document.querySelector(".form-section").scrollIntoView({ behavior: "smooth" });
-        };
-        document.querySelector(".nav-btn").onclick = () => {
-            document.querySelector(".form-section").scrollIntoView({ behavior: "smooth" });
-        };
+        const pageViews = document.querySelectorAll('.page-view');
+        const viewTriggers = document.querySelectorAll('[data-view]:not(.page-view)');
 
-        // Smooth scroll para links del menú con href=#
-        document.querySelectorAll('.menu a[href^="#"]').forEach(link => {
-            link.addEventListener('click', event => {
-                if (window.innerWidth > 900) {
-                    event.preventDefault();
-                    const target = document.querySelector(link.getAttribute('href'));
-                    if (target) {
-                        const offsetPosition = target.getBoundingClientRect().top + window.pageYOffset - 90;
-                        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-                    }
+        function showView(viewName, updateUrl = true) {
+            const targetView = document.querySelector(`.page-view[data-view="${viewName}"]`);
+            if (!targetView) return;
+
+            pageViews.forEach(view => {
+                const isHomeContent = view.dataset.homeContent === 'true' && viewName === 'home';
+                const isServicesContent = view.dataset.servicesContent === 'true' && viewName === 'programs';
+                const isAboutContent = view.dataset.aboutContent === 'true' && viewName === 'about';
+                const isActive = view === targetView || isHomeContent || isServicesContent || isAboutContent;
+                view.classList.toggle('is-active', isActive);
+                if (isActive) view.classList.add('active');
+            });
+
+            viewTriggers.forEach(trigger => {
+                if (trigger.matches('.menu [data-view]')) {
+                    trigger.classList.toggle('current', trigger.dataset.view === viewName);
+                }
+            });
+
+            if (updateUrl) history.replaceState(null, '', `#${viewName}`);
+            window.scrollTo(0, 0);
+            mainMenu.classList.remove('open');
+            hamburger.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', 'false');
+        }
+
+        viewTriggers.forEach(trigger => {
+            trigger.addEventListener('click', event => {
+                const viewName = trigger.dataset.view;
+                if (!viewName) return;
+                event.preventDefault();
+                showView(viewName);
+                const scrollTarget = trigger.dataset.scrollTarget;
+                if (scrollTarget) {
+                    requestAnimationFrame(() => {
+                        document.getElementById(scrollTarget)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    });
                 }
             });
         });
+
+        document.querySelector('.nav-btn').addEventListener('click', () => showView('form'));
+        const initialView = window.location.hash.slice(1);
+        showView(initialView || 'home', false);
+
+        const carouselSlides = document.querySelectorAll('.carousel-slide');
+        const carouselDots = document.querySelectorAll('.carousel-dot');
+        const carouselPrev = document.querySelector('.carousel-prev');
+        const carouselNext = document.querySelector('.carousel-next');
+        let carouselIndex = 0;
+
+        function showCarouselSlide(index) {
+            if (!carouselSlides.length) return;
+            carouselIndex = (index + carouselSlides.length) % carouselSlides.length;
+            carouselSlides.forEach((slide, slideIndex) => slide.classList.toggle('is-active', slideIndex === carouselIndex));
+            carouselDots.forEach((dot, dotIndex) => dot.classList.toggle('is-active', dotIndex === carouselIndex));
+        }
+
+        carouselPrev.addEventListener('click', () => showCarouselSlide(carouselIndex - 1));
+        carouselNext.addEventListener('click', () => showCarouselSlide(carouselIndex + 1));
+        carouselDots.forEach((dot, dotIndex) => dot.addEventListener('click', () => showCarouselSlide(dotIndex)));
+        setInterval(() => showCarouselSlide(carouselIndex + 1), 5000);
 
         // ANIMACIÓN DE ENTRADA
         window.addEventListener("load", () => {
@@ -1060,6 +1276,10 @@
             serviceModalFormService.textContent = data.title;
             serviceFormProgram.value = data.title;
             serviceFormProgramDisplay.textContent = data.title;
+            serviceModalOverlay.classList.toggle('head-hunting-modal', data.service === 'head-hunting');
+            serviceModalOverlay.classList.toggle('academy-modal', data.service === 'thc-academy');
+            serviceModalOverlay.classList.toggle('sanitizacion-modal', data.service === 'sanitacion');
+            serviceModalOverlay.classList.toggle('operator-modal', data.service === 'operador-hotelero');
             serviceModalOverlay.classList.add('active');
             document.body.classList.add('modal-open');
         }
@@ -1073,6 +1293,7 @@
             btn.addEventListener('click', () => {
                 const points = (btn.dataset.points || '').split('|').filter(Boolean);
                 openServiceModal({
+                    service: btn.dataset.service,
                     title: btn.dataset.title,
                     image: btn.dataset.image,
                     description: btn.dataset.description,
@@ -1172,8 +1393,56 @@
                 });
 
                 heroVideoEl.addEventListener('ended', showHeroEndedState);
+                heroVideoEl.addEventListener('error', showHeroEndedState);
+                if (heroVideoEl.error) showHeroEndedState();
             }
         }
+
+        const videoPopup = document.getElementById('videoPopup');
+        const videoPopupClose = document.getElementById('videoPopupClose');
+        const popupVideo = document.getElementById('popupVideo');
+
+        function closeVideoPopup() {
+            popupVideo.pause();
+            videoPopup.classList.remove('is-open');
+            document.body.classList.remove('video-popup-open');
+        }
+
+        videoPopup.classList.add('is-open');
+        document.body.classList.add('video-popup-open');
+        popupVideo.muted = false;
+        popupVideo.volume = 1;
+        popupVideo.play().catch(() => {
+            popupVideo.muted = true;
+            popupVideo.play().catch(() => {});
+        });
+        videoPopupClose.addEventListener('click', closeVideoPopup);
+        videoPopup.addEventListener('click', event => {
+            if (event.target === videoPopup) closeVideoPopup();
+        });
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape' && videoPopup.classList.contains('is-open')) closeVideoPopup();
+        });
+        window.addEventListener('pageshow', function (event) {
+    // 'event.persisted' es true si el navegador sacó la página de la caché (como al usar el botón atrás)
+    if (event.persisted) {
+        
+        
+        const pantallaTransicion = document.querySelector('.cuadro-rojo'); 
+        
+        if (pantallaTransicion) {
+            // Aquí lo ocultas. Dependiendo de cómo lo hayas programado, usa una de estas opciones:
+            
+            // Opción 1: Quitar la clase que activa la animación
+            pantallaTransicion.classList.remove('clase-activa'); 
+            
+            // Opción 2: Ocultarlo a la fuerza con CSS
+            pantallaTransicion.style.opacity = '0';
+            pantallaTransicion.style.visibility = 'hidden';
+            pantallaTransicion.style.display = 'none'; // Usa esta si lo muestras con display: block
+        }
+    }
+});
     </script>
 
 </body>
