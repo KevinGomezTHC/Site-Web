@@ -15,7 +15,7 @@
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
             if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
             n.queue = []; t = b.createElement(e); t.async = !0;
@@ -95,7 +95,7 @@
                     <div class="hero-copy">
                         <div class="hero-brand reveal delay-2">
 
-                            <h1><br>The Hospitality Center</h1>
+                            
                         </div>
 
                         <p class="reveal delay-3">
@@ -110,6 +110,11 @@
                 </div>
 
                 <div class="home-grid-actions" aria-label="Explorar The Hospitality Center">
+                    <div class="home-action-row">
+                        <div class="home-tile home-tile-heading" role="heading" aria-level="2">
+                            <strong>Nuestros servicios</strong>
+                        </div>
+                    </div>
                     <div class="home-action-row">
                         <button class="home-tile tile-about" type="button" data-view="thc-academy">
                             <strong>THC Academy</strong>
@@ -540,6 +545,11 @@
                 <article class="academy-option"><span class="academy-icon">▣</span>
                     <div>
                         <h3>Cursos</h3>
+                        <div class="home-action-row">
+                            <div class="home-tile home-tile-heading" role="heading" aria-level="2">
+                                <strong>Nuestros servicios</strong>
+                            </div>
+                        </div>
                         <p>Programas certificados para profesionales del sector</p>
                     </div><span></span>
                 </article>
@@ -971,47 +981,35 @@
         </section>
 
 
-        <!-- FORMULARIO -->
-        <section class="form-section home-content page-view" id="form" data-view="form" data-home-content="true">
-            <div class="form-text reveal">
-                <p class="subtitle">CONTÁCTANOS</p>
-                <h2>
-                    Consolida tu <br>
-                    <span>proyecto</span> hoy
-                </h2>
-                <p class="description">
-                    Solicita información sobre nuestros servicios empresariales y programas de academia para tu equipo.
-                </p>
-                <ul>
-                    <li>Certificación internacional reconocida</li>
-                    <li>Instructores con experiencia global</li>
-                    <li>Acceso de por vida al material</li>
-                    <li>Red de alumni en +15 países</li>
-                </ul>
-            </div>
-
-            <div class="form-box reveal delay-2">
-                <h3>Registro de Interés</h3>
-                <form id="registroForm" action="https://formsubmit.co/ajax/admin4@thehospitalitycenter.net"
-                    method="POST" class="contact-form">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_subject" value="Nueva solicitud THC">
-                    <input type="hidden" name="_template" value="table">
-
-                    <input type="text" name="nombre" placeholder="Nombre completo*" required>
-                    <input type="text" name="pais" placeholder="País*" required>
-                    <input type="email" name="correo" placeholder="Correo electrónico*" required>
-                    <input type="text" name="telefono" placeholder="Teléfono / WhatsApp*" required>
-
-                    <select name="programa">
-                        <option>THC Academy</option>
-                        <option>Sanitizacion</option>
-                        <option>Operador Hotelero</option>
-                        <option>Head Hunting</option>
-                    </select>
-
-                    <button type="submit" class="btn btn-primary btn-full">Enviar solicitud</button>
-                </form>
+        <section class="contact-gallery page-view" id="form" data-view="form" data-home-content="true"
+            aria-label="Galería de The Hospitality Center">
+            <div class="contact-gallery-stage">
+                <div class="contact-gallery-frame">
+                    <img class="contact-gallery-slide is-active" src="image/Evento_1.jpeg" alt="Comunidad de The Hospitality Center en un evento">
+                    <img class="contact-gallery-slide" src="image/Evento_2.jpeg" alt="Equipo de hospitalidad en una sede">
+                    <img class="contact-gallery-slide" src="image/Evento_3.jpeg" alt="Equipo recibiendo certificados de formación">
+                    <img class="contact-gallery-slide" src="image/Evento_4.jpeg" alt="Capacitación para profesionales de hospitalidad">
+                    <div class="contact-gallery-cover is-active" aria-hidden="true">
+                        <img class="contact-gallery-cover-logo" src="image/thc-logo.png" alt="">
+                        <div class="contact-gallery-cover-copy">
+                            <p>Encuentros que inspiran</p>
+                            <h2>Nuestros <span>eventos</span></h2>
+                            <span>Celebramos las conexiones que hacen crecer la hospitalidad.</span>
+                        </div>
+                    </div>
+                    <button class="contact-gallery-control contact-gallery-prev" type="button" aria-label="Imagen anterior">‹</button>
+                    <button class="contact-gallery-control contact-gallery-next" type="button" aria-label="Imagen siguiente">›</button>
+                    <div class="contact-gallery-dots" aria-label="Seleccionar imagen">
+                        <button class="contact-gallery-dot is-active" type="button" aria-label="Mostrar imagen 1" aria-pressed="true"></button>
+                        <button class="contact-gallery-dot" type="button" aria-label="Mostrar imagen 2" aria-pressed="false"></button>
+                        <button class="contact-gallery-dot" type="button" aria-label="Mostrar imagen 3" aria-pressed="false"></button>
+                        <button class="contact-gallery-dot" type="button" aria-label="Mostrar imagen 4" aria-pressed="false"></button>
+                    </div>
+                </div>
+                <div class="contact-gallery-footer">
+                    <span>Nuestras Experiencias</span>
+                    <span>Desliza para explorar <b>↓</b></span>
+                </div>
             </div>
         </section>
 
@@ -1288,6 +1286,97 @@
         carouselNext.addEventListener('click', () => showCarouselSlide(carouselIndex + 1));
         carouselDots.forEach((dot, dotIndex) => dot.addEventListener('click', () => showCarouselSlide(dotIndex)));
         setInterval(() => showCarouselSlide(carouselIndex + 1), 5000);
+
+        const contactGallery = document.querySelector('.contact-gallery');
+        const contactGallerySlides = contactGallery?.querySelectorAll('.contact-gallery-slide') || [];
+        const contactGalleryDots = contactGallery?.querySelectorAll('.contact-gallery-dot') || [];
+        const contactGalleryFrame = contactGallery?.querySelector('.contact-gallery-frame');
+        const contactGalleryCover = contactGallery?.querySelector('.contact-gallery-cover');
+        let contactGalleryIndex = 0;
+
+        function showContactGallerySlide(index) {
+            if (!contactGallerySlides.length) return;
+            contactGalleryIndex = (index + contactGallerySlides.length) % contactGallerySlides.length;
+            contactGallerySlides.forEach((slide, slideIndex) => {
+                const isActive = slideIndex === contactGalleryIndex;
+                const stackIndex = (slideIndex - contactGalleryIndex + contactGallerySlides.length) % contactGallerySlides.length;
+                const cardPosition = stackIndex === contactGallerySlides.length - 1 ? -1 : stackIndex;
+                const isMobile = window.innerWidth <= 700;
+                const frameWidth = contactGalleryFrame?.clientWidth || window.innerWidth * (isMobile ? 1 : 0.9);
+                const cardWidth = frameWidth * (isMobile ? 0.82 : 0.74);
+                slide.classList.toggle('is-active', isActive);
+                slide.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+                slide.style.setProperty('--card-x', `${cardPosition * cardWidth * 0.82}px`);
+                slide.style.setProperty('--card-y', `${Math.abs(cardPosition) * 8}px`);
+                slide.style.setProperty('--card-angle', `${cardPosition === 0 ? 0 : Math.sign(cardPosition) * -30}deg`);
+                slide.style.setProperty('--card-rotation', `${cardPosition * -1.5}deg`);
+                slide.style.setProperty('--card-scale', `${cardPosition === 0 ? 1 : 0.94}`);
+                slide.style.setProperty('--card-layer', String(cardPosition === 0 ? 5 : 4 - Math.abs(cardPosition)));
+            });
+            contactGalleryCover?.classList.toggle('is-active', contactGalleryIndex === 0);
+            contactGalleryDots.forEach((dot, dotIndex) => {
+                const isActive = dotIndex === contactGalleryIndex;
+                dot.classList.toggle('is-active', isActive);
+                dot.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+            });
+        }
+
+        if (contactGallery) {
+            const contactGalleryPrev = contactGallery.querySelector('.contact-gallery-prev');
+            const contactGalleryNext = contactGallery.querySelector('.contact-gallery-next');
+            contactGalleryPrev.addEventListener('click', () => showContactGallerySlide(contactGalleryIndex - 1));
+            contactGalleryNext.addEventListener('click', () => showContactGallerySlide(contactGalleryIndex + 1));
+            contactGalleryDots.forEach((dot, dotIndex) => {
+                dot.addEventListener('click', () => showContactGallerySlide(dotIndex));
+            });
+
+            let contactGalleryProgress = 0;
+
+            function setContactGalleryProgress(progress) {
+                contactGalleryProgress = Math.min(1, Math.max(0, progress));
+                contactGallery.style.setProperty('--gallery-progress', contactGalleryProgress.toFixed(3));
+                contactGallery.classList.toggle('has-scrolled', contactGalleryProgress > 0.25);
+            }
+
+            function isContactGalleryInScrollPosition() {
+                if (!contactGallery.classList.contains('is-active')) return false;
+                const bounds = contactGallery.getBoundingClientRect();
+                return bounds.top <= 1 && bounds.bottom > 0;
+            }
+
+            function consumeContactGalleryScroll(delta, event) {
+                if (!delta || !isContactGalleryInScrollPosition()) return;
+                if ((delta < 0 && contactGalleryProgress <= 0) || (delta > 0 && contactGalleryProgress >= 1)) return;
+
+                event.preventDefault();
+                const bounds = contactGallery.getBoundingClientRect();
+                if (bounds.top < -1) document.documentElement.scrollTop += bounds.top;
+                setContactGalleryProgress(contactGalleryProgress + delta / 2000);
+            }
+
+            showContactGallerySlide(0);
+            window.addEventListener('wheel', event => {
+                const unit = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? window.innerHeight : 1;
+                consumeContactGalleryScroll(event.deltaY * unit, event);
+            }, { passive: false });
+
+            let contactGalleryTouchY = null;
+            window.addEventListener('touchstart', event => {
+                contactGalleryTouchY = contactGallery.contains(event.target) && event.touches.length === 1
+                    ? event.touches[0].clientY
+                    : null;
+            }, { passive: true });
+            window.addEventListener('touchmove', event => {
+                if (contactGalleryTouchY === null || event.touches.length !== 1) return;
+                const touchY = event.touches[0].clientY;
+                const delta = contactGalleryTouchY - touchY;
+                contactGalleryTouchY = touchY;
+                consumeContactGalleryScroll(delta, event);
+            }, { passive: false });
+            window.addEventListener('touchend', () => { contactGalleryTouchY = null; }, { passive: true });
+            window.addEventListener('touchcancel', () => { contactGalleryTouchY = null; }, { passive: true });
+            window.addEventListener('resize', () => showContactGallerySlide(contactGalleryIndex));
+        }
 
         // ANIMACIÓN DE ENTRADA
         window.addEventListener("load", () => {
@@ -1615,6 +1704,70 @@
                 }
             }
         });
+        // GALERÍA DE SERVICIOS: el scroll vertical mueve las tarjetas en horizontal.
+        // Pegar dentro del <script> de index.html, después del bloque de showView().
+        (function () {
+            const section = document.getElementById('services-gallery');
+            if (!section) return;
+
+            const sticky = section.querySelector('.dishes-sticky');
+            const viewport = section.querySelector('.dishes-viewport');
+            const track = document.getElementById('dishesTrack');
+            const prev = document.getElementById('dishesPrev');
+            const next = document.getElementById('dishesNext');
+
+            // Efecto sticky solo en escritorio y sin "reducir movimiento"
+            const desktop = window.matchMedia('(min-width: 901px) and (prefers-reduced-motion: no-preference)');
+
+            function update() {
+                if (!desktop.matches) {
+                    section.style.height = '';
+                    track.style.transform = '';
+                    return;
+                }
+                if (!sticky.offsetHeight) return; // sección oculta (otra vista activa)
+
+                const dist = Math.max(0, track.offsetWidth - viewport.clientWidth);
+                section.style.height = (sticky.offsetHeight + dist) + 'px';
+
+                const progress = dist
+                    ? Math.min(1, Math.max(0, -section.getBoundingClientRect().top / dist))
+                    : 0;
+                track.style.transform = 'translate3d(' + (-progress * dist) + 'px, 0, 0)';
+            }
+
+            let ticking = false;
+            window.addEventListener('scroll', () => {
+                if (ticking) return;
+                ticking = true;
+                requestAnimationFrame(() => { update(); ticking = false; });
+            }, { passive: true });
+
+            // Recalcula al cambiar de vista (la sección pasa de oculta a visible) o de tamaño
+            if ('ResizeObserver' in window) {
+                const ro = new ResizeObserver(update);
+                ro.observe(sticky);
+                ro.observe(viewport);
+            }
+            window.addEventListener('resize', update);
+            desktop.addEventListener('change', update);
+
+            // Flechas: en escritorio mueven el scroll de la página (1 px de scroll = 1 px de desplazamiento)
+            function step(dir) {
+                const card = track.querySelector('.dish-card');
+                if (!card) return;
+                const size = card.offsetWidth + 24;
+                if (desktop.matches) {
+                    window.scrollBy({ top: dir * size, behavior: 'smooth' });
+                } else {
+                    viewport.scrollBy({ left: dir * size, behavior: 'smooth' });
+                }
+            }
+            prev.addEventListener('click', () => step(-1));
+            next.addEventListener('click', () => step(1));
+
+            update();
+        })();
     </script>
 
 </body>
