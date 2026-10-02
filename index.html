@@ -1340,7 +1340,16 @@
                 if (!contactGallery.classList.contains('is-active')) return false;
                 const bounds = contactGallery.getBoundingClientRect();
                 if (bounds.top <= 1 && bounds.bottom > 0) return true;
-                return delta > 0 && bounds.top > 1 && delta >= bounds.top;
+                const isEnteringWhileScrollingDown = delta > 0
+                    && bounds.top > 1
+                    && bounds.top < window.innerHeight
+                    && bounds.bottom > 0;
+                const isCrossingWhileScrollingDown = delta > 0 && bounds.top > 1 && delta >= bounds.top;
+                const isReturningWhileScrollingUp = delta < 0
+                    && contactGalleryProgress > 0
+                    && bounds.bottom > 0
+                    && bounds.top < window.innerHeight;
+                return isEnteringWhileScrollingDown || isCrossingWhileScrollingDown || isReturningWhileScrollingUp;
             }
 
             function consumeContactGalleryScroll(delta, event) {
@@ -1351,8 +1360,10 @@
                 const bounds = contactGallery.getBoundingClientRect();
                 let galleryDelta = delta;
                 if (bounds.top > 1) {
-                    document.documentElement.scrollTop += bounds.top;
-                    galleryDelta = Math.max(0, delta - bounds.top);
+                    const pageDistance = Math.min(Math.max(0, delta), bounds.top);
+                    document.documentElement.scrollTop += pageDistance;
+                    galleryDelta = delta - pageDistance;
+                    if (!galleryDelta) return;
                 } else if (bounds.top < -1) {
                     document.documentElement.scrollTop += bounds.top;
                 }
@@ -1363,10 +1374,10 @@
             }
 
             showContactGallerySlide(0);
-            window.addEventListener('wheel', event => {
+            document.addEventListener('wheel', event => {
                 const unit = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? window.innerHeight : 1;
                 consumeContactGalleryScroll(event.deltaY * unit, event);
-            }, { passive: false });
+            }, { capture: true, passive: false });
 
             let contactGalleryTouchY = null;
             window.addEventListener('touchstart', event => {
