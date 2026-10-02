@@ -1336,20 +1336,30 @@
                 contactGallery.classList.toggle('has-scrolled', contactGalleryProgress > 0.25);
             }
 
-            function isContactGalleryInScrollPosition() {
+            function isContactGalleryInScrollPosition(delta) {
                 if (!contactGallery.classList.contains('is-active')) return false;
                 const bounds = contactGallery.getBoundingClientRect();
-                return bounds.top <= 1 && bounds.bottom > 0;
+                if (bounds.top <= 1 && bounds.bottom > 0) return true;
+                return delta > 0 && bounds.top > 1 && delta >= bounds.top;
             }
 
             function consumeContactGalleryScroll(delta, event) {
-                if (!delta || !isContactGalleryInScrollPosition()) return;
+                if (!delta || !isContactGalleryInScrollPosition(delta)) return;
                 if ((delta < 0 && contactGalleryProgress <= 0) || (delta > 0 && contactGalleryProgress >= 1)) return;
 
                 event.preventDefault();
                 const bounds = contactGallery.getBoundingClientRect();
-                if (bounds.top < -1) document.documentElement.scrollTop += bounds.top;
-                setContactGalleryProgress(contactGalleryProgress + delta / 2000);
+                let galleryDelta = delta;
+                if (bounds.top > 1) {
+                    document.documentElement.scrollTop += bounds.top;
+                    galleryDelta = Math.max(0, delta - bounds.top);
+                } else if (bounds.top < -1) {
+                    document.documentElement.scrollTop += bounds.top;
+                }
+                galleryDelta = Math.min(100, Math.max(-100, galleryDelta));
+                const mobileCardsOpen = window.innerWidth <= 700 && contactGalleryProgress > 0.25;
+                const scrollDistance = mobileCardsOpen ? 850 : 2000;
+                setContactGalleryProgress(contactGalleryProgress + galleryDelta / scrollDistance);
             }
 
             showContactGallerySlide(0);
@@ -1360,7 +1370,7 @@
 
             let contactGalleryTouchY = null;
             window.addEventListener('touchstart', event => {
-                contactGalleryTouchY = contactGallery.contains(event.target) && event.touches.length === 1
+                contactGalleryTouchY = contactGallery.classList.contains('is-active') && event.touches.length === 1
                     ? event.touches[0].clientY
                     : null;
             }, { passive: true });
