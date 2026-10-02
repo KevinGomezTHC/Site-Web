@@ -1331,9 +1331,15 @@
             let contactGalleryProgress = 0;
 
             function setContactGalleryProgress(progress) {
+                const previousProgress = contactGalleryProgress;
                 contactGalleryProgress = Math.min(1, Math.max(0, progress));
                 contactGallery.style.setProperty('--gallery-progress', contactGalleryProgress.toFixed(3));
                 contactGallery.classList.toggle('has-scrolled', contactGalleryProgress > 0.25);
+
+                const isReturningToCover = contactGalleryProgress < previousProgress
+                    && contactGalleryProgress <= 0.25
+                    && contactGalleryIndex !== 0;
+                if (isReturningToCover) showContactGallerySlide(0);
             }
 
             function isContactGalleryInScrollPosition(delta) {
