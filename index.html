@@ -1373,9 +1373,10 @@
                 } else if (bounds.top < -1) {
                     document.documentElement.scrollTop += bounds.top;
                 }
-                galleryDelta = Math.min(100, Math.max(-100, galleryDelta));
+                galleryDelta = Math.min(160, Math.max(-160, galleryDelta));
                 const mobileCardsOpen = window.innerWidth <= 700 && contactGalleryProgress > 0.25;
-                const scrollDistance = mobileCardsOpen ? 850 : 2000;
+                const isMobile = window.innerWidth <= 700;
+                const scrollDistance = isMobile ? (mobileCardsOpen ? 500 : 700) : 1200;
                 setContactGalleryProgress(contactGalleryProgress + galleryDelta / scrollDistance);
             }
 
