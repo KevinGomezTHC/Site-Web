@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="stylesheet" type="text/css" href="stylesV19.css">
+    <link rel="stylesheet" type="text/css" href="stylesV20.css">
     <!-- Meta Pixel Code -->
     <script>
         !function (f, b, e, v, n, t, s) {
@@ -1342,65 +1342,17 @@
                 if (isReturningToCover) showContactGallerySlide(0);
             }
 
-            function isContactGalleryInScrollPosition(delta) {
-                if (!contactGallery.classList.contains('is-active')) return false;
-                const bounds = contactGallery.getBoundingClientRect();
-                if (bounds.top <= 1 && bounds.bottom > 0) return true;
-                const isEnteringWhileScrollingDown = delta > 0
-                    && bounds.top > 1
-                    && bounds.top < window.innerHeight
-                    && bounds.bottom > 0;
-                const isCrossingWhileScrollingDown = delta > 0 && bounds.top > 1 && delta >= bounds.top;
-                const isReturningWhileScrollingUp = delta < 0
-                    && contactGalleryProgress > 0
-                    && bounds.bottom > 0
-                    && bounds.top < window.innerHeight;
-                return isEnteringWhileScrollingDown || isCrossingWhileScrollingDown || isReturningWhileScrollingUp;
-            }
-
-            function consumeContactGalleryScroll(delta, event) {
-                if (!delta || !isContactGalleryInScrollPosition(delta)) return;
-                if ((delta < 0 && contactGalleryProgress <= 0) || (delta > 0 && contactGalleryProgress >= 1)) return;
-
-                event.preventDefault();
-                const bounds = contactGallery.getBoundingClientRect();
-                let galleryDelta = delta;
-                if (bounds.top > 1) {
-                    const pageDistance = Math.min(Math.max(0, delta), bounds.top);
-                    document.documentElement.scrollTop += pageDistance;
-                    galleryDelta = delta - pageDistance;
-                    if (!galleryDelta) return;
-                } else if (bounds.top < -1) {
-                    document.documentElement.scrollTop += bounds.top;
-                }
-                galleryDelta = Math.min(160, Math.max(-160, galleryDelta));
-                const mobileCardsOpen = window.innerWidth <= 700 && contactGalleryProgress > 0.25;
-                const isMobile = window.innerWidth <= 700;
-                const scrollDistance = isMobile ? (mobileCardsOpen ? 500 : 700) : 1200;
-                setContactGalleryProgress(contactGalleryProgress + galleryDelta / scrollDistance);
+            function updateContactGalleryProgress() {
+                if (!contactGallery.classList.contains('is-active')) return;
+                const scrollDistance = Math.max(1, contactGallery.offsetHeight - window.innerHeight);
+                const progress = Math.max(0, -contactGallery.getBoundingClientRect().top / scrollDistance);
+                setContactGalleryProgress(progress);
             }
 
             showContactGallerySlide(0);
-            document.addEventListener('wheel', event => {
-                const unit = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? window.innerHeight : 1;
-                consumeContactGalleryScroll(event.deltaY * unit, event);
-            }, { capture: true, passive: false });
-
-            let contactGalleryTouchY = null;
-            window.addEventListener('touchstart', event => {
-                contactGalleryTouchY = contactGallery.classList.contains('is-active') && event.touches.length === 1
-                    ? event.touches[0].clientY
-                    : null;
-            }, { passive: true });
-            window.addEventListener('touchmove', event => {
-                if (contactGalleryTouchY === null || event.touches.length !== 1) return;
-                const touchY = event.touches[0].clientY;
-                const delta = contactGalleryTouchY - touchY;
-                contactGalleryTouchY = touchY;
-                consumeContactGalleryScroll(delta, event);
-            }, { passive: false });
-            window.addEventListener('touchend', () => { contactGalleryTouchY = null; }, { passive: true });
-            window.addEventListener('touchcancel', () => { contactGalleryTouchY = null; }, { passive: true });
+            window.addEventListener('scroll', updateContactGalleryProgress, { passive: true });
+            window.addEventListener('resize', updateContactGalleryProgress);
+            updateContactGalleryProgress();
             window.addEventListener('resize', () => showContactGallerySlide(contactGalleryIndex));
         }
 
