@@ -5157,6 +5157,345 @@ body,
   font-weight: 600;
 }
 
+.cup-scroll-section.page-view.is-active {
+  position: relative;
+  display: block;
+  height: 180vh;
+  height: 180svh;
+  min-height: 0;
+  padding: 0;
+  overflow: clip;
+  color: #ffffff;
+  background: linear-gradient(125deg, #211719 0%, #3a171b 48%, #171a1b 100%);
+  --cup-progress: 0;
+}
+
+.cup-scroll-stage {
+  position: sticky;
+  top: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(300px, 1.08fr);
+  align-items: center;
+  gap: 6vw;
+  width: min(1280px, 100%);
+  height: 100vh;
+  height: 100svh;
+  margin: 0 auto;
+  padding: 128px 48px 42px;
+}
+
+.cup-scroll-copy {
+  max-width: 540px;
+  z-index: 1;
+}
+
+.cup-scroll-eyebrow {
+  margin: 0 0 22px;
+  color: #f4bd58;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.cup-scroll-copy h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 54px;
+  font-weight: 800;
+  line-height: 1.04;
+}
+
+.cup-scroll-copy h2 span {
+  display: block;
+  color: #f4bd58;
+}
+
+.cup-scroll-copy > p:not(.cup-scroll-eyebrow) {
+  max-width: 460px;
+  margin: 22px 0 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.cup-scroll-frame {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-top: 34px;
+  color: #f4bd58;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+#cupFrameNumber {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.cup-scroll-frame-divider {
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.cup-scroll-progress {
+  width: min(300px, 100%);
+  height: 3px;
+  margin-top: 14px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.cup-scroll-progress span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #f4bd58;
+  transform: scaleX(var(--cup-progress));
+  transform-origin: left center;
+}
+
+.cup-scroll-visual {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  min-width: 0;
+  height: 100%;
+}
+
+.cup-illustration {
+  display: block;
+  width: min(100%, 430px);
+  height: auto;
+  max-height: 70vh;
+  overflow: visible;
+  filter: drop-shadow(0 24px 35px rgba(0, 0, 0, 0.28));
+}
+
+.bottle-shadow {
+  fill: rgba(0, 0, 0, 0.28);
+  filter: url(#cupSoftShadow);
+}
+
+.bottle-body,
+.bottle-shoulder,
+.bottle-neck {
+  fill: url(#bottleGlassGradient);
+  stroke: rgba(255, 246, 220, 0.88);
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+}
+
+.bottle-liquid {
+  fill: url(#cupDrinkGradient);
+  opacity: 0.94;
+}
+
+.bottle-liquid-glint,
+.bottle-highlight,
+.bottle-neck-highlight {
+  fill: none;
+  stroke: rgba(255, 250, 231, 0.85);
+  stroke-linecap: round;
+  stroke-width: 3;
+}
+
+.bottle-liquid-glint { stroke-width: 1.6; opacity: 0.72; }
+.bottle-highlight { opacity: 0.7; }
+.bottle-neck-highlight { stroke-width: 2; opacity: 0.8; }
+
+.bottle-mouth {
+  fill: #edc779;
+  stroke: rgba(255, 250, 231, 0.9);
+  stroke-width: 2;
+}
+
+.bottle-label {
+  fill: rgba(37, 22, 18, 0.86);
+  stroke: rgba(255, 226, 166, 0.86);
+  stroke-width: 1.5;
+}
+
+.bottle-label-mark {
+  fill: #f4bd58;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.bottle-label-sub {
+  fill: rgba(255, 255, 255, 0.92);
+  font-size: 4.5px;
+  font-weight: 700;
+  letter-spacing: 0.9px;
+}
+
+.cup-pour-stream,
+.cup-pour-highlight {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  transition: stroke-dashoffset 0.16s linear;
+}
+
+.cup-pour-stream {
+  stroke: url(#pourStreamGradient);
+  stroke-width: 18;
+  filter: drop-shadow(0 2px 3px rgba(110, 49, 8, 0.48));
+}
+
+.cup-pour-highlight {
+  stroke: rgba(255, 244, 197, 0.9);
+  stroke-width: 2.6;
+  stroke-dasharray: 12 88;
+  opacity: var(--pour-progress);
+  animation: cup-pour-glint 0.72s linear infinite;
+}
+
+@keyframes cup-pour-glint {
+  to { stroke-dashoffset: -100; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cup-pour-highlight { animation: none; }
+}
+
+.cup-pour-drop {
+  fill: #ffcf59;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  filter: drop-shadow(0 1px 2px rgba(102, 48, 12, 0.4));
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.cup-shadow {
+  fill: rgba(0, 0, 0, 0.35);
+  filter: url(#cupSoftShadow);
+}
+
+.cup-glass-outline,
+.cup-glass-rim,
+.cup-stem,
+.cup-foot {
+  fill: rgba(255, 255, 255, 0.035);
+  stroke: url(#cupGlassGradient);
+  stroke-width: 3;
+  stroke-linejoin: round;
+}
+
+.cup-stem,
+.cup-foot-highlight,
+.cup-glass-highlight,
+.cup-fizz {
+  fill: none;
+  stroke: url(#cupGlassGradient);
+  stroke-linecap: round;
+  stroke-width: 3;
+}
+
+.cup-stem {
+  stroke: #f4bd58;
+  stroke-width: 4;
+  opacity: 0.9;
+}
+
+.cup-glass-highlight { opacity: 0.72; }
+.cup-foot-highlight,
+.cup-fizz { opacity: 0.54; }
+
+.cup-liquid-surface {
+  fill: url(#cupDrinkGradient);
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: cup-liquid-rock 2.2s ease-in-out infinite alternate;
+}
+
+.cup-bubbles {
+  fill: rgba(255, 247, 207, 0.84);
+  opacity: var(--cup-progress);
+}
+
+.cup-fizz { stroke: #f4bd58; }
+
+.cup-visual-caption {
+  margin-top: 2px;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+@keyframes cup-liquid-rock {
+  from { transform: translateX(-2px) rotate(-0.6deg); }
+  to { transform: translateX(2px) rotate(0.6deg); }
+}
+
+@media (max-width: 700px) {
+  .cup-scroll-section.page-view.is-active {
+    height: 160vh;
+    height: 160svh;
+  }
+
+  .cup-scroll-stage {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr);
+    justify-items: center;
+    gap: 10px;
+    height: 100vh;
+    height: 100svh;
+    padding: 126px 24px 28px;
+  }
+
+  .cup-scroll-copy {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+  }
+
+  .cup-scroll-eyebrow {
+    margin-bottom: 12px;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+  }
+
+  .cup-scroll-copy h2 { font-size: 36px; }
+
+  .cup-scroll-copy > p:not(.cup-scroll-eyebrow) {
+    max-width: 380px;
+    margin: 12px auto 0;
+    font-size: 15px;
+    line-height: 1.45;
+  }
+
+  .cup-scroll-frame {
+    justify-content: center;
+    margin-top: 16px;
+  }
+
+  #cupFrameNumber { font-size: 24px; }
+  .cup-scroll-progress { margin: 10px auto 0; }
+
+  .cup-scroll-visual {
+    width: 100%;
+    height: 100%;
+    align-content: center;
+  }
+
+  .cup-illustration {
+    width: min(78vw, 310px);
+    max-height: 42svh;
+  }
+
+  .cup-visual-caption { margin-top: 0; font-size: 10px; }
+}
+
 .contact-gallery.has-scrolled .contact-gallery-cover {
   opacity: 0;
   visibility: hidden;

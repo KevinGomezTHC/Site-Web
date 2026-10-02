@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="stylesheet" type="text/css" href="stylesV20.css">
+    <link rel="stylesheet" type="text/css" href="stylesV21.css">
     <!-- Meta Pixel Code -->
     <script>
         !function (f, b, e, v, n, t, s) {
@@ -979,6 +979,106 @@
         </section>
 
 
+        <section class="cup-scroll-section page-view home-content" id="cupExperience" data-view="home"
+            data-home-content="true" aria-label="Secuencia de una copa llenándose">
+            <div class="cup-scroll-stage">
+                <div class="cup-scroll-copy">
+                    <p class="cup-scroll-eyebrow">Un brindis se construye poco a poco</p>
+                    <h2>Los mejores momentos <span>se sirven juntos</span></h2>
+                    <p>En cada encuentro, cada detalle suma. Acompaña el recorrido y mira cómo se llena la copa.</p>
+                    <div class="cup-scroll-frame" aria-live="polite">
+                        <span id="cupFrameNumber">01</span>
+                        <span class="cup-scroll-frame-divider">/</span>
+                        <span>06</span>
+                    </div>
+                    <div class="cup-scroll-progress" aria-hidden="true"><span id="cupProgressBar"></span></div>
+                </div>
+                <div class="cup-scroll-visual">
+                    <svg class="cup-illustration" viewBox="0 0 420 560" role="img"
+                        aria-labelledby="cupIllustrationTitle cupIllustrationDescription">
+                        <title id="cupIllustrationTitle">Una botella sirve una copa</title>
+                        <desc id="cupIllustrationDescription">Un chorro de bebida cae desde una botella inclinada y llena la copa a medida que avanzas por la sección.</desc>
+                        <defs>
+                            <linearGradient id="cupGlassGradient" x1="0" x2="1" y1="0" y2="1">
+                                <stop offset="0" stop-color="#ffffff" stop-opacity="0.88" />
+                                <stop offset="0.45" stop-color="#ffffff" stop-opacity="0.22" />
+                                <stop offset="1" stop-color="#ffffff" stop-opacity="0.68" />
+                            </linearGradient>
+                            <linearGradient id="cupDrinkGradient" x1="0" x2="0" y1="0" y2="1">
+                                <stop offset="0" stop-color="#ffe07a" />
+                                <stop offset="0.5" stop-color="#f4ae3b" />
+                                <stop offset="1" stop-color="#c96327" />
+                            </linearGradient>
+                            <linearGradient id="pourStreamGradient" x1="0" x2="1" y1="0" y2="0">
+                                <stop offset="0" stop-color="#d97a28" />
+                                <stop offset="0.35" stop-color="#ffe17b" />
+                                <stop offset="0.72" stop-color="#f3a536" />
+                                <stop offset="1" stop-color="#c85f24" />
+                            </linearGradient>
+                            <linearGradient id="bottleGlassGradient" x1="0" x2="1" y1="0" y2="1">
+                                <stop offset="0" stop-color="#ffffff" stop-opacity="0.86" />
+                                <stop offset="0.32" stop-color="#f5c779" stop-opacity="0.55" />
+                                <stop offset="0.7" stop-color="#bb5927" stop-opacity="0.9" />
+                                <stop offset="1" stop-color="#ffe4a0" stop-opacity="0.75" />
+                            </linearGradient>
+                            <clipPath id="bottleBodyClip">
+                                <path d="M45 31 Q45 19 58 19 H126 Q139 19 139 32 V91 Q139 106 124 112 H60 Q45 106 45 91 Z" />
+                            </clipPath>
+                            <clipPath id="cupBowlClip">
+                                <path d="M83 56 H237 C230 145 204 218 160 246 C116 218 90 145 83 56 Z" />
+                            </clipPath>
+                            <filter id="cupSoftShadow" x="-60%" y="-30%" width="220%" height="180%">
+                                <feGaussianBlur stdDeviation="14" />
+                            </filter>
+                        </defs>
+                        <g class="pour-bottle" transform="translate(16 -24) rotate(-35 92 78)">
+                            <ellipse class="bottle-shadow" cx="93" cy="157" rx="54" ry="8" />
+                            <g clip-path="url(#bottleBodyClip)">
+                                <path class="bottle-liquid" d="M44 67 Q72 61 96 67 T140 66 V116 H44 Z" />
+                                <path class="bottle-liquid-glint" d="M54 70 Q74 66 91 70" />
+                            </g>
+                            <path class="bottle-body" d="M45 31 Q45 19 58 19 H126 Q139 19 139 32 V91 Q139 106 124 112 H60 Q45 106 45 91 Z" />
+                            <path class="bottle-shoulder" d="M66 111 H120 L108 131 H78 Z" />
+                            <path class="bottle-neck" d="M78 128 H108 V148 Q108 155 115 158 H71 Q78 155 78 148 Z" />
+                            <path class="bottle-neck-highlight" d="M84 132 V149 Q84 153 80 155" />
+                            <path class="bottle-mouth" d="M70 157 Q93 163 116 157 L113 165 Q93 171 73 165 Z" />
+                            <path class="bottle-highlight" d="M54 34 Q53 57 55 84 M130 39 V85" />
+                            <path class="bottle-label" d="M61 48 Q92 43 124 48 V83 Q92 88 61 83 Z" />
+                            <text class="bottle-label-mark" x="92" y="64" text-anchor="middle">THC</text>
+                            <text class="bottle-label-sub" x="92" y="75" text-anchor="middle">HOSPITALITY</text>
+                        </g>
+                        <path id="cupPourStream" class="cup-pour-stream" pathLength="100"
+                            d="M161 134 C179 161 170 174 188 199 C207 226 191 248 213 276 C231 297 229 310 235 356" />
+                        <path id="cupPourHighlight" class="cup-pour-highlight" pathLength="100"
+                            d="M161 134 C179 161 170 174 188 199 C207 226 191 248 213 276 C231 297 229 310 235 356" />
+                        <circle id="cupPourDrop" class="cup-pour-drop" cx="235" cy="356" r="7" />
+                        <ellipse class="cup-shadow" cx="234" cy="558" rx="75" ry="11" />
+                        <g class="cup-glass" transform="translate(96 144) scale(0.86)">
+                            <g clip-path="url(#cupBowlClip)">
+                                <rect id="cupLiquid" x="72" y="248" width="176" height="0" fill="url(#cupDrinkGradient)" />
+                                <path id="cupLiquidSurface" class="cup-liquid-surface" d="M72 248 Q104 241 136 248 T200 248 T248 248 V258 H72 Z" />
+                                <g class="cup-bubbles">
+                                    <circle cx="132" cy="190" r="3" />
+                                    <circle cx="184" cy="166" r="2.5" />
+                                    <circle cx="160" cy="216" r="2" />
+                                    <circle cx="202" cy="202" r="3" />
+                                    <circle cx="145" cy="145" r="2" />
+                                </g>
+                            </g>
+                            <path class="cup-glass-outline" d="M76 49 H244 C237 144 207 222 160 251 C113 222 83 144 76 49 Z" />
+                            <ellipse class="cup-glass-rim" cx="160" cy="50" rx="84" ry="12" />
+                            <path class="cup-glass-highlight" d="M96 70 C102 137 121 192 145 220" />
+                            <path class="cup-stem" d="M160 251 V381" />
+                            <path class="cup-foot" d="M110 405 C122 386 139 381 160 381 C181 381 198 386 210 405 C180 413 140 413 110 405 Z" />
+                            <path class="cup-foot-highlight" d="M127 400 C139 393 151 391 161 391" />
+                        </g>
+                        <path class="cup-fizz" d="M180 279 C169 267 171 254 183 247 M287 262 C299 249 298 237 290 228" />
+                    </svg>
+                    <span class="cup-visual-caption">Hospitalidad en cada detalle</span>
+                </div>
+            </div>
+        </section>
+
         <section class="contact-gallery page-view" id="form" data-view="form" data-home-content="true"
             aria-label="Galería de The Hospitality Center">
             <div class="contact-gallery-stage">
@@ -1354,6 +1454,61 @@
             window.addEventListener('resize', updateContactGalleryProgress);
             updateContactGalleryProgress();
             window.addEventListener('resize', () => showContactGallerySlide(contactGalleryIndex));
+        }
+
+        const cupScrollSection = document.getElementById('cupExperience');
+        const cupLiquid = document.getElementById('cupLiquid');
+        const cupLiquidSurface = document.getElementById('cupLiquidSurface');
+        const cupPourStream = document.getElementById('cupPourStream');
+        const cupPourHighlight = document.getElementById('cupPourHighlight');
+        const cupPourDrop = document.getElementById('cupPourDrop');
+        const cupFrameNumber = document.getElementById('cupFrameNumber');
+        const cupProgressBar = document.getElementById('cupProgressBar');
+
+        function updateCupFillProgress() {
+            if (!cupScrollSection || !cupLiquid || !cupLiquidSurface) return;
+            if (!cupScrollSection.classList.contains('is-active')) {
+                cupScrollSection.style.setProperty('--cup-progress', '0');
+                cupLiquid.setAttribute('y', '246');
+                cupLiquid.setAttribute('height', '0');
+                cupLiquidSurface.style.opacity = '0';
+                return;
+            }
+
+            const scrollDistance = Math.max(1, cupScrollSection.offsetHeight - window.innerHeight);
+            const progress = Math.min(1, Math.max(0, -cupScrollSection.getBoundingClientRect().top / scrollDistance));
+            const surfaceY = 246 - progress * 166;
+            const pourProgress = Math.min(1, Math.max(0, (progress - 0.015) / 0.07));
+            const impactY = 144 + surfaceY * 0.86;
+            const streamStartY = 134;
+            const streamDistance = Math.max(1, impactY - streamStartY);
+            const streamPath = `M 161 ${streamStartY} C 179 ${(streamStartY + streamDistance * 0.14).toFixed(1)} 170 ${(streamStartY + streamDistance * 0.22).toFixed(1)} 188 ${(streamStartY + streamDistance * 0.34).toFixed(1)} C 207 ${(streamStartY + streamDistance * 0.49).toFixed(1)} 191 ${(streamStartY + streamDistance * 0.6).toFixed(1)} 213 ${(streamStartY + streamDistance * 0.75).toFixed(1)} C 231 ${(streamStartY + streamDistance * 0.85).toFixed(1)} 229 ${(streamStartY + streamDistance * 0.93).toFixed(1)} 235 ${impactY.toFixed(1)}`;
+            cupScrollSection.style.setProperty('--cup-progress', progress.toFixed(3));
+            cupScrollSection.style.setProperty('--pour-progress', pourProgress.toFixed(3));
+            cupLiquid.setAttribute('y', surfaceY.toFixed(1));
+            cupLiquid.setAttribute('height', Math.max(0, 246 - surfaceY).toFixed(1));
+            cupLiquidSurface.setAttribute('d', `M 72 ${surfaceY.toFixed(1)} Q 104 ${(surfaceY - 6).toFixed(1)} 136 ${surfaceY.toFixed(1)} T 200 ${surfaceY.toFixed(1)} T 248 ${surfaceY.toFixed(1)} V 258 H 72 Z`);
+            cupLiquidSurface.style.opacity = progress > 0.015 ? '1' : '0';
+            cupPourStream?.setAttribute('d', streamPath);
+            cupPourHighlight?.setAttribute('d', streamPath);
+            const pourDashOffset = (100 * (1 - pourProgress)).toFixed(2);
+            if (cupPourStream) cupPourStream.style.strokeDashoffset = `${pourDashOffset}px`;
+            if (cupPourDrop) {
+                cupPourDrop.style.opacity = pourProgress > 0.94 ? '1' : '0';
+                cupPourDrop.style.transform = `scale(${pourProgress > 0.94 ? 1 : 0.25})`;
+                cupPourDrop.setAttribute('cy', impactY.toFixed(1));
+            }
+            if (cupFrameNumber) {
+                const frame = Math.min(6, Math.floor(progress * 5) + 1);
+                cupFrameNumber.textContent = String(frame).padStart(2, '0');
+            }
+            if (cupProgressBar) cupProgressBar.style.transform = `scaleX(${progress})`;
+        }
+
+        if (cupScrollSection) {
+            window.addEventListener('scroll', updateCupFillProgress, { passive: true });
+            window.addEventListener('resize', updateCupFillProgress);
+            updateCupFillProgress();
         }
 
         // ANIMACIÓN DE ENTRADA
